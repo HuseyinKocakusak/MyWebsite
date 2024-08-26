@@ -46,7 +46,7 @@ nav a:hover {
 }
 
 #hero {
-  background-image: url("~/img/20240412_132630.jpg"); /* Update with the path to your image */
+  background-image: URL("../public/img/20240412_132630.jpg"); /* Update with the path to your image */
   background-size: cover;
   background-position: center;
   height: 121vh;
