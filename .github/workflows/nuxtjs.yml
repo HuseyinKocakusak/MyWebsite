@@ -3,7 +3,7 @@ name: Deploy Nuxt.js to GitHub Pages
 on:
   push:
     branches:
-      - main  # Deploys when changes are pushed to the 'main' branch
+      - main
 
 jobs:
   build-deploy:
@@ -13,11 +13,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Use the Node.js version compatible with your project
-      - run: npm install  # Install dependencies
-      - run: npm run generate  # Build the static site
+          node-version: '18'  # Upgrade to a compatible Node.js version
+      - run: npm install
+      - run: npm run generate
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # This is where Nuxt.js outputs the static files
+          publish_dir: ./dist
