@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huseyin Kocakusak</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #fafaf8;
+            color: #2a2a2a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 4rem;
+            z-index: 1000;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(42, 42, 42, 0.08);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #2a2a2a;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+            letter-spacing: 0.3px;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 4rem 4rem;
+            background: linear-gradient(135deg, #fafaf8 0%, #f5f5f0 100%);
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: #666;
+            max-width: 800px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        
+        .section {
+            padding: 8rem 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            margin-bottom: 4rem;
+        }
+        
+        .section-number {
+            font-size: 0.85rem;
+            color: #999;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .content-block {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 2px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .content-block:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        
+        .content-block h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #2a2a2a;
+        }
+        
+        .content-block p, .content-block ul {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .content-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .content-block li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.8rem;
+        }
+        
+        .content-block li:before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+        
+        .publications {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 2px;
+            margin-bottom: 3rem;
+        }
+        
+        .publication-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-item h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #2a2a2a;
+        }
+        
+        .publication-authors {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+        
+        .publication-journal {
+            font-size: 0.85rem;
+            color: #999;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            aspect-ratio: 4/5;
+            background: #e5e5e0;
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+        
+        .contact-section {
+            background: #2a2a2a;
+            color: white;
+            padding: 8rem 4rem;
+            text-align: center;
+        }
+        
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-detail {
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .contact-detail a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-color 0.3s;
+        }
+        
+        .contact-detail a:hover {
+            border-color: white;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: #f9f9f6;
+            padding: 2rem;
+            border-radius: 2px;
+        }
+        
+        .skill-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2a2a2a;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+        
+        .skill-category li:before {
+            content: '•';
+            position: absolute;
+            margin-left: -1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1.5rem 2rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
+            
+            .hero, .section {
+                padding: 4rem 2rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="logo">HUSEYIN KOCAKUSAK</div>
+            <ul class="nav-links">
+                <li><a href="#science">Science</a></li>
+                <li><a href="#apiary">Apiary</a></li>
+                <li><a href="#sport">Sport</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Molecular Biology<br>Researcher & Apiarist</h1>
+            <p class="hero-subtitle">Investigating microglia biology, extracellular vesicles, and tRNA-derived fragments. Building sustainable apiculture practices. Training as a hybrid athlete.</p>
+        </div>
+    </section>
+
+    <section id="science" class="section">
+        <div class="section-header">
+            <div class="section-number">01</div>
+            <h2 class="section-title">Science</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-block">
+                <h3>Research Focus</h3>
+                <p>Current research examines microglial function in neurodegenerative contexts, with specific attention to extracellular vesicle-mediated signaling and tRNA-derived fragment regulation. Work includes analysis of RNA-derived EVs released by microglia cells under inflammatory conditions and characterization of tRNA fragment populations in neurodegenerative disease models.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Research Aims</h3>
+                <ul>
+                    <li>Characterize microglial extracellular vesicle cargo in response to inflammatory stimuli</li>
+                    <li>Identify tRNA-derived fragments enriched in microglia-derived EVs</li>
+                    <li>Examine functional roles of specific tRF species in neuroinflammatory pathways</li>
+                    <li>Develop methodologies for isolating and analyzing small RNA populations from extracellular vesicles</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Laboratory Skills</h3>
+                <ul>
+                    <li>Primary cell culture techniques (microglia isolation and maintenance)</li>
+                    <li>Extracellular vesicle isolation and characterization</li>
+                    <li>RNA extraction, quality assessment, and library preparation</li>
+                    <li>Quantitative PCR and cytotoxicity assays</li>
+                    <li>Microscopy techniques for cellular imaging</li>
+                    <li>Western blotting for protein analysis</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Bioinformatics</h3>
+                <ul>
+                    <li>NGS data analysis for small RNA sequencing</li>
+                    <li>tRNA fragment identification and annotation</li>
+                    <li>Differential expression analysis using statistical frameworks</li>
+                    <li>Python and R for data processing and visualization</li>
+                    <li>Linux command-line proficiency for pipeline execution</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="publications">
+            <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Publications</h3>
+            
+            <div class="publication-item">
+                <h4>Development of tRNA-Derived Fragment Fragments with cell–cell interactions</h4>
+                <p class="publication-authors">B. Arıcı, İ. Bırakoğlu, H. Koçakuşak, P. Karakuşak, Ş. Çetin</p>
+                <p class="publication-journal">Submitted</p>
+            </div>
+
+            <div class="publication-item">
+                <h4>An innovative tRF species reveals novel landscape in CatG-HES3 treatment</h4>
+                <p class="publication-authors">B. Arıcı, İ. Bırakoğlu, H. Koçakuşak, C. Baloğlu, Ş. Çetin</p>
+                <p class="publication-journal">Submitted</p>
+            </div>
+
+            <div class="publication-item">
+                <h4>tRNA fragments in Neuroinflammative Responses</h4>
+                <p class="publication-authors">H. Koçakuşak, İ. Bırakoğlu, B. Arıcı</p>
+                <p class="publication-journal">Submitted</p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Determining the effects of tRNA fragments in exosome secreted by pluripotent stem cells on inflammation</h4>
+                <p class="publication-authors">H. Koçakuşak, C. P. Emel, B. Arıcı, L. Bırakoğlu, G. Karakuşak, Ş. Çetin</p>
+                <p class="publication-journal">In preparation</p>
+            </div>
+
+            <div class="publication-item">
+                <h4>Navigating tRF Nomenclature: Challenges, Distinctions and Need for a Physical Solution for tRF Investigation</h4>
+                <p class="publication-authors">L. Bırakoğlu, H. Koçakuşak, P. Karakuşak, Ş. Çetin</p>
+                <p class="publication-journal">In preparation</p>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3>Conferences</h3>
+            <ul>
+                <li>5th Turkish Molecular Biology Congress, Istanbul, Turkey, 2024</li>
+                <li>ISPAN-17 International Extracellular Vesicle Conference, Ankara, Turkey, 2024</li>
+                <li>FEBS LatAm Symposium, Izmir, Turkey, 2024</li>
+                <li>The 8th Neurology Meeting on Neuroinflammation, Belek, Luxemburg, 2025</li>
+                <li>96th Cold Spring Harbor Symposium, New York, USA, 2025</li>
+            </ul>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Molecular Techniques</h4>
+                <ul>
+                    <li>qRT-PCR</li>
+                    <li>Western Blotting</li>
+                    <li>RNA Extraction</li>
+                    <li>Library Preparation</li>
+                    <li>Cell Culture</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Bioinformatics</h4>
+                <ul>
+                    <li>NGS Analysis</li>
+                    <li>Python</li>
+                    <li>R Statistical Computing</li>
+                    <li>Linux/Unix</li>
+                    <li>Data Visualization</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Languages</h4>
+                <ul>
+                    <li>Turkish (Native)</li>
+                    <li>English (Fluent, IELTS 7.5)</li>
+                    <li>German (Intermediate, B1)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="apiary" class="section" style="background: #f5f5f0;">
+        <div class="section-header">
+            <div class="section-number">02</div>
+            <h2 class="section-title">Apiary</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-block">
+                <h3>Mission</h3>
+                <p>Ege Arıcılık operates on principles of scientific beekeeping, emphasizing colony health monitoring, evidence-based husbandry practices, and minimal intervention approaches. Production methods prioritize bee welfare and natural foraging behaviors while maintaining productivity through selective breeding and disease management protocols.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Product Standards</h3>
+                <p>Honey production follows region-specific botanical profiles from distinct geographic zones. Each batch undergoes moisture content verification, pollen analysis for botanical origin confirmation, and absence testing for synthetic compounds. Products are traceable to specific apiary locations and harvesting periods.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Sustainability Practices</h3>
+                <ul>
+                    <li>Colony health monitoring using standardized assessment protocols</li>
+                    <li>Integrated pest management without synthetic chemical treatments</li>
+                    <li>Maintenance of genetic diversity through selective breeding programs</li>
+                    <li>Preservation of forage habitat through partnerships with local landowners</li>
+                    <li>Seasonal management aligned with regional flora phenology</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Scientific Approach</h3>
+                <p>Operations integrate current research on colony nutrition, pathogen dynamics, and environmental stressors. Management decisions are informed by temperature monitoring, brood pattern assessment, and forage availability data. Record-keeping systems track colony performance metrics across seasons to optimize hive placement and resource allocation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sport" class="section">
+        <div class="section-header">
+            <div class="section-number">03</div>
+            <h2 class="section-title">Sport</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-block">
+                <h3>Training Philosophy</h3>
+                <p>Training follows a hybrid athlete model integrating resistance training, endurance running, swimming, and mobility work. Programming emphasizes concurrent adaptation across strength and aerobic capacities while managing interference effects through periodization and recovery protocols.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Performance Metrics</h3>
+                <ul>
+                    <li>10K running performances: multiple races completed at approximately 46-minute pace</li>
+                    <li>Resistance training: compound movement progressions tracked across mesocycles</li>
+                    <li>Swimming: technique development and distance capacity building</li>
+                    <li>Mobility: range of motion assessments and flexibility maintenance</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Training Aims</h3>
+                <ul>
+                    <li>Optimize concurrent training adaptations without compromising either strength or endurance gains</li>
+                    <li>Improve 10K running time through structured interval training and base building phases</li>
+                    <li>Develop swimming efficiency and increase sustainable distance capacity</li>
+                    <li>Maintain joint health and functional mobility across all movement patterns</li>
+                    <li>Apply evidence-based recovery strategies including sleep optimization and nutrition timing</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Research Interest Areas</h3>
+                <ul>
+                    <li>Interference effect mechanisms in concurrent training</li>
+                    <li>Periodization models for hybrid athlete development</li>
+                    <li>Nutritional strategies for optimizing body composition and performance</li>
+                    <li>Recovery modalities and their physiological effects</li>
+                    <li>Supplementation efficacy in trained populations</li>
+                    <li>Biomechanical analysis of running economy</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section" style="background: #f5f5f0;">
+        <div class="section-header">
+            <div class="section-number">04</div>
+            <h2 class="section-title">Gallery</h2>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-caption">Laboratory work</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-caption">Apiary inspection</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-caption">Trail running</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-caption">Hive management</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-caption">Training session</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-caption">Field research</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-caption">Daily life</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-caption">Nature photography</div>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 3rem; color: #666; font-size: 0.9rem;">Gallery placeholders - replace with your actual images</p>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-header">
+            <div class="section-number">05</div>
+            <h2 class="section-title">About</h2>
+        </div>
+
+        <div class="content-block" style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.9;">
+                Completed Bachelor of Science in Molecular Biology and Genetics at Izmir Biomedicine and Genome Center, August 2023. Currently pursuing Master of Science at the same institution with research focus on microglia-derived extracellular vesicles and tRNA-derived fragments in neuroinflammatory processes.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 1.5rem;">
+                Master's thesis examines tRNA fragment populations in microglial extracellular vesicles under inflammatory conditions, utilizing small RNA sequencing, bioinformatics analysis, and functional validation approaches. Research includes both computational analysis and wet laboratory techniques.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 1.5rem;">
+                Founded Ege Arıcılık, operating multiple apiaries with focus on scientific beekeeping methods, colony health monitoring, and region-specific honey production. Management practices integrate current research on bee nutrition, pathogen control, and sustainable apiculture.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 1.5rem;">
+                Training follows hybrid athlete programming with structured periodization across strength training, distance running, swimming, and mobility work. Completed multiple 10K races with times around 46 minutes. Approach incorporates exercise physiology literature and evidence-based recovery protocols.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 1.5rem;">
+                Active in scientific communication through content creation on research methodologies, data analysis approaches, and training science. Interests span neuroscience, immunology, extracellular vesicle biology, and exercise physiology.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <div class="contact-detail">
+                <strong>Email:</strong><br>
+                <a href="mailto:huseyinkocakusak@gmail.com">huseyinkocakusak@gmail.com</a>
+            </div>
+            <div class="contact-detail">
+                <strong>Location:</strong><br>
+                Izmir, Turkey
+            </div>
+            <div class="contact-detail">
+                <strong>Social:</strong><br>
+                <a href="#">@huseyinkocakusak</a>
+            </div>
+            <div class="contact-detail" style="margin-top: 3rem; font-size: 0.9rem; opacity: 0.7;">
+                Available for research collaboration inquiries
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
