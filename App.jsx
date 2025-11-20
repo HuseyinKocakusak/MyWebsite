@@ -232,9 +232,18 @@ const galleryItemsSeed = [
 ];
 
 const socialLinks = [
+  { label: "Email", href: "mailto:huseyinkocakusak@gmail.com", icon: <Icons.Mail className="w-5 h-5" /> },
+  { label: "ORCID", href: "https://orcid.org/0000-0002-0670-1655", icon: <Icons.Globe2 className="w-5 h-5" /> },
+  {
+    label: "Scholar",
+    href: "https://scholar.google.com/citations?hl=en&user=lPCH3-0AAAAJ&view_op=list_works&gmla=AKzYXQ3uDv5Dgv7vobBh5tnAVrppGOvxgz1-F4DDusNXlS5YiG4yKWORS9eCDvWR67nV2OO96gF3DaOeJvZbVlNT",
+    icon: <Icons.GraduationCap className="w-5 h-5" />,
+  },
+  { label: "Instagram", href: "https://www.instagram.com/huseyin_kocakusak/", icon: <Icons.Sparkles className="w-5 h-5" /> },
+  { label: "Medium", href: "https://medium.com/@huseyinkocakusak", icon: <Icons.BookOpen className="w-5 h-5" /> },
+  { label: "Evrim Ağacı", href: "https://evrimagaci.org/orcinus22598", icon: <Icons.Leaf className="w-5 h-5" /> },
   { label: "Email", href: "mailto:hello@huseyinkocakusak.com", icon: <Icons.Mail className="w-5 h-5" /> },
   { label: "Research", href: "https://orcid.org", icon: <Icons.Globe2 className="w-5 h-5" /> },
-  { label: "Strava", href: "https://www.strava.com", icon: <Icons.Sparkles className="w-5 h-5" /> },
 ];
 
 const filterOptions = ["All", "Daily", "Beekeeper", "Sport", "Scientific", "Aesthetic"];
@@ -458,6 +467,15 @@ function App() {
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary">Science • Apiary • Sport</p>
             <h1 className="text-4xl font-black text-[#2F4F4F] sm:text-5xl">
+              Extracellular Vesicles • Brain • Bee • Longevity
+            </h1>
+            <p className="text-lg text-[#333333]/85">
+              Role of microglia derived extracellular vesicles in cell cell interactions across the brain. Science
+              based beekeeping, lifting and nutrition.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <span className={badgeClasses}><Icons.Beaker className="h-4 w-4" /> Researcher</span>
+              <span className={badgeClasses}><Icons.Hexagon className="h-4 w-4" /> Beekeeper</span>
               Premium Nature Professional blending research, beekeeping, and athletic grit.
             </h1>
             <p className="text-lg text-[#333333]/85">
@@ -502,6 +520,8 @@ function App() {
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
                 <p className="text-xs uppercase tracking-[0.2em] text-secondary">Science</p>
+                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">1</p>
+                <p className="text-sm text-[#333333]/75">article</p>
                 <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">12+</p>
                 <p className="text-sm text-[#333333]/75">peer-reviewed pieces</p>
               </div>
@@ -512,6 +532,8 @@ function App() {
               </div>
               <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
                 <p className="text-xs uppercase tracking-[0.2em] text-secondary">Sport</p>
+                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">45.07''</p>
+                <p className="text-sm text-[#333333]/75">10K PR</p>
                 <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">2:59</p>
                 <p className="text-sm text-[#333333]/75">marathon PR</p>
               </div>
@@ -527,8 +549,8 @@ function App() {
         <SectionShell
           id="science"
           eyebrow="Science"
-          title="Researcher with ecological intent"
-          description="Hands-on with field data, lab automation, and transparent science communication."
+          title="Extracellular Vesicles Researcher"
+          description="Neuroinflammation & Neuroprotection, non-coding RNAs"
         >
           <div className="grid gap-8 lg:grid-cols-2">
             <AimList aims={scienceAims} icon={<Icons.Brain className="h-5 w-5 text-[#2F4F4F]" />} />
@@ -550,6 +572,7 @@ function App() {
         <SectionShell
           id="beekeeping"
           eyebrow="Beekeeping"
+          title="Beekeeper stewarding resilient colonies"
           title="Apiarist stewarding resilient colonies"
           description="Balancing tradition with instrumentation to care for pollinators."
         >
@@ -620,12 +643,13 @@ function App() {
           id="about"
           eyebrow="About"
           title="About Hüseyin"
-          description="Blending research rigor, ecological care, and athletic resilience."
+          description="Molecular biologist who applies research mindset to health, sport, and personal development."
         >
           <div className="grid gap-6 md:grid-cols-[220px,1fr]">
             <div className="flex h-full flex-col items-center justify-center rounded-2xl bg-white p-6 shadow-sm shadow-[#2F4F4F]/10">
               <div className="h-32 w-32 rounded-full bg-gradient-to-br from-[#DAA520] to-[#2F4F4F] opacity-90" />
               <p className="mt-4 text-lg font-semibold text-[#2F4F4F]">You</p>
+              <p className="text-sm text-[#333333]/70">Researcher • Beekeeper • Athlete</p>
               <p className="text-sm text-[#333333]/70">Researcher • Apiarist • Athlete</p>
             </div>
             <div className="space-y-4 text-[#333333]/85">
@@ -656,7 +680,7 @@ function App() {
           id="contact"
           eyebrow="Contact"
           title="Let’s collaborate"
-          description="Share projects, research ideas, or training opportunities."
+          description="Contact for collaboration and evidence based exercise/nutrition "
         >
           <div className="grid gap-8 md:grid-cols-2">
             <form className="space-y-4">
@@ -695,8 +719,8 @@ function App() {
               <div className="rounded-2xl bg-white/80 p-5 shadow-sm shadow-[#2F4F4F]/10">
                 <p className="text-sm font-semibold text-[#2F4F4F]">Connect</p>
                 <div className="mt-3 space-y-2 text-sm text-[#333333]/80">
-                  <p>hello@huseyinkocakusak.com</p>
-                  <p>Ankara, Türkiye • Available for collaboration</p>
+                  <p>huseyinkocakusak@gmail.com</p>
+                  <p>Izmir, Türkiye</p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">
