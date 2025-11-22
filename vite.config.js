@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  // Use the repository name so assets load correctly on GitHub Pages
-  base: "/MyWebsite/"
+  // Use the site root for custom domain deployments so bundled assets resolve correctly
+  base: "/"
 });
