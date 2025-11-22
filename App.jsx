@@ -163,33 +163,6 @@ const navLinks = [
   { id: "contact", label: "Contact" },
 ];
 
-const researchOutputs = [
-  {
-    title:
-      "TRNA-DERIVED FRAGMENTS IN MICROGLIA-DERIVED EXTRACELLULAR VESICLES: REGULATORS OF NEUROIMMUNE SIGNALING AND NEURONAL INTEGRITY",
-    type: "Thesis",
-    detail:
-      "Graduate research defining how microglial extracellular vesicles package and deliver regulatory tRNA fragments that influence neuronal resilience and immune crosstalk.",
-  },
-  {
-    title: "Microglia-derived extracellular vesicle cargo orchestrates neural integrity",
-    type: "Journal Article",
-    detail: (
-      <>
-        Authors: <strong>Huseyin KOCAKUSAK</strong>, Aysu Başak KÖK, Bilgesu OZTURK, Bilge KARACICEK, Sermin GENC. DOI:
-        10.3389/fncel.2025.1663788
-      </>
-    ),
-  },
-  {
-    title: "Inflammatory signaling dynamics in neuroimmune communication (see provided record)",
-    type: "Journal Article",
-    detail: (
-      <>
-        Authors: First Author, Second Author, <strong>Huseyin KOCAKUSAK</strong>, Collaborator. Third-author contribution
-        highlighting extracellular vesicle signaling signatures captured in neuroinflammatory models.
-      </>
-    ),
 const scienceFocusCopy =
   "Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention.";
 
@@ -587,9 +560,27 @@ function App() {
               ))}
             </div>
           </div>
-        ) : null}
+        )}
       </header>
 
+      <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 pb-16 pt-28 md:px-6">
+        <SectionShell
+          id="home"
+          eyebrow="Welcome"
+          title="Scientist • Beekeeper • Athlete"
+          description="Exploring microglial biology while tending hives and pursuing data-informed sport."
+        >
+          <div className="grid gap-6 lg:grid-cols-[2fr,1fr]">
+            <div className="space-y-4 text-[#333333]/85">
+              <p>
+                I balance laboratory rigor, ecological stewardship, and athletic discipline. My work focuses on
+                extracellular vesicle biology and how molecular cargo shapes neural integrity.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className={badgeClasses}><Icons.Brain className="h-4 w-4" /> Neuroscience</span>
+                <span className={badgeClasses}><Icons.Leaf className="h-4 w-4" /> Beekeeping</span>
+                <span className={badgeClasses}><Icons.Dumbbell className="h-4 w-4" /> Sport Science</span>
+              </div>
       <main className="mx-auto max-w-6xl space-y-16 px-4 pb-20 pt-28 md:px-6 md:pt-32">
         <section id="home" className="grid gap-8 rounded-3xl bg-white p-8 shadow-lg shadow-[#2F4F4F]/10 md:grid-cols-2">
           <div className="space-y-6">
@@ -619,18 +610,19 @@ function App() {
                 <Icons.GalleryVertical className="h-4 w-4" /> View gallery
               </button>
             </div>
-          </div>
-          <div className="grid gap-4">
-            <div className="rounded-2xl border border-[#2F4F4F]/10 bg-[#F0F8FF] p-5 shadow-sm shadow-[#2F4F4F]/10">
+            <div className="rounded-2xl bg-white/85 p-5 text-[#2F4F4F] shadow-sm shadow-[#2F4F4F]/10">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2F4F4F] text-white">
-                  <Icons.Telescope className="h-5 w-5" />
+                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
+                  <Icons.Sparkles className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Current focus</p>
-                  <p className="text-lg font-bold text-[#2F4F4F]">Field-ready biomaterials</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Current Focus</p>
+                  <p className="text-lg font-semibold">Microglial EV cargo & neural health</p>
                 </div>
               </div>
+              <p className="mt-3 text-sm text-[#333333]/80">{scienceFocusCopy}</p>
+            </div>
+          </div>
               <p className="mt-3 text-sm text-[#333333]/80">
                 Testing sustainable substrates that benefit pollinator habitats while enabling sensor-rich research.
               </p>
@@ -699,8 +691,8 @@ function App() {
         <SectionShell
           id="science"
           eyebrow="Science"
-          title="Researcher aligning neuroscience and performance"
-          description="Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention."
+          title="Researching microglial communication"
+          description="Extracellular vesicles, noncoding RNAs, and neuroimmune signaling."
         >
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="space-y-4">
@@ -787,7 +779,6 @@ function App() {
         <SectionShell
           id="beekeeping"
           eyebrow="Beekeeping"
-          title="Beekeeper stewarding resilient colonies"
           title="Apiarist stewarding resilient colonies"
           description="Balancing tradition with instrumentation to care for pollinators."
         >
@@ -858,7 +849,6 @@ function App() {
           id="about"
           eyebrow="About"
           title="About Hüseyin"
-          description="Blending research rigor, ecological care, and athletic resilience."
           description="Molecular biologist who applies research mindset to health, sport, and personal development."
         >
           <div className="grid gap-6 md:grid-cols-[220px,1fr]">
