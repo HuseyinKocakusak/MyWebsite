@@ -163,6 +163,33 @@ const navLinks = [
   { id: "contact", label: "Contact" },
 ];
 
+const researchOutputs = [
+  {
+    title:
+      "TRNA-DERIVED FRAGMENTS IN MICROGLIA-DERIVED EXTRACELLULAR VESICLES: REGULATORS OF NEUROIMMUNE SIGNALING AND NEURONAL INTEGRITY",
+    type: "Thesis",
+    detail:
+      "Graduate research defining how microglial extracellular vesicles package and deliver regulatory tRNA fragments that influence neuronal resilience and immune crosstalk.",
+  },
+  {
+    title: "Microglia-derived extracellular vesicle cargo orchestrates neural integrity",
+    type: "Journal Article",
+    detail: (
+      <>
+        Authors: <strong>Huseyin KOCAKUSAK</strong>, Aysu Başak KÖK, Bilgesu OZTURK, Bilge KARACICEK, Sermin GENC. DOI:
+        10.3389/fncel.2025.1663788
+      </>
+    ),
+  },
+  {
+    title: "Inflammatory signaling dynamics in neuroimmune communication (see provided record)",
+    type: "Journal Article",
+    detail: (
+      <>
+        Authors: First Author, Second Author, <strong>Huseyin KOCAKUSAK</strong>, Collaborator. Third-author contribution
+        highlighting extracellular vesicle signaling signatures captured in neuroinflammatory models.
+      </>
+    ),
 const scienceFocusCopy =
   "Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention.";
 
@@ -189,6 +216,21 @@ const researchOutputs = [
 ];
 
 const conferenceHighlights = [
+  {
+    name: "International Neuroimmunology Summit",
+    role: "Poster presentation on microglial EV cargo and neuronal integrity",
+    year: "2024",
+  },
+  {
+    name: "Translational Neuroscience Forum",
+    role: "Talk on noncoding RNA regulation within microglia-derived extracellular vesicles",
+    year: "2023",
+  },
+  {
+    name: "Sustainable Apiculture & Ecology Symposium",
+    role: "Session contribution linking hive health metrics with cellular metabolism insights",
+    year: "2023",
+  },
   "Delivered oral and poster presentations on microglial extracellular vesicle signaling at interdisciplinary neuroscience symposia.",
   "Shared findings on tRNA-derived fragment dynamics during inflammation at university research colloquia.",
   "Discussed integrated training and nutrition strategies for hybrid athletes at sport science seminars.",
@@ -427,6 +469,28 @@ function App() {
     <div className="min-h-screen bg-background">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#2F4F4F]/10 bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#2F4F4F] text-white shadow-sm shadow-[#2F4F4F]/30">
+                <Icons.Hexagon className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.25em] text-secondary">Premium Nature Professional</p>
+                <p className="text-xl font-bold text-[#2F4F4F]">Hüseyin KOCAKUŞAK</p>
+              </div>
+            </div>
+            <nav className="hidden items-center gap-2 md:flex">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => handleNav(link.id)}
+                  className="rounded-full px-3 py-2 text-sm font-semibold text-[#2F4F4F] transition-transform transition-colors duration-200 hover:scale-110 hover:text-[#1f2f2f] hover:bg-[#F0F8FF]"
+                >
+                  {link.label}
+                </button>
+              ))}
+            </nav>
+          <button
+            className="rounded-lg p-2 text-[#2F4F4F] hover:bg-[#F0F8FF] md:hidden"
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#2F4F4F] text-white shadow-sm shadow-[#2F4F4F]/30">
               <Icons.Hexagon className="h-6 w-6" />
@@ -462,6 +526,7 @@ function App() {
                 <button
                   key={link.id}
                   onClick={() => handleNav(link.id)}
+                  className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] transition-transform transition-colors duration-200 hover:scale-110 hover:text-[#1f2f2f] hover:bg-[#F0F8FF]"
                   className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:bg-[#F0F8FF] hover:text-[#0f2626]"
                 >
                   {link.label}
@@ -482,6 +547,9 @@ function App() {
             <p className="text-lg text-[#333333]/85">
               Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <span className={badgeClasses}><Icons.Beaker className="h-4 w-4" /> Researcher</span>
+              <span className={badgeClasses}><Icons.Hexagon className="h-4 w-4" /> Beekeeper</span>
             <p className="text-lg text-[#333333]/85">
               Grounded in ecosystems, sharpened by inquiry, and energized by movement. I bridge labs, hives, and
               training grounds to steward healthy futures.
@@ -553,6 +621,50 @@ function App() {
         <SectionShell
           id="science"
           eyebrow="Science"
+          title="Researcher aligning neuroscience and performance"
+          description="Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention."
+        >
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3 rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10">
+                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
+                  <Icons.Brain className="h-5 w-5" />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Research Outputs</p>
+                  <div className="space-y-3">
+                    {researchOutputs.map((item) => (
+                      <div key={item.title} className="rounded-lg bg-white/60 p-3 shadow-inner shadow-[#2F4F4F]/5">
+                        <p className="text-sm font-semibold text-[#2F4F4F]">{item.title}</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-secondary">{item.type}</p>
+                        <div className="text-sm text-[#333333]/75">{item.detail}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10">
+                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
+                  <Icons.Telescope className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Conferences & Presentations</p>
+                  <p className="text-lg font-semibold text-[#2F4F4F]">Selected highlights</p>
+                </div>
+              </div>
+              <ul className="space-y-3">
+                {conferenceHighlights.map((item) => (
+                  <li
+                    key={item.name}
+                    className="rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10 transition duration-300 hover:-translate-y-1 hover:shadow-md"
+                  >
+                    <div className="flex items-center justify-between text-sm font-semibold text-[#2F4F4F]">
+                      <span>{item.name}</span>
+                      <span className="text-secondary">{item.year}</span>
+                    </div>
+                    <p className="mt-1 text-sm text-[#333333]/80">{item.role}</p>
           title="Extracellular Vesicles Researcher"
           description="Neuroinflammation & Neuroprotection, non-coding RNAs"
         >
@@ -600,6 +712,7 @@ function App() {
         <SectionShell
           id="beekeeping"
           eyebrow="Beekeeping"
+          title="Beekeeper stewarding resilient colonies"
           title="Apiarist stewarding resilient colonies"
           description="Balancing tradition with instrumentation to care for pollinators."
         >
@@ -670,6 +783,7 @@ function App() {
           id="about"
           eyebrow="About"
           title="About Hüseyin"
+          description="Blending research rigor, ecological care, and athletic resilience."
           description="Molecular biologist who applies research mindset to health, sport, and personal development."
         >
           <div className="grid gap-6 md:grid-cols-[220px,1fr]">
@@ -707,6 +821,7 @@ function App() {
           id="contact"
           eyebrow="Contact"
           title="Let’s collaborate"
+          description="Share projects, research ideas, or training opportunities."
           description="Contact for collaboration and evidence based exercise/nutrition "
         >
           <div className="grid gap-8 md:grid-cols-2">
@@ -747,6 +862,7 @@ function App() {
                 <p className="text-sm font-semibold text-[#2F4F4F]">Connect</p>
                 <div className="mt-3 space-y-2 text-sm text-[#333333]/80">
                   <p>huseyinkocakusak@gmail.com</p>
+                  <p>Izmir, Türkiye • Available for collaboration</p>
                   <p>Izmir, Türkiye</p>
                 </div>
               </div>
