@@ -623,6 +623,8 @@ function App() {
               <p className="mt-3 text-sm text-[#333333]/80">{scienceFocusCopy}</p>
             </div>
           </div>
+            </div>
+          </div>
               <p className="mt-3 text-sm text-[#333333]/80">
                 Testing sustainable substrates that benefit pollinator habitats while enabling sensor-rich research.
               </p>
