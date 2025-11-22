@@ -190,6 +190,28 @@ const researchOutputs = [
         highlighting extracellular vesicle signaling signatures captured in neuroinflammatory models.
       </>
     ),
+const scienceFocusCopy =
+  "Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention.";
+
+const researchOutputs = [
+  {
+    title:
+      "Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis",
+    meta: "Article type: Review | Journal: Frontiers in Cellular Neuroscience - Cellular Neuropathology",
+    authors:
+      "**Huseyin KOCAKUSAK**, Aysu Başak KÖK, Bilgesu OZTURK, Bilge KARACICEK, Sermin GENC",
+    doi: "DOI: 10.3389/fncel.2025.1663788",
+  },
+  {
+    title: "Profiling tRNA-derived fragments in LPS-induced microglia and their influence on immune response",
+    meta: "Research Article",
+    authors:
+      "Burak Ibrahim ARIOZ, Leman BINOKAY, **Huseyin KOCAKUSAK**, Gökhan KARAKÜLAH, Sermin GENC",
+  },
+  {
+    title:
+      "TRNA-DERIVED FRAGMENTS IN MICROGLIA-DERIVED EXTRACELLULAR VESICLES: REGULATORS OF NEUROIMMUNE SIGNALING AND NEURONAL INTEGRITY",
+    meta: "Thesis",
   },
 ];
 
@@ -209,6 +231,9 @@ const conferenceHighlights = [
     role: "Session contribution linking hive health metrics with cellular metabolism insights",
     year: "2023",
   },
+  "Delivered oral and poster presentations on microglial extracellular vesicle signaling at interdisciplinary neuroscience symposia.",
+  "Shared findings on tRNA-derived fragment dynamics during inflammation at university research colloquia.",
+  "Discussed integrated training and nutrition strategies for hybrid athletes at sport science seminars.",
 ];
 
 const beekeepingStatements = [
@@ -269,6 +294,8 @@ const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/huseyin_kocakusak/", icon: <Icons.Sparkles className="w-5 h-5" /> },
   { label: "Medium", href: "https://medium.com/@huseyinkocakusak", icon: <Icons.BookOpen className="w-5 h-5" /> },
   { label: "Evrim Ağacı", href: "https://evrimagaci.org/orcinus22598", icon: <Icons.Leaf className="w-5 h-5" /> },
+  { label: "Email", href: "mailto:hello@huseyinkocakusak.com", icon: <Icons.Mail className="w-5 h-5" /> },
+  { label: "Research", href: "https://orcid.org", icon: <Icons.Globe2 className="w-5 h-5" /> },
 ];
 
 const filterOptions = ["All", "Daily", "Beekeeper", "Sport", "Scientific", "Aesthetic"];
@@ -464,6 +491,28 @@ function App() {
             </nav>
           <button
             className="rounded-lg p-2 text-[#2F4F4F] hover:bg-[#F0F8FF] md:hidden"
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#2F4F4F] text-white shadow-sm shadow-[#2F4F4F]/30">
+              <Icons.Hexagon className="h-6 w-6" />
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-secondary">Premium Nature Professional</p>
+              <p className="text-[1.3rem] font-bold text-[#2F4F4F]">Hüseyin KOCAKUŞAK</p>
+            </div>
+          </div>
+          <nav className="hidden items-center gap-2 md:flex">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => handleNav(link.id)}
+                className="rounded-full px-3 py-2 text-sm font-semibold text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:text-[#0f2626] hover:bg-[#F0F8FF]"
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+          <button
+            className="rounded-lg p-2 text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:bg-[#F0F8FF] md:hidden"
             onClick={() => setMobileOpen((p) => !p)}
             aria-label="Toggle navigation"
           >
@@ -478,6 +527,7 @@ function App() {
                   key={link.id}
                   onClick={() => handleNav(link.id)}
                   className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] transition-transform transition-colors duration-200 hover:scale-110 hover:text-[#1f2f2f] hover:bg-[#F0F8FF]"
+                  className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:bg-[#F0F8FF] hover:text-[#0f2626]"
                 >
                   {link.label}
                 </button>
@@ -500,6 +550,13 @@ function App() {
             <div className="flex flex-wrap gap-3">
               <span className={badgeClasses}><Icons.Beaker className="h-4 w-4" /> Researcher</span>
               <span className={badgeClasses}><Icons.Hexagon className="h-4 w-4" /> Beekeeper</span>
+            <p className="text-lg text-[#333333]/85">
+              Grounded in ecosystems, sharpened by inquiry, and energized by movement. I bridge labs, hives, and
+              training grounds to steward healthy futures.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <span className={badgeClasses}><Icons.Beaker className="h-4 w-4" /> Researcher</span>
+              <span className={badgeClasses}><Icons.Hexagon className="h-4 w-4" /> Apiarist</span>
               <span className={badgeClasses}><Icons.Dumbbell className="h-4 w-4" /> Athlete</span>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -537,6 +594,8 @@ function App() {
                 <p className="text-xs uppercase tracking-[0.2em] text-secondary">Science</p>
                 <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">1</p>
                 <p className="text-sm text-[#333333]/75">article</p>
+                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">12+</p>
+                <p className="text-sm text-[#333333]/75">peer-reviewed pieces</p>
               </div>
               <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
                 <p className="text-xs uppercase tracking-[0.2em] text-secondary">Apiary</p>
@@ -547,6 +606,8 @@ function App() {
                 <p className="text-xs uppercase tracking-[0.2em] text-secondary">Sport</p>
                 <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">45.07''</p>
                 <p className="text-sm text-[#333333]/75">10K PR</p>
+                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">2:59</p>
+                <p className="text-sm text-[#333333]/75">marathon PR</p>
               </div>
               <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
                 <p className="text-xs uppercase tracking-[0.2em] text-secondary">Community</p>
@@ -604,6 +665,43 @@ function App() {
                       <span className="text-secondary">{item.year}</span>
                     </div>
                     <p className="mt-1 text-sm text-[#333333]/80">{item.role}</p>
+          title="Extracellular Vesicles Researcher"
+          description="Neuroinflammation & Neuroprotection, non-coding RNAs"
+        >
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="space-y-3 rounded-2xl bg-white/85 p-5 shadow-sm shadow-[#2F4F4F]/10">
+              <div className="flex items-center gap-3 text-[#2F4F4F]">
+                <Icons.Brain className="h-5 w-5" />
+                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Research Focus</p>
+              </div>
+              <p className="text-sm leading-relaxed text-[#333333]/85">{scienceFocusCopy}</p>
+            </div>
+            <div className="space-y-3 rounded-2xl bg-white/85 p-5 shadow-sm shadow-[#2F4F4F]/10">
+              <div className="flex items-center gap-3 text-[#2F4F4F]">
+                <Icons.BookOpen className="h-5 w-5" />
+                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Research Outputs</p>
+              </div>
+              <ol className="space-y-3 text-sm text-[#333333]/85 list-decimal list-inside">
+                {researchOutputs.map((item) => (
+                  <li key={item.title} className="space-y-1">
+                    <p className="font-semibold text-[#2F4F4F]">{item.title}</p>
+                    {item.meta ? <p className="text-xs text-[#333333]/70">{item.meta}</p> : null}
+                    {item.authors ? <p className="text-xs text-[#333333]/90" dangerouslySetInnerHTML={{ __html: item.authors }} /> : null}
+                    {item.doi ? <p className="text-xs text-secondary">{item.doi}</p> : null}
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <div className="space-y-3 rounded-2xl bg-white/85 p-5 shadow-sm shadow-[#2F4F4F]/10">
+              <div className="flex items-center gap-3 text-[#2F4F4F]">
+                <Icons.Award className="h-5 w-5" />
+                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Conference Highlights</p>
+              </div>
+              <ul className="space-y-2 text-sm text-[#333333]/85">
+                {conferenceHighlights.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[#DAA520]" />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -615,6 +713,7 @@ function App() {
           id="beekeeping"
           eyebrow="Beekeeping"
           title="Beekeeper stewarding resilient colonies"
+          title="Apiarist stewarding resilient colonies"
           description="Balancing tradition with instrumentation to care for pollinators."
         >
           <div className="grid gap-6 lg:grid-cols-3">
@@ -685,12 +784,14 @@ function App() {
           eyebrow="About"
           title="About Hüseyin"
           description="Blending research rigor, ecological care, and athletic resilience."
+          description="Molecular biologist who applies research mindset to health, sport, and personal development."
         >
           <div className="grid gap-6 md:grid-cols-[220px,1fr]">
             <div className="flex h-full flex-col items-center justify-center rounded-2xl bg-white p-6 shadow-sm shadow-[#2F4F4F]/10">
               <div className="h-32 w-32 rounded-full bg-gradient-to-br from-[#DAA520] to-[#2F4F4F] opacity-90" />
               <p className="mt-4 text-lg font-semibold text-[#2F4F4F]">You</p>
               <p className="text-sm text-[#333333]/70">Researcher • Beekeeper • Athlete</p>
+              <p className="text-sm text-[#333333]/70">Researcher • Apiarist • Athlete</p>
             </div>
             <div className="space-y-4 text-[#333333]/85">
               <p>
@@ -721,6 +822,7 @@ function App() {
           eyebrow="Contact"
           title="Let’s collaborate"
           description="Share projects, research ideas, or training opportunities."
+          description="Contact for collaboration and evidence based exercise/nutrition "
         >
           <div className="grid gap-8 md:grid-cols-2">
             <form className="space-y-4">
@@ -761,6 +863,7 @@ function App() {
                 <div className="mt-3 space-y-2 text-sm text-[#333333]/80">
                   <p>huseyinkocakusak@gmail.com</p>
                   <p>Izmir, Türkiye • Available for collaboration</p>
+                  <p>Izmir, Türkiye</p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">
