@@ -1,4 +1,4 @@
-const { useEffect, useMemo, useRef, useState } = React;
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 const IconBase = ({ children, className }) => (
   <svg
@@ -163,25 +163,35 @@ const navLinks = [
   { id: "contact", label: "Contact" },
 ];
 
-const scienceAims = [
-  "Advance sustainable biomaterials research with measurable ecological impact.",
-  "Mentor interdisciplinary teams blending data, biology, and systems thinking.",
-  "Publish transparent, reproducible studies that invite collaboration.",
+const scienceFocusCopy =
+  "Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention.";
+
+const researchOutputs = [
+  {
+    title:
+      "Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis",
+    meta: "Article type: Review | Journal: Frontiers in Cellular Neuroscience - Cellular Neuropathology",
+    authors:
+      "**Huseyin KOCAKUSAK**, Aysu Başak KÖK, Bilgesu OZTURK, Bilge KARACICEK, Sermin GENC",
+    doi: "DOI: 10.3389/fncel.2025.1663788",
+  },
+  {
+    title: "Profiling tRNA-derived fragments in LPS-induced microglia and their influence on immune response",
+    meta: "Research Article",
+    authors:
+      "Burak Ibrahim ARIOZ, Leman BINOKAY, **Huseyin KOCAKUSAK**, Gökhan KARAKÜLAH, Sermin GENC",
+  },
+  {
+    title:
+      "TRNA-DERIVED FRAGMENTS IN MICROGLIA-DERIVED EXTRACELLULAR VESICLES: REGULATORS OF NEUROIMMUNE SIGNALING AND NEURONAL INTEGRITY",
+    meta: "Thesis",
+  },
 ];
 
-const scienceArticles = [
-  {
-    title: "Microbial Consortia for Coastal Resilience",
-    summary: "Exploring engineered symbioses that stabilize shoreline erosion while boosting biodiversity.",
-  },
-  {
-    title: "Carbon-Aware Labs",
-    summary: "Designing laboratory automation that schedules heavy instrumentation during renewable peaks.",
-  },
-  {
-    title: "Data Provenance in Field Studies",
-    summary: "Implementing tamper-evident data trails to keep citizen science contributions trustworthy.",
-  },
+const conferenceHighlights = [
+  "Delivered oral and poster presentations on microglial extracellular vesicle signaling at interdisciplinary neuroscience symposia.",
+  "Shared findings on tRNA-derived fragment dynamics during inflammation at university research colloquia.",
+  "Discussed integrated training and nutrition strategies for hybrid athletes at sport science seminars.",
 ];
 
 const beekeepingStatements = [
@@ -423,7 +433,7 @@ function App() {
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-secondary">Premium Nature Professional</p>
-              <p className="text-lg font-bold text-[#2F4F4F]">Hüseyin Kocakuşak</p>
+              <p className="text-[1.3rem] font-bold text-[#2F4F4F]">Hüseyin KOCAKUŞAK</p>
             </div>
           </div>
           <nav className="hidden items-center gap-2 md:flex">
@@ -431,14 +441,14 @@ function App() {
               <button
                 key={link.id}
                 onClick={() => handleNav(link.id)}
-                className="rounded-full px-3 py-2 text-sm font-semibold text-[#2F4F4F] transition hover:bg-[#F0F8FF]"
+                className="rounded-full px-3 py-2 text-sm font-semibold text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:text-[#0f2626] hover:bg-[#F0F8FF]"
               >
                 {link.label}
               </button>
             ))}
           </nav>
           <button
-            className="rounded-lg p-2 text-[#2F4F4F] hover:bg-[#F0F8FF] md:hidden"
+            className="rounded-lg p-2 text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:bg-[#F0F8FF] md:hidden"
             onClick={() => setMobileOpen((p) => !p)}
             aria-label="Toggle navigation"
           >
@@ -452,7 +462,7 @@ function App() {
                 <button
                   key={link.id}
                   onClick={() => handleNav(link.id)}
-                  className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] hover:bg-[#F0F8FF]"
+                  className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:bg-[#F0F8FF] hover:text-[#0f2626]"
                 >
                   {link.label}
                 </button>
@@ -467,17 +477,11 @@ function App() {
           <div className="space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary">Science • Apiary • Sport</p>
             <h1 className="text-4xl font-black text-[#2F4F4F] sm:text-5xl">
-              Extracellular Vesicles • Brain • Bee • Longevity
+              Molecular Biology - Athletic Performance - Scientific Advisor
             </h1>
             <p className="text-lg text-[#333333]/85">
-              Role of microglia derived extracellular vesicles in cell cell interactions across the brain. Science
-              based beekeeping, lifting and nutrition.
+              Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <span className={badgeClasses}><Icons.Beaker className="h-4 w-4" /> Researcher</span>
-              <span className={badgeClasses}><Icons.Hexagon className="h-4 w-4" /> Beekeeper</span>
-              Premium Nature Professional blending research, beekeeping, and athletic grit.
-            </h1>
             <p className="text-lg text-[#333333]/85">
               Grounded in ecosystems, sharpened by inquiry, and energized by movement. I bridge labs, hives, and
               training grounds to steward healthy futures.
@@ -552,19 +556,43 @@ function App() {
           title="Extracellular Vesicles Researcher"
           description="Neuroinflammation & Neuroprotection, non-coding RNAs"
         >
-          <div className="grid gap-8 lg:grid-cols-2">
-            <AimList aims={scienceAims} icon={<Icons.Brain className="h-5 w-5 text-[#2F4F4F]" />} />
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10">
-                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
-                  <Icons.Beaker className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Lab mindset</p>
-                  <p className="text-lg font-semibold text-[#2F4F4F]">Measured. Reproducible. Open.</p>
-                </div>
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="space-y-3 rounded-2xl bg-white/85 p-5 shadow-sm shadow-[#2F4F4F]/10">
+              <div className="flex items-center gap-3 text-[#2F4F4F]">
+                <Icons.Brain className="h-5 w-5" />
+                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Research Focus</p>
               </div>
-              <ArticleGrid articles={scienceArticles} />
+              <p className="text-sm leading-relaxed text-[#333333]/85">{scienceFocusCopy}</p>
+            </div>
+            <div className="space-y-3 rounded-2xl bg-white/85 p-5 shadow-sm shadow-[#2F4F4F]/10">
+              <div className="flex items-center gap-3 text-[#2F4F4F]">
+                <Icons.BookOpen className="h-5 w-5" />
+                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Research Outputs</p>
+              </div>
+              <ol className="space-y-3 text-sm text-[#333333]/85 list-decimal list-inside">
+                {researchOutputs.map((item) => (
+                  <li key={item.title} className="space-y-1">
+                    <p className="font-semibold text-[#2F4F4F]">{item.title}</p>
+                    {item.meta ? <p className="text-xs text-[#333333]/70">{item.meta}</p> : null}
+                    {item.authors ? <p className="text-xs text-[#333333]/90" dangerouslySetInnerHTML={{ __html: item.authors }} /> : null}
+                    {item.doi ? <p className="text-xs text-secondary">{item.doi}</p> : null}
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <div className="space-y-3 rounded-2xl bg-white/85 p-5 shadow-sm shadow-[#2F4F4F]/10">
+              <div className="flex items-center gap-3 text-[#2F4F4F]">
+                <Icons.Award className="h-5 w-5" />
+                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Conference Highlights</p>
+              </div>
+              <ul className="space-y-2 text-sm text-[#333333]/85">
+                {conferenceHighlights.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-[#DAA520]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </SectionShell>
@@ -572,7 +600,6 @@ function App() {
         <SectionShell
           id="beekeeping"
           eyebrow="Beekeeping"
-          title="Beekeeper stewarding resilient colonies"
           title="Apiarist stewarding resilient colonies"
           description="Balancing tradition with instrumentation to care for pollinators."
         >
@@ -742,3 +769,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
