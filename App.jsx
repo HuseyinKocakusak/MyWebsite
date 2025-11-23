@@ -266,6 +266,16 @@ const socialLinks = [
 const filterOptions = ["All", "Daily", "Beekeeper", "Sport", "Scientific", "Aesthetic"];
 
 const generateId = () => {
+  if (typeof crypto !== "undefined") {
+    if (typeof crypto.randomUUID === "function") {
+      return crypto.randomUUID();
+    }
+
+    if (typeof crypto.getRandomValues === "function") {
+      const buffer = new Uint32Array(4);
+      crypto.getRandomValues(buffer);
+      return Array.from(buffer, (value) => value.toString(16).padStart(8, "0")).join("-");
+    }
   if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
     return crypto.randomUUID();
   }
