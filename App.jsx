@@ -276,6 +276,8 @@ const generateId = () => {
       crypto.getRandomValues(buffer);
       return Array.from(buffer, (value) => value.toString(16).padStart(8, "0")).join("-");
     }
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
   }
 
   return `id-${Date.now()}-${Math.random().toString(16).slice(2)}`;
