@@ -265,6 +265,22 @@ const socialLinks = [
 
 const filterOptions = ["All", "Daily", "Beekeeper", "Sport", "Scientific", "Aesthetic"];
 
+const generateId = () => {
+  if (typeof crypto !== "undefined") {
+    if (typeof crypto.randomUUID === "function") {
+      return crypto.randomUUID();
+    }
+
+    if (typeof crypto.getRandomValues === "function") {
+      const buffer = new Uint32Array(4);
+      crypto.getRandomValues(buffer);
+      return Array.from(buffer, (value) => value.toString(16).padStart(8, "0")).join("-");
+    }
+  }
+
+  return `id-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+};
+
 const badgeClasses =
   "inline-flex items-center gap-2 rounded-full bg-[#F0F8FF] text-[#2F4F4F] px-3 py-1 text-sm font-semibold";
 
@@ -340,7 +356,7 @@ function Gallery({ activeFilter, onFilterChange, items, onUpload, galleryRef }) 
           const reader = new FileReader();
           reader.onload = (e) =>
             resolve({
-              id: crypto.randomUUID(),
+              id: generateId(),
               title: file.name,
               category: "Daily",
               description: "Uploaded from your device.",
