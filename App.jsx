@@ -168,8 +168,7 @@ const scienceFocusCopy =
 
 const researchOutputs = [
   {
-    title:
-      "Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis",
+    title: "Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis",
     meta: "Article type: Review | Journal: Frontiers in Cellular Neuroscience - Cellular Neuropathology",
     authors: "**Huseyin KOCAKUSAK**, Aysu Başak KÖK, Bilgesu OZTURK, Bilge KARACICEK, Sermin GENC",
     doi: "DOI: 10.3389/fncel.2025.1663788",
@@ -249,62 +248,6 @@ const galleryItemsSeed = [
   { id: 6, title: "Lab Bench", category: "Scientific", description: "Spectrometry runs organized for carbon-aware scheduling.", icon: <Icons.FlaskConical className="w-6 h-6 text-primary" /> },
   { id: 7, title: "Post-Game Reset", category: "Sport", description: "Recovery protocols after a night match.", icon: <Icons.Award className="w-6 h-6 text-secondary" /> },
   { id: 8, title: "Apiary Sunset", category: "Beekeeper", description: "Golden hour silhouettes across the hives.", icon: <Icons.Images className="w-6 h-6 text-secondary" /> },
-  {
-    id: 1,
-    title: "Field Sampling",
-    category: "Scientific",
-    description: "Collecting soil microbe data before hive placement.",
-    icon: <Icons.Beaker className="w-6 h-6 text-primary" />,
-  },
-  {
-    id: 2,
-    title: "Sunrise Ride",
-    category: "Sport",
-    description: "Gravel intervals along the ridge at dawn.",
-    icon: <Icons.Dumbbell className="w-6 h-6 text-primary" />,
-  },
-  {
-    id: 3,
-    title: "Hive Inspection",
-    category: "Beekeeper",
-    description: "Checking brood frames after spring bloom.",
-    icon: <Icons.Hexagon className="w-6 h-6 text-secondary" />,
-  },
-  {
-    id: 4,
-    title: "Daily Notes",
-    category: "Daily",
-    description: "Notebook sketches of experimental setups.",
-    icon: <Icons.BookOpen className="w-6 h-6 text-primary" />,
-  },
-  {
-    id: 5,
-    title: "Meadow Still",
-    category: "Aesthetic",
-    description: "The apiary framed by wildflowers and soft light.",
-    icon: <Icons.Leaf className="w-6 h-6 text-secondary" />,
-  },
-  {
-    id: 6,
-    title: "Lab Bench",
-    category: "Scientific",
-    description: "Spectrometry runs organized for carbon-aware scheduling.",
-    icon: <Icons.FlaskConical className="w-6 h-6 text-primary" />,
-  },
-  {
-    id: 7,
-    title: "Post-Game Reset",
-    category: "Sport",
-    description: "Recovery protocols after a night match.",
-    icon: <Icons.Award className="w-6 h-6 text-secondary" />,
-  },
-  {
-    id: 8,
-    title: "Apiary Sunset",
-    category: "Beekeeper",
-    description: "Golden hour silhouettes across the hives.",
-    icon: <Icons.Images className="w-6 h-6 text-secondary" />,
-  },
 ];
 
 const socialLinks = [
@@ -449,7 +392,11 @@ function Gallery({ activeFilter, onFilterChange, items, onUpload, galleryRef }) 
             className="group relative overflow-hidden rounded-2xl border border-[#2F4F4F]/10 bg-white shadow-sm shadow-[#2F4F4F]/10"
           >
             {item.image ? (
-              <img src={item.image} alt={item.title} className="h-48 w-full object-cover transition duration-300 group-hover:scale-[1.02]" />
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-48 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+              />
             ) : (
               <div className="flex h-48 items-center justify-center bg-[#F0F8FF] text-4xl">{item.icon}</div>
             )}
@@ -491,29 +438,6 @@ function App() {
     <div className="min-h-screen bg-background">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#2F4F4F]/10 bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#2F4F4F] text-white shadow-sm shadow-[#2F4F4F]/30">
-                <Icons.Hexagon className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-secondary">Premium Nature Professional</p>
-                <p className="text-xl font-bold text-[#2F4F4F]">Hüseyin KOCAKUŞAK</p>
-              </div>
-            </div>
-            <nav className="hidden items-center gap-2 md:flex">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => handleNav(link.id)}
-                  className="rounded-full px-3 py-2 text-sm font-semibold text-[#2F4F4F] transition-transform transition-colors duration-200 hover:scale-110 hover:text-[#1f2f2f] hover:bg-[#F0F8FF]"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </nav>
-          <button
-            className="rounded-lg p-2 text-[#2F4F4F] hover:bg-[#F0F8FF] md:hidden"
-            onClick={() => setMobileOpen((p) => !p)}
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#2F4F4F] text-white shadow-sm shadow-[#2F4F4F]/30">
               <Icons.Hexagon className="h-6 w-6" />
@@ -528,215 +452,101 @@ function App() {
               <button
                 key={link.id}
                 onClick={() => handleNav(link.id)}
-                className="rounded-full px-3 py-2 text-sm font-semibold text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:bg-[#F0F8FF] hover:text-[#1f2f2f]"
+                className="rounded-full px-3 py-2 text-sm font-semibold text-[#2F4F4F] transition duration-200 hover:scale-110 hover:bg-[#F0F8FF] hover:text-[#1f2f2f]"
               >
                 {link.label}
               </button>
             ))}
           </nav>
           <button
-            className="rounded-lg p-2 text-[#2F4F4F] transition-transform duration-200 hover:scale-110 hover:bg-[#F0F8FF] md:hidden"
-            onClick={() => setMobileOpen((prev) => !prev)}
+            className="rounded-lg p-2 text-[#2F4F4F] hover:bg-[#F0F8FF] md:hidden"
+            onClick={() => setMobileOpen((p) => !p)}
             aria-label="Toggle navigation"
           >
             {mobileOpen ? <Icons.X className="h-6 w-6" /> : <Icons.Menu className="h-6 w-6" />}
           </button>
         </div>
         {mobileOpen ? (
-          <div className="border-t border-[#2F4F4F]/10 bg-background md:hidden">
-            <div className="space-y-1 px-4 py-3">
-        {mobileOpen && (
-          <div className="border-t border-[#2F4F4F]/10 bg-background/95 shadow-lg shadow-[#2F4F4F]/10 md:hidden">
-            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
+          <div className="border-t border-[#2F4F4F]/10 bg-background/95 shadow-sm shadow-[#2F4F4F]/10 md:hidden">
+            <div className="mx-auto flex max-w-6xl flex-col px-4 py-2">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => handleNav(link.id)}
-                  className="block w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] transition-transform transition-colors duration-200 hover:scale-110 hover:text-[#1f2f2f] hover:bg-[#F0F8FF]"
-                  className="rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] hover:bg-[#F0F8FF]"
+                  className="w-full rounded-lg px-3 py-2 text-left text-sm font-semibold text-[#2F4F4F] hover:bg-[#F0F8FF]"
                 >
                   {link.label}
                 </button>
               ))}
             </div>
           </div>
-        )}
+        ) : null}
       </header>
 
-      <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 pb-16 pt-28 md:px-6">
-        <SectionShell
-          id="home"
-          eyebrow="Welcome"
-          title="Scientist • Beekeeper • Athlete"
-          description="Exploring microglial biology while tending hives and pursuing data-informed sport."
-        >
-          <div className="grid gap-6 lg:grid-cols-[2fr,1fr]">
-            <div className="space-y-4 text-[#333333]/85">
-              <p>
-                I balance laboratory rigor, ecological stewardship, and athletic discipline. My work focuses on
-                extracellular vesicle biology and how molecular cargo shapes neural integrity.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className={badgeClasses}><Icons.Brain className="h-4 w-4" /> Neuroscience</span>
-                <span className={badgeClasses}><Icons.Leaf className="h-4 w-4" /> Beekeeping</span>
-                <span className={badgeClasses}><Icons.Dumbbell className="h-4 w-4" /> Sport Science</span>
-              </div>
-      <main className="mx-auto max-w-6xl space-y-16 px-4 pb-20 pt-28 md:px-6 md:pt-32">
-        <section id="home" className="grid gap-8 rounded-3xl bg-white p-8 shadow-lg shadow-[#2F4F4F]/10 md:grid-cols-2">
-          <div className="space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary">Science • Apiary • Sport</p>
-            <h1 className="text-4xl font-black text-[#2F4F4F] sm:text-5xl">
-              Molecular Biology - Athletic Performance - Scientific Advisor
+      <main className="mx-auto max-w-6xl space-y-16 px-4 pb-16 pt-28 md:px-6">
+        <section id="home" className="grid gap-8 rounded-2xl bg-white/70 p-6 shadow-sm shadow-[#2F4F4F]/10 md:grid-cols-[1.1fr,0.9fr]">
+          <div className="space-y-4">
+            <span className={badgeClasses}>
+              <Icons.Sparkles className="h-4 w-4" /> Researcher • Beekeeper • Athlete
+            </span>
+            <h1 className="text-4xl font-bold leading-tight text-[#2F4F4F]">
+              Crafting healthier systems across the brain, the hive, and the field.
             </h1>
-            <p className="text-lg text-[#333333]/85">
-              Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <span className={badgeClasses}><Icons.Beaker className="h-4 w-4" /> Researcher</span>
-              <span className={badgeClasses}><Icons.Hexagon className="h-4 w-4" /> Beekeeper</span>
-              <span className={badgeClasses}><Icons.Dumbbell className="h-4 w-4" /> Athlete</span>
-            </div>
+            <p className="text-base text-[#333333]/85">{scienceFocusCopy}</p>
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => handleNav("contact")}
-                className="inline-flex items-center gap-2 rounded-full bg-[#2F4F4F] px-5 py-3 text-sm font-semibold text-white shadow-md shadow-[#2F4F4F]/30 transition hover:bg-[#263e3e]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#2F4F4F] px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-[#2F4F4F]/30 transition hover:bg-[#263e3e]"
               >
-                <Icons.Mail className="h-4 w-4" /> Contact
+                Let&apos;s talk
               </button>
               <button
-                onClick={() => handleNav("gallery")}
-                className="inline-flex items-center gap-2 rounded-full border border-[#2F4F4F]/20 bg-[#F0F8FF] px-5 py-3 text-sm font-semibold text-[#2F4F4F] transition hover:border-[#2F4F4F]/40"
+                onClick={() => handleNav("science")}
+                className="inline-flex items-center gap-2 rounded-full border border-[#2F4F4F]/30 bg-[#F0F8FF] px-5 py-3 text-sm font-semibold text-[#2F4F4F] transition hover:border-[#2F4F4F]/50"
               >
-                <Icons.GalleryVertical className="h-4 w-4" /> View gallery
+                View research
               </button>
             </div>
-            <div className="rounded-2xl bg-white/85 p-5 text-[#2F4F4F] shadow-sm shadow-[#2F4F4F]/10">
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl bg-[#2F4F4F] p-5 text-white shadow-lg shadow-[#2F4F4F]/30">
               <div className="flex items-center gap-3">
-                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
-                  <Icons.Sparkles className="h-5 w-5" />
+                <div className="rounded-xl bg-white/15 p-3">
+                  <Icons.Brain className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Current Focus</p>
-                  <p className="text-lg font-semibold">Microglial EV cargo & neural health</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#F0F8FF]">Current Focus</p>
+                  <p className="text-lg font-semibold">Microglial EV cargo</p>
                 </div>
               </div>
-              <p className="mt-3 text-sm text-[#333333]/80">{scienceFocusCopy}</p>
+              <p className="mt-3 text-sm text-[#F0F8FF]/90">Mapping how noncoding RNAs shape neuronal integrity.</p>
             </div>
-          </div>
-            </div>
-          </div>
-              <p className="mt-3 text-sm text-[#333333]/80">
-                Testing sustainable substrates that benefit pollinator habitats while enabling sensor-rich research.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
-                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Science</p>
-                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">1</p>
-                <p className="text-sm text-[#333333]/75">article</p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 rounded-2xl bg-white/85 p-4 shadow-sm shadow-[#2F4F4F]/10">
+                <div className="rounded-xl bg-[#F0F8FF] p-3 text-[#2F4F4F]">
+                  <Icons.Hexagon className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Apiary Log</p>
+                  <p className="text-sm text-[#333333]/85">Seasonal splits, health metrics, regenerative design.</p>
+                </div>
               </div>
-              <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
-                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Apiary</p>
-                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">18</p>
-                <p className="text-sm text-[#333333]/75">healthy hives</p>
-              </div>
-              <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
-                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Sport</p>
-                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">45.07''</p>
-                <p className="text-sm text-[#333333]/75">10K PR</p>
-              </div>
-              <div className="rounded-2xl border border-[#2F4F4F]/10 bg-white p-4 shadow-sm shadow-[#2F4F4F]/10">
-                <p className="text-xs uppercase tracking-[0.2em] text-secondary">Community</p>
-                <p className="mt-1 text-2xl font-bold text-[#2F4F4F]">30+</p>
-                <p className="text-sm text-[#333333]/75">workshops hosted</p>
+              <div className="flex items-center gap-3 rounded-2xl bg-white/85 p-4 shadow-sm shadow-[#2F4F4F]/10">
+                <div className="rounded-xl bg-[#F0F8FF] p-3 text-[#2F4F4F]">
+                  <Icons.Dumbbell className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Athlete Notes</p>
+                  <p className="text-sm text-[#333333]/85">Data-driven training, recovery, and team play.</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        )}
-      </header>
-
-      <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 pb-16 pt-28 md:px-6">
-        <SectionShell
-          id="home"
-          eyebrow="Welcome"
-          title="Scientist • Beekeeper • Athlete"
-          description="Exploring microglial biology while tending hives and pursuing data-informed sport."
-        >
-          <div className="grid gap-6 lg:grid-cols-[2fr,1fr]">
-            <div className="space-y-4 text-[#333333]/85">
-              <p>
-                I balance laboratory rigor, ecological stewardship, and athletic discipline. My work focuses on
-                extracellular vesicle biology and how molecular cargo shapes neural integrity.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className={badgeClasses}><Icons.Brain className="h-4 w-4" /> Neuroscience</span>
-                <span className={badgeClasses}><Icons.Leaf className="h-4 w-4" /> Beekeeping</span>
-                <span className={badgeClasses}><Icons.Dumbbell className="h-4 w-4" /> Sport Science</span>
-              </div>
-            </div>
-            <div className="rounded-2xl bg-white/85 p-5 text-[#2F4F4F] shadow-sm shadow-[#2F4F4F]/10">
-              <div className="flex items-center gap-3">
-                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
-                  <Icons.Sparkles className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Current Focus</p>
-                  <p className="text-lg font-semibold">Microglial EV cargo & neural health</p>
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-[#333333]/80">{scienceFocusCopy}</p>
-            </div>
-          </div>
-        </SectionShell>
 
         <SectionShell
           id="science"
           eyebrow="Science"
-          title="Researching microglial communication"
-          description="Extracellular vesicles, noncoding RNAs, and neuroimmune signaling."
-        >
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="space-y-4">
-              <div className="flex items-start gap-3 rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10">
-                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
-                  <Icons.Brain className="h-5 w-5" />
-                </div>
-                <div className="space-y-1">
-                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Research Outputs</p>
-                  <div className="space-y-3">
-                    {researchOutputs.map((item) => (
-                      <div key={item.title} className="rounded-lg bg-white/60 p-3 shadow-inner shadow-[#2F4F4F]/5">
-                        <p className="text-sm font-semibold text-[#2F4F4F]">{item.title}</p>
-                        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-secondary">{item.type}</p>
-                        <div className="text-sm text-[#333333]/75">{item.detail}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10">
-                <div className="rounded-xl bg-[#2F4F4F] p-3 text-white">
-                  <Icons.Telescope className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-secondary">Conferences & Presentations</p>
-                  <p className="text-lg font-semibold text-[#2F4F4F]">Selected highlights</p>
-                </div>
-              </div>
-              <ul className="space-y-3">
-                {conferenceHighlights.map((item) => (
-                  <li
-                    key={item.name}
-                    className="rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10 transition duration-300 hover:-translate-y-1 hover:shadow-md"
-                  >
-                    <div className="flex items-center justify-between text-sm font-semibold text-[#2F4F4F]">
-                      <span>{item.name}</span>
-                      <span className="text-secondary">{item.year}</span>
-                    </div>
-                    <p className="mt-1 text-sm text-[#333333]/80">{item.role}</p>
           title="Researching microglial communication"
           description="Extracellular vesicles, noncoding RNAs, and neuroimmune signaling."
         >
@@ -856,17 +666,13 @@ function App() {
           <div className="grid gap-6 md:grid-cols-[220px,1fr]">
             <div className="flex h-full flex-col items-center justify-center rounded-2xl bg-white p-6 shadow-sm shadow-[#2F4F4F]/10">
               <div className="h-32 w-32 rounded-full bg-gradient-to-br from-[#DAA520] to-[#2F4F4F] opacity-90" />
-              <p className="mt-4 text-lg font-semibold text-[#2F4F4F]">You</p>
               <p className="mt-4 text-lg font-semibold text-[#2F4F4F]">Hüseyin KOCAKUŞAK</p>
               <p className="text-sm text-[#333333]/70">Researcher • Beekeeper • Athlete</p>
             </div>
             <div className="space-y-4 text-[#333333]/85">
               <p>
-                I navigate the intersections of science, ecology, and sport to create measurable impact. I love
-                translating field observations into repeatable lab insights, while keeping a beekeeper’s patience and an
-                athlete’s discipline.
-                I navigate the intersections of science, ecology, and sport to create measurable impact. I love translating
-                field observations into repeatable lab insights while keeping a beekeeper’s patience and an athlete’s discipline.
+                I navigate the intersections of science, ecology, and sport to create measurable impact. I love translating field
+                observations into repeatable lab insights while keeping a beekeeper’s patience and an athlete’s discipline.
               </p>
               <div className="grid gap-3 md:grid-cols-2">
                 <div className="rounded-xl bg-white/80 p-4 shadow-sm shadow-[#2F4F4F]/10">
