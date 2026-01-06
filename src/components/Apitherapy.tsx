@@ -2,9 +2,9 @@ import { Users } from 'lucide-react';
 
 export default function Apitherapy() {
   const team = [
-    { name: 'Osman Falakalı', role: 'Co-founder', image: '👨‍💼' },
-    { name: 'Mehmet Kocakuşak', role: 'Co-founder', image: '👨‍💼' },
-    { name: 'Hüseyin Kocakuşak', role: 'Scientific Advisor, Digital Marketing Manager', image: '👨‍🔬' },
+    { name: 'Osman Falakalı', role: 'Co-founder', image: '👨‍💼', emoji: true },
+    { name: 'Mehmet Kocakuşak', role: 'Co-founder', image: '👨‍💼', emoji: true },
+    { name: 'Hüseyin Kocakuşak', role: 'Scientific Advisor, Digital Marketing Manager', image: '/images/team/huseyin-kocakusak.jpg', emoji: false },
   ];
 
   const visionText = "Vizyonumuz, arıların ve insanların uzun vadeli sağlığını gözetiyoruz ki kaliteli bal üretelim ve sürdürülebilir bir şekilde müşterilerimize muazzam bir bal yedirelim. Arıcılığı bilimsel bilgi, analiz ve izlenebilirlik temeline oturtarak arılarımızın uzun vadeli sağlığını korumayı; bunun doğal sonucu olarak da kalıntı yükü düşük, yüksek nitelikli balları sürdürülebilir bir şekilde üreterek insanlara güvenle sunmayı esas alan bir model haline getirmektir. Geleneksel arıcılık birikimini güncel literatür, saha verileri ve kalite analizleriyle birleştirerek, süreçleri şeffaf ve denetlenebilir bir yapıya kavuşturmayı amaçlıyoruz. Yıl içinde farklı flora ve iklim kuşaklarına göç ederek; Yamanlar Dağı'nda bahar aylarında zengin çiçek kombinasyonlarından elde ettiğimiz polen ve çiçek balıyla, Menderes'te özellikle püren ve hayıt ağırlıklı bitki örtüsünden kaynaklanan aromatik ballarla ve Balıkesir/Kütahya gibi daha iç bölgelerde ürettiğimiz karaçaltı balıyla bu yaklaşımı somutlaştırıyoruz. Uzun vadede, bu bölgelerde yürüttüğümüz gezgin arıcılık faaliyetleriyle hem biyolojik çeşitliliğin korunmasına katkı sağlayan hem de güvenilir, bilim temelli üretim modeliyle referans gösterilmeyi hedefliyoruz.";
@@ -31,8 +31,16 @@ export default function Apitherapy() {
                 key={member.name}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="h-48 bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center text-6xl">
-                  {member.image}
+                <div className="h-48 bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center text-6xl overflow-hidden">
+                  {member.emoji ? (
+                    <span className="text-6xl">{member.image}</span>
+                  ) : (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
                 <div className="p-6">
                   <h4 className="text-xl font-bold text-slate-900 mb-2">
