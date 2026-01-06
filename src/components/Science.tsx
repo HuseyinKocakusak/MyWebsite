@@ -27,7 +27,7 @@ export default function Science() {
       title: 'Publications',
       icon: Award,
       content: [
-        { title: 'KOCAKUSAK, H., KÖK, A. B., OZTURK, B., KARACICEK, B., GENC, S. (2025)', venue: 'Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis. Frontiers in Cellular Neuroscience' },
+        { title: 'KOCAKUSAK, H., KÖK, A. B., OZTURK, B., KARACICEK, B., GENC, S. (2025)', venue: 'Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis. Frontiers in Cellular Neuroscience', url: 'https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2025.1663788/full' },
       ],
       type: 'publications',
     },
@@ -91,13 +91,25 @@ export default function Science() {
                   {section.type === 'publications' && (
                     <div className="space-y-6">
                       {(section.content as any[]).map((item, index) => (
-                        <div key={index} className="bg-gradient-to-r from-blue-50 to-transparent p-6 rounded-lg border border-blue-200">
-                          <h4 className="text-lg font-semibold text-slate-900 mb-2">
-                            {item.title}
-                          </h4>
-                          <p className="text-slate-600 italic">
-                            {item.venue}
-                          </p>
+                        <div key={index} className="bg-gradient-to-r from-blue-50 to-transparent p-6 rounded-lg border border-blue-200 flex items-start justify-between gap-4">
+                          <div className="flex-1">
+                            <h4 className="text-lg font-semibold text-slate-900 mb-2">
+                              {item.title}
+                            </h4>
+                            <p className="text-slate-600 italic">
+                              {item.venue}
+                            </p>
+                          </div>
+                          {item.url && (
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 hover:underline font-medium text-sm whitespace-nowrap"
+                            >
+                              Read
+                            </a>
+                          )}
                         </div>
                       ))}
                     </div>
