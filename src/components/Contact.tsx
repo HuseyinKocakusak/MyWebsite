@@ -1,7 +1,12 @@
 import { Mail, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations';
 
 export default function Contact() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,7 +15,16 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    const mailtoLink = `mailto:huseyinkocakusak@gmail.com?subject=${subject}&body=${body}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Clear form
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -18,17 +32,16 @@ export default function Contact() {
     <section id="contact" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
-          Get In Touch
+          {t.contact.title}
         </h2>
         <div className="w-20 h-1 bg-slate-900 mx-auto mb-8"></div>
         <p className="text-center text-slate-600 mb-16 max-w-2xl mx-auto text-lg">
-          Have a project in mind or just want to chat? I'd love to hear from you.
-          Drop me a message and I'll get back to you as soon as possible.
+          {t.contact.subtitle}
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-slate-900">Contact Information</h3>
+            <h3 className="text-2xl font-bold mb-6 text-slate-900">{t.contact.contactInfo}</h3>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -36,7 +49,7 @@ export default function Contact() {
                   <Mail size={24} className="text-slate-900" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-1">Email</h4>
+                  <h4 className="font-semibold text-slate-900 mb-1">{t.contact.email}</h4>
                   <a
                     href="mailto:huseyinkocakusak@gmail.com"
                     className="text-slate-600 hover:text-slate-900 transition-colors"
@@ -51,16 +64,15 @@ export default function Contact() {
                   <MapPin size={24} className="text-slate-900" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-1">Location</h4>
-                  <p className="text-slate-600">🇹🇷 Izmir, Türkiye</p>
+                  <h4 className="font-semibold text-slate-900 mb-1">{t.contact.location}</h4>
+                  <p className="text-slate-600">{t.contact.locationValue}</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 p-6 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl">
               <p className="text-slate-700 leading-relaxed">
-                I'm always open to discussing new projects, creative ideas, or opportunities
-                to be part of your vision. Let's build something amazing together!
+                {t.contact.description}
               </p>
             </div>
           </div>
@@ -68,7 +80,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-slate-900 mb-2">
-                Your Name
+                {t.contact.yourName}
               </label>
               <input
                 type="text"
@@ -82,7 +94,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
-                Your Email
+                {t.contact.yourEmail}
               </label>
               <input
                 type="email"
@@ -96,7 +108,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="message" className="block text-sm font-semibold text-slate-900 mb-2">
-                Your Message
+                {t.contact.yourMessage}
               </label>
               <textarea
                 id="message"
@@ -112,7 +124,7 @@ export default function Contact() {
               type="submit"
               className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:scale-105 font-medium shadow-lg shadow-slate-900/20 flex items-center justify-center gap-2"
             >
-              <span>Send Message</span>
+              <span>{t.contact.sendMessage}</span>
               <Send size={20} />
             </button>
           </form>
