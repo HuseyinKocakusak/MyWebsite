@@ -1,30 +1,29 @@
 import { BookOpen, FileText, Award, Users } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations';
 
 export default function Science() {
-  const academiaText = "Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention.";
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const sections = [
     {
       id: 'academia',
-      title: 'Academia',
+      title: t.science.academia,
       icon: BookOpen,
-      content: academiaText,
+      content: t.science.academiaText,
       type: 'text',
     },
     {
       id: 'literature',
-      title: 'Literature',
+      title: t.science.literature,
       icon: FileText,
-      content: [
-        { title: 'Extracellular Vesicles in Neuroinflammation', summary: 'Comprehensive review of EV roles in microglia-neuron communication and neuroinflammatory processes.' },
-        { title: 'Noncoding RNAs and Cellular Metabolism', summary: 'Analysis of miRNA and lncRNA regulation in metabolic pathways and energy homeostasis.' },
-        { title: 'Athletic Performance and Molecular Adaptation', summary: 'Exploration of molecular markers in exercise-induced adaptations and muscle development.' },
-      ],
+      content: t.science.literatureItems,
       type: 'list',
     },
     {
       id: 'publications',
-      title: 'Publications',
+      title: t.science.publications,
       icon: Award,
       content: [
         { title: 'KOCAKUSAK, H., KÖK, A. B., OZTURK, B., KARACICEK, B., GENC, S. (2025)', venue: 'Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis. Frontiers in Cellular Neuroscience', url: 'https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2025.1663788/full' },
@@ -33,7 +32,7 @@ export default function Science() {
     },
     {
       id: 'conferences',
-      title: 'Conferences',
+      title: t.science.conferences,
       icon: Users,
       content: [
         { title: '22nd Turkish Neuroscience Congress', year: '2024', location: 'Istanbul, Turkey', url: 'https://www.bad.org.tr/guncel-usk/' },
@@ -50,7 +49,7 @@ export default function Science() {
     <section id="science" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
-          Science
+          {t.science.title}
         </h2>
         <div className="w-20 h-1 bg-slate-900 mx-auto mb-16"></div>
 
@@ -107,7 +106,7 @@ export default function Science() {
                               rel="noopener noreferrer"
                               className="text-blue-600 hover:text-blue-800 hover:underline font-medium text-sm whitespace-nowrap"
                             >
-                              Read
+                              {t.science.read}
                             </a>
                           )}
                         </div>
@@ -146,7 +145,7 @@ export default function Science() {
                               rel="noopener noreferrer"
                               className="text-blue-600 hover:text-blue-800 hover:underline font-medium text-sm ml-4 whitespace-nowrap"
                             >
-                              Visit
+                              {t.science.visit}
                             </a>
                           )}
                         </div>
