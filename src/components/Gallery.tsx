@@ -1,20 +1,21 @@
-import { useLanguage } from '../contexts/LanguageContext';
-import { translations } from '../translations';
-
 export default function Gallery() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const galleries = [
+    { title: 'Research Lab', description: 'Microbiology and cellular research environment' },
+    { title: 'Athletic Training', description: 'Performance optimization and biomechanics' },
+    { title: 'Apitherapy', description: 'Therapeutic applications of bee products and venom' },
+    { title: 'Conferences', description: 'Speaking engagements and presentations' },
+  ];
 
   return (
     <section id="gallery" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
-          {t.gallery.title}
+          Gallery
         </h2>
         <div className="w-20 h-1 bg-slate-900 mx-auto mb-16"></div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.gallery.items.map((item) => (
+          {galleries.map((item) => (
             <div
               key={item.title}
               className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl overflow-hidden hover:shadow-xl transition-all hover:scale-105 h-64 flex flex-col justify-end"
