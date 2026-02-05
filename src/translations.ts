@@ -48,6 +48,9 @@ export const translations = {
     },
     gallery: {
       title: 'Gallery',
+      backToGallery: 'Back to Gallery',
+      photoCount: 'photos',
+      noPhotosYet: 'Photos coming soon...',
       items: [
         { title: 'Research Lab', description: 'Microbiology and cellular research environment' },
         { title: 'Athletic Training', description: 'Performance optimization and biomechanics' },
@@ -130,6 +133,9 @@ export const translations = {
     },
     gallery: {
       title: 'Galeri',
+      backToGallery: 'Galeriye Dön',
+      photoCount: 'fotoğraf',
+      noPhotosYet: 'Fotoğraflar yakında...',
       items: [
         { title: 'Araştırma Laboratuvarı', description: 'Mikrobiyoloji ve hücresel araştırma ortamı' },
         { title: 'Atletik Antrenman', description: 'Performans optimizasyonu ve biyomekanik' },

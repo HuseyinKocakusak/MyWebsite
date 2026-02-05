@@ -15,7 +15,7 @@ export default function Hero() {
     <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8 animate-fade-in">
-          <div className="border-4 border-red-600 inline-block p-6 mb-6">
+          <div className="inline-block p-6 mb-6">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent leading-tight">
               <div>{t.hero.title1}</div>
               <div>{t.hero.title2}</div>
