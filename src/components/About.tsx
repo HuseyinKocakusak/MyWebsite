@@ -1,24 +1,29 @@
 import { BookOpen, CheckCircle, BarChart3 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations';
 
 export default function About() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
-          About Me
+          {t.about.title}
         </h2>
         <div className="w-20 h-1 bg-slate-900 mx-auto mb-16"></div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              I am a science-driven molecular biologist who focuses on understanding how cells communicate through extracellular vesicles and small noncoding RNAs. I approach complex biological questions with analytical precision, aiming to generate clear, reproducible, and meaningful results.
+              {t.about.paragraph1}
             </p>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              Outside the lab, I apply the same discipline to training, combining strength work, endurance running, and evidence-based nutrition to continuously improve physical performance. I also practice beekeeping with a scientific mindset, emphasizing natural production, sustainability, and traceable quality.
+              {t.about.paragraph2}
             </p>
             <p className="text-lg text-slate-600 leading-relaxed">
-              I value rigorous thinking, consistent work, and projects that create measurable impact in research, sport, and the products I develop.
+              {t.about.paragraph3}
             </p>
           </div>
 
@@ -29,9 +34,9 @@ export default function About() {
                   <BookOpen size={28} className="text-slate-900" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-slate-900">Science Based</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-slate-900">{t.about.scienceBased}</h3>
                   <p className="text-slate-600">
-                    Grounding all decisions and strategies in peer-reviewed research and empirical evidence.
+                    {t.about.scienceBasedDesc}
                   </p>
                 </div>
               </div>
@@ -43,9 +48,9 @@ export default function About() {
                   <CheckCircle size={28} className="text-slate-900" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-slate-900">Disciplined</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-slate-900">{t.about.disciplined}</h3>
                   <p className="text-slate-600">
-                    Committed to consistent execution, rigorous methodology, and sustainable practices.
+                    {t.about.disciplinedDesc}
                   </p>
                 </div>
               </div>
@@ -57,9 +62,9 @@ export default function About() {
                   <BarChart3 size={28} className="text-slate-900" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-slate-900">Analytic</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-slate-900">{t.about.analytic}</h3>
                   <p className="text-slate-600">
-                    Using data-driven analysis and critical thinking to generate measurable, meaningful results.
+                    {t.about.analyticDesc}
                   </p>
                 </div>
               </div>
