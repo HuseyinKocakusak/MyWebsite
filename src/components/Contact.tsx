@@ -1,7 +1,13 @@
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Get your free access key from https://web3forms.com
+// Enter your email (huseyinkocakusak@gmail.com), check your inbox, paste below:
+const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function Contact() {
   const { language } = useLanguage();
@@ -12,20 +18,41 @@ export default function Contact() {
     email: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus('sending');
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Message from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    const mailtoLink = `mailto:huseyinkocakusak@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New message from ${formData.name}`,
+          from_name: formData.name,
+          reply_to: formData.email,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
 
-    // Open email client
-    window.location.href = mailtoLink;
+      const data = await response.json();
 
-    // Clear form
-    setFormData({ name: '', email: '', message: '' });
+      if (data.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   return (
@@ -89,6 +116,7 @@ export default function Contact() {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-slate-900 transition-colors"
                 required
+                disabled={status === 'sending'}
               />
             </div>
 
@@ -103,6 +131,7 @@ export default function Contact() {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-slate-900 transition-colors"
                 required
+                disabled={status === 'sending'}
               />
             </div>
 
@@ -117,16 +146,38 @@ export default function Contact() {
                 rows={6}
                 className="w-full px-4 py-3 border-2 border-slate-200 rounded-lg focus:outline-none focus:border-slate-900 transition-colors resize-none"
                 required
+                disabled={status === 'sending'}
               />
             </div>
 
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:scale-105 font-medium shadow-lg shadow-slate-900/20 flex items-center justify-center gap-2"
+              disabled={status === 'sending'}
+              className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:scale-105 font-medium shadow-lg shadow-slate-900/20 flex items-center justify-center gap-2 disabled:opacity-60 disabled:hover:scale-100"
             >
-              <span>{t.contact.sendMessage}</span>
-              <Send size={20} />
+              {status === 'sending' ? (
+                <span>{t.contact.sending}</span>
+              ) : (
+                <>
+                  <span>{t.contact.sendMessage}</span>
+                  <Send size={20} />
+                </>
+              )}
             </button>
+
+            {status === 'success' && (
+              <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                <CheckCircle size={20} />
+                <span>{t.contact.successMessage}</span>
+              </div>
+            )}
+
+            {status === 'error' && (
+              <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                <AlertCircle size={20} />
+                <span>{t.contact.errorMessage}</span>
+              </div>
+            )}
           </form>
         </div>
 
