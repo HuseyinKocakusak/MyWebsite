@@ -12,8 +12,15 @@ interface GalleryProps {
 export default function Gallery({ onOpenAlbum }: GalleryProps) {
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
+import { albums } from '../albumData';
 
-export default function Gallery() {
+const albumSlugs = ['research-lab', 'athletic-training', 'apitherapy', 'conferences'];
+
+interface GalleryProps {
+  onOpenAlbum: (slug: string) => void;
+}
+
+export default function Gallery({ onOpenAlbum }: GalleryProps) {
   const { language } = useLanguage();
   const t = translations[language];
 
