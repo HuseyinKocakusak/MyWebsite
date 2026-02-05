@@ -10,6 +10,17 @@ interface GalleryProps {
 }
 
 export default function Gallery({ onOpenAlbum }: GalleryProps) {
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations';
+import { albums } from '../albumData';
+
+const albumSlugs = ['research-lab', 'athletic-training', 'apitherapy', 'conferences'];
+
+interface GalleryProps {
+  onOpenAlbum: (slug: string) => void;
+}
+
+export default function Gallery({ onOpenAlbum }: GalleryProps) {
   const { language } = useLanguage();
   const t = translations[language];
 
@@ -49,6 +60,17 @@ export default function Gallery({ onOpenAlbum }: GalleryProps) {
               </button>
             );
           })}
+          {t.gallery.items.map((item) => (
+            <div
+              key={item.title}
+              className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl overflow-hidden hover:shadow-xl transition-all hover:scale-105 h-64 flex flex-col justify-end"
+            >
+              <div className="bg-gradient-to-t from-slate-900 to-transparent p-6">
+                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-slate-200 text-sm">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
