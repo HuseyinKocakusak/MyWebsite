@@ -9,7 +9,6 @@ export default function Apitherapy() {
     { name: 'Osman Falakalı', role: t.apitherapy.roles.cofounder, image: '👨‍💼', emoji: true },
     { name: 'Mehmet Kocakuşak', role: t.apitherapy.roles.cofounder, image: '👨‍💼', emoji: true },
     { name: 'Hüseyin Kocakuşak', role: t.apitherapy.roles.scientificAdvisor, image: '👨‍🔬', emoji: true },
-    { name: 'Hüseyin Kocakuşak', role: t.apitherapy.roles.scientificAdvisor, image: '/images/team/huseyin-kocakusak.jpg', emoji: false },
   ];
 
   return (
