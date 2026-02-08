@@ -5,6 +5,11 @@ import { translations } from '../translations';
 
 const ITEMS_PER_PAGE = 10;
 
+import { useState } from 'react';
+import { BookOpen, FileText, Award, Users, Tag } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations';
+
 const categoryColors: Record<string, { bg: string; text: string; border: string; activeBg: string }> = {
   ev: { bg: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-200', activeBg: 'bg-purple-600' },
   apitherapy: { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200', activeBg: 'bg-amber-500' },
@@ -22,6 +27,8 @@ interface LiteratureItem {
   summary: string;
   categories: string[];
 }
+
+};
 
 export default function Science() {
   const { language } = useLanguage();
@@ -64,6 +71,27 @@ export default function Science() {
   };
 
   const sections = [
+    {
+
+  const categories = t.science.literatureCategories as Record<string, string>;
+  const literatureItems = t.science.literatureItems as Array<{
+    title: string;
+    summary: string;
+    categories: string[];
+  }>;
+
+  const filteredItems = activeCategory
+    ? literatureItems.filter((item) => item.categories.includes(activeCategory))
+    : literatureItems;
+
+  const sections = [
+    {
+      id: 'academia',
+      title: t.science.academia,
+      icon: BookOpen,
+      content: t.science.academiaText,
+      type: 'text',
+    },
     {
       id: 'publications',
       title: t.science.publications,
@@ -126,6 +154,7 @@ export default function Science() {
               <div className="flex flex-wrap gap-2 mb-8">
                 <button
                   onClick={() => handleCategoryChange(null)}
+                  onClick={() => setActiveCategory(null)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                     activeCategory === null
                       ? 'bg-slate-900 text-white shadow-md'
@@ -140,6 +169,7 @@ export default function Science() {
                     <button
                       key={key}
                       onClick={() => handleCategoryChange(activeCategory === key ? null : key)}
+                      onClick={() => setActiveCategory(activeCategory === key ? null : key)}
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                         activeCategory === key
                           ? `${colors.activeBg} text-white shadow-md`
@@ -207,6 +237,32 @@ export default function Science() {
                           <ExternalLink size={14} />
                         </a>
                       </div>
+                {filteredItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="group border border-slate-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-200 transition-all"
+                  >
+                    <div className="flex items-start gap-3 mb-3">
+                      <Tag size={18} className="text-blue-600 mt-1 flex-shrink-0" />
+                      <h4 className="text-lg font-semibold text-slate-900 leading-snug">
+                        {item.title}
+                      </h4>
+                    </div>
+                    <p className="text-slate-600 leading-relaxed mb-4 pl-[30px]">
+                      {item.summary}
+                    </p>
+                    <div className="flex flex-wrap gap-2 pl-[30px]">
+                      {item.categories.map((catKey) => {
+                        const colors = categoryColors[catKey] || { bg: 'bg-slate-50', text: 'text-slate-700', border: 'border-slate-200' };
+                        return (
+                          <span
+                            key={catKey}
+                            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text} border ${colors.border}`}
+                          >
+                            {categories[catKey]}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
@@ -257,6 +313,7 @@ export default function Science() {
 
           {/* Publications and Conferences sections */}
           {sections.map((section) => {
+          {sections.filter((s) => s.type !== 'text').map((section) => {
             const Icon = section.icon;
             return (
               <div key={section.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
