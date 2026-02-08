@@ -38,7 +38,6 @@ export interface Album {
 
 export const albums: Album[] = [
   // ── Research Lab ──────────────────────────────────────────────────────
-export const albums: Album[] = [
   {
     slug: 'research-lab',
     icon: '🔬',
@@ -50,10 +49,6 @@ export const albums: Album[] = [
   },
 
   // ── Athletic Training ─────────────────────────────────────────────────
-      // Add photos here:
-      // { src: '/images/gallery/research-lab/photo1.jpg', note: { en: 'Working in the cell culture lab', tr: 'Hücre kültürü laboratuvarında çalışırken' } },
-    ],
-  },
   {
     slug: 'athletic-training',
     icon: '🏋️',
@@ -65,10 +60,6 @@ export const albums: Album[] = [
   },
 
   // ── Apitherapy ────────────────────────────────────────────────────────
-      // Add photos here:
-      // { src: '/images/gallery/athletic-training/photo1.jpg', note: { en: 'Morning training session', tr: 'Sabah antrenman seansı' } },
-    ],
-  },
   {
     slug: 'apitherapy',
     icon: '🐝',
@@ -80,10 +71,6 @@ export const albums: Album[] = [
   },
 
   // ── Conferences ───────────────────────────────────────────────────────
-      // Add photos here:
-      // { src: '/images/gallery/apitherapy/photo1.jpg', note: { en: 'Inspecting the hives', tr: 'Kovanları kontrol ederken' } },
-    ],
-  },
   {
     slug: 'conferences',
     icon: '🎤',
@@ -91,8 +78,6 @@ export const albums: Album[] = [
       // Add your Conferences photos here:
       //
       // { src: '/images/gallery/conferences/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
-      // Add photos here:
-      // { src: '/images/gallery/conferences/photo1.jpg', note: { en: 'Presenting at the neuroscience congress', tr: 'Sinirbilim kongresinde sunum yaparken' } },
     ],
   },
 ];
