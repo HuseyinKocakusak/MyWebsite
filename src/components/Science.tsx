@@ -1,10 +1,30 @@
-import { BookOpen, FileText, Award, Users } from 'lucide-react';
+import { useState } from 'react';
+import { BookOpen, FileText, Award, Users, Tag } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
+
+const categoryColors: Record<string, { bg: string; text: string; border: string; activeBg: string }> = {
+  ev: { bg: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-200', activeBg: 'bg-purple-600' },
+  apitherapy: { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200', activeBg: 'bg-amber-500' },
+  brain: { bg: 'bg-rose-50', text: 'text-rose-700', border: 'border-rose-200', activeBg: 'bg-rose-500' },
+  exercise: { bg: 'bg-emerald-50', text: 'text-emerald-700', border: 'border-emerald-200', activeBg: 'bg-emerald-500' },
+};
 
 export default function Science() {
   const { language } = useLanguage();
   const t = translations[language];
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const categories = t.science.literatureCategories as Record<string, string>;
+  const literatureItems = t.science.literatureItems as Array<{
+    title: string;
+    summary: string;
+    categories: string[];
+  }>;
+
+  const filteredItems = activeCategory
+    ? literatureItems.filter((item) => item.categories.includes(activeCategory))
+    : literatureItems;
 
   const sections = [
     {
@@ -13,13 +33,6 @@ export default function Science() {
       icon: BookOpen,
       content: t.science.academiaText,
       type: 'text',
-    },
-    {
-      id: 'literature',
-      title: t.science.literature,
-      icon: FileText,
-      content: t.science.literatureItems,
-      type: 'list',
     },
     {
       id: 'publications',
@@ -54,7 +67,104 @@ export default function Science() {
         <div className="w-20 h-1 bg-slate-900 mx-auto mb-16"></div>
 
         <div className="space-y-12">
-          {sections.map((section) => {
+          {/* Academia section */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-700 to-cyan-600 p-6 flex items-center gap-4">
+              <div className="p-3 bg-white rounded-lg">
+                <BookOpen size={28} className="text-slate-900" />
+              </div>
+              <h3 className="text-2xl font-bold text-white">{t.science.academia}</h3>
+            </div>
+            <div className="p-8">
+              <p className="text-slate-700 leading-relaxed text-lg">
+                {t.science.academiaText}
+              </p>
+            </div>
+          </div>
+
+          {/* Literature section with category filters */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-700 to-cyan-600 p-6 flex items-center gap-4">
+              <div className="p-3 bg-white rounded-lg">
+                <FileText size={28} className="text-slate-900" />
+              </div>
+              <h3 className="text-2xl font-bold text-white">{t.science.literature}</h3>
+            </div>
+
+            <div className="p-8">
+              {/* Category filter buttons */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                <button
+                  onClick={() => setActiveCategory(null)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    activeCategory === null
+                      ? 'bg-slate-900 text-white shadow-md'
+                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
+                >
+                  {t.science.allCategories}
+                </button>
+                {Object.entries(categories).map(([key, label]) => {
+                  const colors = categoryColors[key] || { activeBg: 'bg-slate-600', bg: 'bg-slate-50', text: 'text-slate-700' };
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => setActiveCategory(activeCategory === key ? null : key)}
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                        activeCategory === key
+                          ? `${colors.activeBg} text-white shadow-md`
+                          : `${colors.bg} ${colors.text} hover:opacity-80`
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Article cards grid */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {filteredItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="group border border-slate-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-200 transition-all"
+                  >
+                    <div className="flex items-start gap-3 mb-3">
+                      <Tag size={18} className="text-blue-600 mt-1 flex-shrink-0" />
+                      <h4 className="text-lg font-semibold text-slate-900 leading-snug">
+                        {item.title}
+                      </h4>
+                    </div>
+                    <p className="text-slate-600 leading-relaxed mb-4 pl-[30px]">
+                      {item.summary}
+                    </p>
+                    <div className="flex flex-wrap gap-2 pl-[30px]">
+                      {item.categories.map((catKey) => {
+                        const colors = categoryColors[catKey] || { bg: 'bg-slate-50', text: 'text-slate-700', border: 'border-slate-200' };
+                        return (
+                          <span
+                            key={catKey}
+                            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text} border ${colors.border}`}
+                          >
+                            {categories[catKey]}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {filteredItems.length === 0 && (
+                <p className="text-center text-slate-400 py-8">
+                  No articles found in this category.
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Publications and Conferences sections */}
+          {sections.filter((s) => s.type !== 'text').map((section) => {
             const Icon = section.icon;
             return (
               <div key={section.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -66,27 +176,6 @@ export default function Science() {
                 </div>
 
                 <div className="p-8">
-                  {section.type === 'text' && (
-                    <p className="text-slate-700 leading-relaxed text-lg">
-                      {section.content}
-                    </p>
-                  )}
-
-                  {section.type === 'list' && (
-                    <div className="space-y-6">
-                      {(section.content as any[]).map((item, index) => (
-                        <div key={index} className="border-l-4 border-blue-600 pl-6">
-                          <h4 className="text-lg font-semibold text-slate-900 mb-2">
-                            {item.title}
-                          </h4>
-                          <p className="text-slate-600 leading-relaxed">
-                            {item.summary}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
                   {section.type === 'publications' && (
                     <div className="space-y-6">
                       {(section.content as any[]).map((item, index) => (

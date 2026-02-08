@@ -24,11 +24,55 @@ export const translations = {
       conferences: 'Conferences',
       read: 'Read',
       visit: 'Visit',
+      allCategories: 'All',
       academiaText: "Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention.",
+      literatureCategories: {
+        ev: 'Extracellular Vesicles',
+        apitherapy: 'Apitherapy',
+        brain: 'Brain',
+        exercise: 'Exercise',
+      },
       literatureItems: [
-        { title: 'Extracellular Vesicles in Neuroinflammation', summary: 'Comprehensive review of EV roles in microglia-neuron communication and neuroinflammatory processes.' },
-        { title: 'Noncoding RNAs and Cellular Metabolism', summary: 'Analysis of miRNA and lncRNA regulation in metabolic pathways and energy homeostasis.' },
-        { title: 'Athletic Performance and Molecular Adaptation', summary: 'Exploration of molecular markers in exercise-induced adaptations and muscle development.' },
+        {
+          title: 'Extracellular Vesicles in Neuroinflammation',
+          summary: 'EVs released by microglia carry inflammatory mediators that modulate neuronal survival and synaptic function during neuroinflammation.',
+          categories: ['ev', 'brain'],
+        },
+        {
+          title: 'Noncoding RNAs and Cellular Metabolism',
+          summary: 'miRNAs and lncRNAs fine-tune metabolic enzyme expression, linking gene regulation to energy homeostasis across tissues.',
+          categories: ['brain'],
+        },
+        {
+          title: 'Athletic Performance and Molecular Adaptation',
+          summary: 'Exercise triggers specific molecular cascades that drive muscle remodeling, mitochondrial biogenesis, and long-term performance gains.',
+          categories: ['exercise'],
+        },
+        {
+          title: 'EV-Mediated Cargo Transfer in Exercise Recovery',
+          summary: 'Circulating extracellular vesicles released during exercise deliver protective cargo to distant organs, accelerating systemic recovery.',
+          categories: ['ev', 'exercise'],
+        },
+        {
+          title: 'Bee Venom Compounds and Neuroplasticity',
+          summary: 'Melittin and apamin from bee venom show potential to modulate ion channels involved in synaptic plasticity and memory formation.',
+          categories: ['apitherapy', 'brain'],
+        },
+        {
+          title: 'Propolis-Derived Polyphenols in Oxidative Stress',
+          summary: 'Polyphenols from propolis reduce oxidative damage markers and support antioxidant enzyme activity in stressed cellular models.',
+          categories: ['apitherapy'],
+        },
+        {
+          title: 'Exercise-Induced Extracellular Vesicles and Brain Health',
+          summary: 'Physical activity increases the release of brain-targeting EVs that carry neurotrophic factors supporting cognitive resilience.',
+          categories: ['ev', 'exercise', 'brain'],
+        },
+        {
+          title: 'Royal Jelly and Metabolic Regulation During Physical Activity',
+          summary: 'Royal jelly supplementation influences lipid metabolism and endurance capacity through AMPK pathway activation during exercise.',
+          categories: ['apitherapy', 'exercise'],
+        },
       ],
     },
     apitherapy: {
@@ -109,11 +153,55 @@ export const translations = {
       conferences: 'Konferanslar',
       read: 'Oku',
       visit: 'Ziyaret Et',
+      allCategories: 'Tümü',
       academiaText: "Mikroglia, sinir sisteminin yerleşik bağışıklık hücreleridir ve sinirsel homeostazın korunması ile inflamatuar yanıtların koordinasyonu için gereklidir. Kodlamayan RNA'lar bu süreçlerde önemli bir düzenleyici katman oluşturarak gen ifadesini ve hücresel davranışı etkiler. Güncel araştırmalar, mikroglianın nöronlara, glia hücrelerine ve periferik hedeflere moleküler sinyaller taşıyan hücrelerarası taşıyıcılar olarak görev yapan ekstraselüler veziküllerin üretimini ve salınımını nasıl değiştirdiğini incelemektedir. Devam eden çalışmalar, EV'lerin bu moleküller aracılığıyla nöronal bütünlüğü ve daha geniş beyin sağlığını nasıl şekillendirdiğini tanımlamayı ve nihayetinde sağlıklı yaşlanma ve hastalık önleme stratejilerini geliştirmeyi amaçlamaktadır.",
+      literatureCategories: {
+        ev: 'Ekstraselüler Veziküller',
+        apitherapy: 'Arı Terapisi',
+        brain: 'Beyin',
+        exercise: 'Egzersiz',
+      },
       literatureItems: [
-        { title: 'Nöroinflamasyonda Ekstraselüler Veziküller', summary: 'Mikroglia-nöron iletişiminde ve nöroinflamatuar süreçlerde EV rollerinin kapsamlı incelemesi.' },
-        { title: 'Kodlamayan RNA\'lar ve Hücresel Metabolizma', summary: 'Metabolik yolaklarda ve enerji homeostazında miRNA ve lncRNA düzenlemesinin analizi.' },
-        { title: 'Atletik Performans ve Moleküler Adaptasyon', summary: 'Egzersizin neden olduğu adaptasyonlarda ve kas gelişiminde moleküler belirteçlerin keşfi.' },
+        {
+          title: 'Nöroinflamasyonda Ekstraselüler Veziküller',
+          summary: 'Mikroglia tarafından salınan EV\'ler, nöroinflamasyon sırasında nöronal sağkalımı ve sinaptik işlevi düzenleyen inflamatuar aracılar taşır.',
+          categories: ['ev', 'brain'],
+        },
+        {
+          title: 'Kodlamayan RNA\'lar ve Hücresel Metabolizma',
+          summary: 'miRNA\'lar ve lncRNA\'lar metabolik enzim ekspresyonunu hassas şekilde ayarlayarak gen düzenlemesini dokular arası enerji homeostazına bağlar.',
+          categories: ['brain'],
+        },
+        {
+          title: 'Atletik Performans ve Moleküler Adaptasyon',
+          summary: 'Egzersiz, kas yeniden şekillenmesini, mitokondriyal biyogenezi ve uzun vadeli performans kazanımlarını yönlendiren spesifik moleküler kaskadları tetikler.',
+          categories: ['exercise'],
+        },
+        {
+          title: 'Egzersiz Toparlanmasında EV Aracılı Kargo Transferi',
+          summary: 'Egzersiz sırasında salınan dolaşımdaki ekstraselüler veziküller, uzak organlara koruyucu kargo ileterek sistemik toparlanmayı hızlandırır.',
+          categories: ['ev', 'exercise'],
+        },
+        {
+          title: 'Arı Zehri Bileşikleri ve Nöroplastisite',
+          summary: 'Arı zehrinden elde edilen melittin ve apamin, sinaptik plastisite ve hafıza oluşumunda görev alan iyon kanallarını modüle etme potansiyeli gösterir.',
+          categories: ['apitherapy', 'brain'],
+        },
+        {
+          title: 'Propolis Kaynaklı Polifenoller ve Oksidatif Stres',
+          summary: 'Propolisten elde edilen polifenoller, stres altındaki hücresel modellerde oksidatif hasar belirteçlerini azaltır ve antioksidan enzim aktivitesini destekler.',
+          categories: ['apitherapy'],
+        },
+        {
+          title: 'Egzersize Bağlı Ekstraselüler Veziküller ve Beyin Sağlığı',
+          summary: 'Fiziksel aktivite, bilişsel direnci destekleyen nörotrofik faktörler taşıyan beyin hedefli EV salınımını artırır.',
+          categories: ['ev', 'exercise', 'brain'],
+        },
+        {
+          title: 'Arı Sütü ve Fiziksel Aktivite Sırasında Metabolik Düzenleme',
+          summary: 'Arı sütü takviyesi, egzersiz sırasında AMPK yolak aktivasyonu aracılığıyla lipid metabolizmasını ve dayanıklılık kapasitesini etkiler.',
+          categories: ['apitherapy', 'exercise'],
+        },
       ],
     },
     apitherapy: {
