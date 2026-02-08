@@ -1,3 +1,10 @@
+import { useState, useMemo } from 'react';
+import { BookOpen, FileText, Award, Users, Tag, ExternalLink, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations';
+
+const ITEMS_PER_PAGE = 10;
+
 import { useState } from 'react';
 import { BookOpen, FileText, Award, Users, Tag } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -8,12 +15,63 @@ const categoryColors: Record<string, { bg: string; text: string; border: string;
   apitherapy: { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200', activeBg: 'bg-amber-500' },
   brain: { bg: 'bg-rose-50', text: 'text-rose-700', border: 'border-rose-200', activeBg: 'bg-rose-500' },
   exercise: { bg: 'bg-emerald-50', text: 'text-emerald-700', border: 'border-emerald-200', activeBg: 'bg-emerald-500' },
+  tsrna: { bg: 'bg-cyan-50', text: 'text-cyan-700', border: 'border-cyan-200', activeBg: 'bg-cyan-600' },
+  exposome: { bg: 'bg-orange-50', text: 'text-orange-700', border: 'border-orange-200', activeBg: 'bg-orange-500' },
+};
+
+interface LiteratureItem {
+  title: string;
+  year: string;
+  url: string;
+  dateAdded: string;
+  summary: string;
+  categories: string[];
+}
+
 };
 
 export default function Science() {
   const { language } = useLanguage();
   const t = translations[language];
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const categories = t.science.literatureCategories as Record<string, string>;
+  const literatureItems = t.science.literatureItems as LiteratureItem[];
+
+  // Sort by dateAdded (newest first), then filter by category
+  const sortedItems = useMemo(() =>
+    [...literatureItems].sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()),
+    [literatureItems]
+  );
+
+  const filteredItems = activeCategory
+    ? sortedItems.filter((item) => item.categories.includes(activeCategory))
+    : sortedItems;
+
+  // Pagination
+  const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+  const paginatedItems = filteredItems.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE,
+  );
+
+  const handleCategoryChange = (category: string | null) => {
+    setActiveCategory(category);
+    setCurrentPage(1);
+  };
+
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString(language === 'tr' ? 'tr-TR' : 'en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+  };
+
+  const sections = [
+    {
 
   const categories = t.science.literatureCategories as Record<string, string>;
   const literatureItems = t.science.literatureItems as Array<{
@@ -95,6 +153,7 @@ export default function Science() {
               {/* Category filter buttons */}
               <div className="flex flex-wrap gap-2 mb-8">
                 <button
+                  onClick={() => handleCategoryChange(null)}
                   onClick={() => setActiveCategory(null)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                     activeCategory === null
@@ -109,6 +168,7 @@ export default function Science() {
                   return (
                     <button
                       key={key}
+                      onClick={() => handleCategoryChange(activeCategory === key ? null : key)}
                       onClick={() => setActiveCategory(activeCategory === key ? null : key)}
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                         activeCategory === key
@@ -124,6 +184,59 @@ export default function Science() {
 
               {/* Article cards grid */}
               <div className="grid md:grid-cols-2 gap-6">
+                {paginatedItems.map((item, index) => (
+                  <div
+                    key={`${currentPage}-${index}`}
+                    className="group border border-slate-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-200 transition-all flex flex-col"
+                  >
+                    {/* Title with publication year */}
+                    <div className="flex items-start gap-3 mb-3">
+                      <Tag size={18} className="text-blue-600 mt-1 flex-shrink-0" />
+                      <h4 className="text-lg font-semibold text-slate-900 leading-snug">
+                        {item.title} ({item.year})
+                      </h4>
+                    </div>
+
+                    {/* Summary */}
+                    <p className="text-slate-600 leading-relaxed mb-4 pl-[30px]">
+                      {item.summary}
+                    </p>
+
+                    {/* Bottom section: date added, categories, link */}
+                    <div className="mt-auto pl-[30px] space-y-3">
+                      {/* Date added to website */}
+                      <div className="flex items-center gap-1.5 text-xs text-slate-400">
+                        <Calendar size={13} />
+                        <span>{t.science.addedOn} {formatDate(item.dateAdded)}</span>
+                      </div>
+
+                      {/* Categories and link row */}
+                      <div className="flex items-center justify-between gap-3 flex-wrap">
+                        <div className="flex flex-wrap gap-2">
+                          {item.categories.map((catKey) => {
+                            const colors = categoryColors[catKey] || { bg: 'bg-slate-50', text: 'text-slate-700', border: 'border-slate-200' };
+                            return (
+                              <span
+                                key={catKey}
+                                className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text} border ${colors.border}`}
+                              >
+                                {categories[catKey]}
+                              </span>
+                            );
+                          })}
+                        </div>
+
+                        {/* Article link */}
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors whitespace-nowrap"
+                        >
+                          {t.science.readArticle}
+                          <ExternalLink size={14} />
+                        </a>
+                      </div>
                 {filteredItems.map((item, index) => (
                   <div
                     key={index}
@@ -160,10 +273,46 @@ export default function Science() {
                   No articles found in this category.
                 </p>
               )}
+
+              {/* Pagination controls */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-2 mt-8">
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="p-2 rounded-lg text-slate-500 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`w-9 h-9 rounded-lg text-sm font-medium transition-all ${
+                        currentPage === page
+                          ? 'bg-blue-600 text-white shadow-md'
+                          : 'text-slate-600 hover:bg-slate-100'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+
+                  <button
+                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="p-2 rounded-lg text-slate-500 hover:bg-slate-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
 
           {/* Publications and Conferences sections */}
+          {sections.map((section) => {
           {sections.filter((s) => s.type !== 'text').map((section) => {
             const Icon = section.icon;
             return (
