@@ -78,6 +78,25 @@ export const albums: Album[] = [
       // Add your Conferences photos here:
       //
       // { src: '/images/gallery/conferences/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+      {
+  src: '/images/gallery/conferences/TURSEV1.jpg',
+  note: {
+    en: 'My proud moment with my Poster',
+    tr: 'Gururla posterimin başındayım.',
+  },
+        {
+  src: '/images/gallery/conferences/TURSEV2.jpg',
+  note: {
+    en: 'Presenting at the TURSEV-1 to the Sherif Ibrahim',
+    tr: 'TURSEV-1de Sherif Ibrahim posterim hakkında bilgi alıyor',
+  },
+        {
+  src: '/images/gallery/conferences/TURSEV2024.jpg',
+  note: {
+    en: '1st TURSEV Conference, 2024',
+    tr: '1. TURSEV konferansı, 2024',
+  },
+}
     ],
   },
 ];
