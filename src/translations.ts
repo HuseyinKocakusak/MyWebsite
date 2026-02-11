@@ -14,7 +14,6 @@ export const translations = {
       title3: 'Scientific Advisor',
       subtitle: 'Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies.',
       getInTouch: 'Get In Touch',
-      viewProjects: 'View Projects',
     },
     science: {
       title: 'Science',
@@ -182,7 +181,6 @@ export const translations = {
       title3: 'Bilimsel Danışman',
       subtitle: 'Sinirbilim, hücresel metabolizma, egzersiz fizyolojisi ve beslenme stratejilerini entegre ediyorum.',
       getInTouch: 'İletişime Geç',
-      viewProjects: 'Projeleri Görüntüle',
     },
     science: {
       title: 'Bilim',
