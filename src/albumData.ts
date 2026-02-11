@@ -6,10 +6,17 @@ export interface AlbumPhoto {
   };
 }
 
+export interface SubAlbum {
+  slug: string;
+  icon: string;
+  photos: AlbumPhoto[];
+}
+
 export interface Album {
   slug: string;
   icon: string;
   photos: AlbumPhoto[];
+  subAlbums?: SubAlbum[];
 }
 
 // =============================================================================
@@ -52,10 +59,48 @@ export const albums: Album[] = [
   {
     slug: 'athletic-training',
     icon: '🏋️',
-    photos: [
-      // Add your Athletic Training photos here:
-      //
-      // { src: '/images/gallery/athletic-training/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+    photos: [],
+    subAlbums: [
+      // ── Strength ──
+      {
+        slug: 'strength',
+        icon: '💪',
+        photos: [
+          // { src: '/images/gallery/athletic-training/strength/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+        ],
+      },
+      // ── Stretching & Mobility ──
+      {
+        slug: 'stretching-mobility',
+        icon: '🧘',
+        photos: [
+          // { src: '/images/gallery/athletic-training/stretching-mobility/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+        ],
+      },
+      // ── Diet ──
+      {
+        slug: 'diet',
+        icon: '🥗',
+        photos: [
+          // { src: '/images/gallery/athletic-training/diet/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+        ],
+      },
+      // ── Mountaineering ──
+      {
+        slug: 'mountaineering',
+        icon: '🏔️',
+        photos: [
+          // { src: '/images/gallery/athletic-training/mountaineering/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+        ],
+      },
+      // ── Running ──
+      {
+        slug: 'running',
+        icon: '🏃',
+        photos: [
+          // { src: '/images/gallery/athletic-training/running/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+        ],
+      },
     ],
   },
 
