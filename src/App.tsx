@@ -11,14 +11,19 @@ import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
   const [albumSlug, setAlbumSlug] = useState<string | null>(null);
+  const [subAlbumSlug, setSubAlbumSlug] = useState<string | null>(null);
 
   useEffect(() => {
     const handleHash = () => {
       const hash = window.location.hash;
       if (hash.startsWith('#album/')) {
-        setAlbumSlug(hash.replace('#album/', ''));
+        const path = hash.replace('#album/', '');
+        const parts = path.split('/');
+        setAlbumSlug(parts[0]);
+        setSubAlbumSlug(parts[1] || null);
       } else {
         setAlbumSlug(null);
+        setSubAlbumSlug(null);
       }
     };
 
@@ -32,12 +37,24 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const openSubAlbum = (subSlug: string) => {
+    if (albumSlug) {
+      window.location.hash = `album/${albumSlug}/${subSlug}`;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const closeAlbum = () => {
-    window.location.hash = 'gallery';
-    setTimeout(() => {
-      const el = document.getElementById('gallery');
-      el?.scrollIntoView({ behavior: 'smooth' });
-    }, 50);
+    if (subAlbumSlug && albumSlug) {
+      window.location.hash = `album/${albumSlug}`;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.location.hash = 'gallery';
+      setTimeout(() => {
+        const el = document.getElementById('gallery');
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
   };
 
   return (
@@ -45,7 +62,12 @@ function App() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
         <Navigation />
         {albumSlug ? (
-          <AlbumPage albumSlug={albumSlug} onBack={closeAlbum} />
+          <AlbumPage
+            albumSlug={albumSlug}
+            subAlbumSlug={subAlbumSlug || undefined}
+            onBack={closeAlbum}
+            onOpenSubAlbum={openSubAlbum}
+          />
         ) : (
           <>
             <Hero />

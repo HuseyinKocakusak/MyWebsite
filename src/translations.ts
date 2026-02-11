@@ -126,7 +126,17 @@ export const translations = {
       noPhotosYet: 'Photos coming soon...',
       items: [
         { title: 'Research Lab', description: 'Microbiology and cellular research environment' },
-        { title: 'Athletic Training', description: 'Performance optimization and biomechanics' },
+        {
+          title: 'Athletic Training',
+          description: 'Performance optimization and biomechanics',
+          subItems: [
+            { title: 'Strength', description: 'Strength and resistance training' },
+            { title: 'Stretching & Mobility', description: 'Flexibility and mobility work' },
+            { title: 'Diet', description: 'Nutrition and dietary strategies' },
+            { title: 'Mountaineering', description: 'Mountain climbing and hiking' },
+            { title: 'Running', description: 'Endurance running and cardio' },
+          ],
+        },
         { title: 'Apitherapy', description: 'Therapeutic applications of bee products and venom' },
         { title: 'Conferences', description: 'Speaking engagements and presentations' },
       ],
@@ -284,7 +294,17 @@ export const translations = {
       noPhotosYet: 'Fotoğraflar yakında...',
       items: [
         { title: 'Araştırma Laboratuvarı', description: 'Mikrobiyoloji ve hücresel araştırma ortamı' },
-        { title: 'Atletik Antrenman', description: 'Performans optimizasyonu ve biyomekanik' },
+        {
+          title: 'Atletik Antrenman',
+          description: 'Performans optimizasyonu ve biyomekanik',
+          subItems: [
+            { title: 'Güç Antrenmanı', description: 'Güç ve direnç antrenmanları' },
+            { title: 'Esneklik & Mobilite', description: 'Esneklik ve mobilite çalışmaları' },
+            { title: 'Beslenme', description: 'Beslenme ve diyet stratejileri' },
+            { title: 'Dağcılık', description: 'Dağ tırmanışı ve yürüyüş' },
+            { title: 'Koşu', description: 'Dayanıklılık koşusu ve kardiyo' },
+          ],
+        },
         { title: 'Arı Terapisi', description: 'Arı ürünleri ve arı zehrinin terapötik uygulamaları' },
         { title: 'Konferanslar', description: 'Konuşma etkinlikleri ve sunumlar' },
       ],
