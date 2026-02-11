@@ -34,12 +34,6 @@ export default function Hero() {
           >
             {t.hero.getInTouch}
           </button>
-          <a
-            href="#projects"
-            className="px-8 py-3 border-2 border-slate-900 text-slate-900 rounded-lg hover:bg-slate-900 hover:text-white transition-all hover:scale-105 font-medium"
-          >
-            {t.hero.viewProjects}
-          </a>
         </div>
 
         <div className="flex gap-6 justify-center mb-12">
