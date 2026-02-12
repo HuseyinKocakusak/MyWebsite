@@ -113,6 +113,61 @@ export const translations = {
       visionText: "Our vision is to protect the long-term health of both bees and people so that we can produce quality honey and sustainably deliver exceptional honey to our customers. We aim to build a model that places beekeeping on a foundation of scientific knowledge, analysis, and traceability to protect the long-term health of our bees; and as a natural consequence, to sustainably produce high-quality honeys with low residue levels and confidently offer them to people. By combining traditional beekeeping expertise with current literature, field data, and quality analyses, we aim to make our processes transparent and auditable. Throughout the year, we migrate to different flora and climate zones: in spring on Yamanlar Mountain we obtain pollen and blossom honey from rich flower combinations; in Menderes we produce aromatic honeys from vegetation dominated by heather and vitex; and in interior regions like Balikesir/Kutahya we produce blackthorn honey. In the long term, through our migratory beekeeping activities in these regions, we aim both to contribute to the preservation of biodiversity and to become a reference for reliable, science-based production models.",
       missionText: "Our mission is to offer reliable bee products through scientifically based and traceable production processes that prioritize the needs of bees and nature. By positioning our colonies according to flora and climate conditions, we adopt a production model with low chemical load, as simple and non-interventionist as possible. At every step, we work based on hygiene standards, analysis results, and current scientific data; and we aim to contribute to a more conscious honey culture by sharing the knowledge we gain with both consumers and beekeepers.",
       principlesText: "The fundamental principles that guide our work are: transparency, traceability, scientific approach, bee welfare, and minimizing environmental impact. When selecting our production locations, we consider the health of our bees, the quality of our honey, and the long-term health of our consumers, aiming to reduce microplastic and pesticide exposure to practically zero. For this reason, we identify areas with low air pollution (especially PM2.5), minimal agricultural pesticide use, and as untouched as possible through extensive field research, and position our apiaries in these areas. We commit to openly sharing the origin of our products, harvest periods, and methods used; and to staying away from misleading, exaggerated, or scientifically unfounded claims. We also consider continuous learning, improving our production with current scientific literature and field observations, and sharing this knowledge with our stakeholders as an unchanging working principle.",
+      visionTagline: 'Protecting the long-term health of bees and people through science-based, sustainable beekeeping.',
+      visionHighlights: [
+        {
+          title: 'Science-Driven Production',
+          description: 'Building beekeeping on scientific knowledge, rigorous analysis, and full traceability to ensure consistently high-quality, low-residue honey.',
+        },
+        {
+          title: 'Migratory Beekeeping',
+          description: "Seasonal migration across diverse flora zones — from Yamanlar Mountain's wildflowers to Menderes' heather and Balıkesir's blackthorn — for exceptional honey varieties.",
+        },
+        {
+          title: 'Biodiversity & Sustainability',
+          description: 'Contributing to environmental preservation and setting the standard for reliable, science-based production models in the industry.',
+        },
+      ],
+      missionTagline: 'Offering reliable bee products through scientifically based, traceable processes that prioritize nature.',
+      missionPillars: [
+        {
+          title: 'Scientific Integrity',
+          description: 'Every step grounded in hygiene standards, laboratory analysis, and current scientific data for full reliability.',
+        },
+        {
+          title: 'Minimal Intervention',
+          description: 'Colonies positioned by flora and climate conditions, with low chemical load and a non-interventionist approach.',
+        },
+        {
+          title: 'Knowledge Sharing',
+          description: 'Openly sharing insights with consumers and beekeepers to foster a more conscious honey culture.',
+        },
+      ],
+      principleItems: [
+        {
+          title: 'Transparency',
+          description: 'Openly sharing product origins, harvest periods, and methods — free from misleading or exaggerated claims.',
+        },
+        {
+          title: 'Traceability',
+          description: 'Complete documentation of every production step, from field selection to final product.',
+        },
+        {
+          title: 'Scientific Approach',
+          description: 'Continuously improving through current literature, field observations, and data-driven decisions.',
+        },
+        {
+          title: 'Bee Welfare',
+          description: 'Prioritizing the health and natural behavior of our bees in every production decision.',
+        },
+        {
+          title: 'Environmental Care',
+          description: 'Selecting pristine locations with minimal pollution, targeting near-zero microplastic and pesticide exposure.',
+        },
+      ],
+      ctaTitle: 'Explore Our Bee Products',
+      ctaDescription: 'Visit our dedicated apitherapy platform to discover our range of science-backed, sustainably produced honey and bee products.',
+      ctaButton: 'Visit beeonia.com',
       roles: {
         cofounder: 'Co-founder',
         scientificAdvisor: 'Scientific Advisor, Digital Marketing Manager',
@@ -280,6 +335,61 @@ export const translations = {
       visionText: "Vizyonumuz, arıların ve insanların uzun vadeli sağlığını gözetiyoruz ki kaliteli bal üretelim ve sürdürülebilir bir şekilde müşterilerimize muazzam bir bal yedirelim. Arıcılığı bilimsel bilgi, analiz ve izlenebilirlik temeline oturtarak arılarımızın uzun vadeli sağlığını korumayı; bunun doğal sonucu olarak da kalıntı yükü düşük, yüksek nitelikli balları sürdürülebilir bir şekilde üreterek insanlara güvenle sunmayı esas alan bir model haline getirmektir. Geleneksel arıcılık birikimini güncel literatür, saha verileri ve kalite analizleriyle birleştirerek, süreçleri şeffaf ve denetlenebilir bir yapıya kavuşturmayı amaçlıyoruz. Yıl içinde farklı flora ve iklim kuşaklarına göç ederek; Yamanlar Dağı'nda bahar aylarında zengin çiçek kombinasyonlarından elde ettiğimiz polen ve çiçek balıyla, Menderes'te özellikle püren ve hayıt ağırlıklı bitki örtüsünden kaynaklanan aromatik ballarla ve Balıkesir/Kütahya gibi daha iç bölgelerde ürettiğimiz karaçaltı balıyla bu yaklaşımı somutlaştırıyoruz. Uzun vadede, bu bölgelerde yürüttüğümüz gezgin arıcılık faaliyetleriyle hem biyolojik çeşitliliğin korunmasına katkı sağlayan hem de güvenilir, bilim temelli üretim modeliyle referans gösterilmeyi hedefliyoruz.",
       missionText: "Arıların ve doğanın ihtiyaçlarını önceleyen, bilimsel temelli ve izlenebilir üretim süreçleriyle güvenilir arı ürünleri sunmaktır. Kolonilerimizi flora ve iklim koşullarına uygun biçimde konumlandırarak, kimyasal yükü düşük, mümkün olduğunca sade ve müdahalesiz bir üretim modeli benimsiyoruz. Her adımda hijyen kurallarına, analiz sonuçlarına ve güncel bilimsel verilere dayanarak çalışıyor; elde ettiğimiz bilgiyi hem tüketicilerle hem de arıcılarla paylaşarak daha bilinçli bir bal kültürü oluşmasına katkı sağlamayı amaçlıyoruz.",
       principlesText: "Çalışma biçimimizi belirleyen temel ilkelerimiz; şeffaflık, izlenebilirlik, bilimsel yaklaşım, arı refahı ve çevresel yükün en aza indirilmesidir. Üretim noktalarımızı seçerken hem arılarımızın sağlığını hem balımızın kalitesini hem de tüketicilerimizin uzun vadeli sağlığını gözeterek, mikroplastik ve tarım ilacı maruziyetini pratikte 0'a indirmeyi hedefliyoruz. Bu nedenle PM2.5 başta olmak üzere hava kirliliğinin düşük olduğu, tarımsal ilaç kullanımının minimal olduğu, mümkün olduğunca el değmemiş bölgeleri uzun saha çalışmalarıyla tespit ediyor ve arılıklarımızı bu alanlarda konumlandırıyoruz. Ürünlerimizin kaynağını, hasat dönemlerini ve kullanılan yöntemleri açıkça paylaşmayı; yanıltıcı, abartılı veya bilimsel temeli olmayan iddialardan uzak durmayı ilke ediniyoruz. Sürekli öğrenmeyi, güncel bilimsel literatür ve sahadaki gözlemlerimizle üretimimizi geliştirmeyi ve bu birikimi paydaşlarımızla paylaşmayı da değişmeyen bir çalışma prensibi olarak kabul ediyoruz.",
+      visionTagline: 'Bilim temelli ve sürdürülebilir arıcılık ile arıların ve insanların uzun vadeli sağlığını korumak.',
+      visionHighlights: [
+        {
+          title: 'Bilim Odaklı Üretim',
+          description: 'Arıcılığı bilimsel bilgi, titiz analiz ve tam izlenebilirlik üzerine kurarak tutarlı, yüksek kaliteli ve düşük kalıntılı bal üretimini garanti altına almak.',
+        },
+        {
+          title: 'Gezgin Arıcılık',
+          description: "Yamanlar Dağı'nın kır çiçeklerinden Menderes'in püren ve hayıtına, Balıkesir'in karaçaltısına kadar farklı flora kuşaklarında mevsimsel göç ile eşsiz bal çeşitleri.",
+        },
+        {
+          title: 'Biyoçeşitlilik ve Sürdürülebilirlik',
+          description: 'Çevresel korumaya katkıda bulunarak sektörde güvenilir, bilim temelli üretim modellerinin standardını belirlemek.',
+        },
+      ],
+      missionTagline: 'Doğayı önceleyen, bilimsel temelli ve izlenebilir süreçlerle güvenilir arı ürünleri sunmak.',
+      missionPillars: [
+        {
+          title: 'Bilimsel Tutarlılık',
+          description: 'Her adımda hijyen standartlarına, laboratuvar analizlerine ve güncel bilimsel verilere dayalı tam güvenilirlik.',
+        },
+        {
+          title: 'Minimal Müdahale',
+          description: 'Kolonilerin flora ve iklim koşullarına uygun konumlandırılması, düşük kimyasal yük ve müdahalesiz yaklaşım.',
+        },
+        {
+          title: 'Bilgi Paylaşımı',
+          description: 'Tüketiciler ve arıcılarla açıkça bilgi paylaşarak daha bilinçli bir bal kültürü oluşturmak.',
+        },
+      ],
+      principleItems: [
+        {
+          title: 'Şeffaflık',
+          description: 'Ürün kaynaklarını, hasat dönemlerini ve yöntemleri açıkça paylaşmak — yanıltıcı veya abartılı iddialardan uzak durmak.',
+        },
+        {
+          title: 'İzlenebilirlik',
+          description: 'Saha seçiminden nihai ürüne kadar her üretim adımının eksiksiz belgelenmesi.',
+        },
+        {
+          title: 'Bilimsel Yaklaşım',
+          description: 'Güncel literatür, saha gözlemleri ve veri odaklı kararlarla sürekli gelişim.',
+        },
+        {
+          title: 'Arı Refahı',
+          description: 'Her üretim kararında arılarımızın sağlığını ve doğal davranışlarını ön planda tutmak.',
+        },
+        {
+          title: 'Çevresel Duyarlılık',
+          description: 'Kirliliğin minimum olduğu bölgeleri seçerek mikroplastik ve tarım ilacı maruziyetini sıfıra yakın hedeflemek.',
+        },
+      ],
+      ctaTitle: 'Arı Ürünlerimizi Keşfedin',
+      ctaDescription: 'Bilim destekli, sürdürülebilir üretim anlayışıyla hazırlanan bal ve arı ürünleri yelpazemizi keşfetmek için apiterapi platformumuzu ziyaret edin.',
+      ctaButton: "beeonia.com'u Ziyaret Et",
       roles: {
         cofounder: 'Kurucu Ortak',
         scientificAdvisor: 'Bilimsel Danışman, Dijital Pazarlama Yöneticisi',
