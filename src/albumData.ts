@@ -145,14 +145,14 @@ export const albums: Album[] = [
         },
       },
       {
-        src: '/images/gallery/conferences/poster.jpeg',
+        src: '/images/gallery/conferences/Poster.jpeg',
         note: {
           en: 'Ready to present latest data at the 8th Venusberg Meeting on Neuroinflammation',
           tr: '8. Nöroinflamasyon Venusberg Toplantısı\'nda son verileri sunmaya hazırım.',
         },
       },
       {
-        src: '/images/gallery/conferences/presenting.jpeg',
+        src: '/images/gallery/conferences/Presenting.jpeg',
         note: {
           en: 'Discussing the recent findings of our project with the audience at Luxemburg.',
           tr: 'Lüksemburg\'da dinleyicilerle projemizin son bulgularını tartışıyorum.',
