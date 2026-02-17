@@ -133,7 +133,7 @@ export const albums: Album[] = [
       {
         src: '/images/gallery/conferences/TURsEV2.jpg',
         note: {
-          en: 'Presenting at the TURSEV-1 to the Sherif Ibrahim',
+          en: 'Presenting to the Sherif Ibrahim at the TURSEV-1 ',
           tr: 'TURSEV-1de Sherif Ibrahim posterim hakkında bilgi alıyor',
         },
       },
@@ -142,6 +142,20 @@ export const albums: Album[] = [
         note: {
           en: '1st TURSEV Conference, 2024',
           tr: '1. TURSEV konferansı, 2024',
+        },
+      },
+      {
+        src: '/images/gallery/conferences/poster.jpeg',
+        note: {
+          en: 'Ready to present latest data at the 8th Venusberg Meeting on Neuroinflammation',
+          tr: '8. Nöroinflamasyon Venusberg Toplantısı\'nda son verileri sunmaya hazırım.',
+        },
+      },
+      {
+        src: '/images/gallery/conferences/presenting.jpeg',
+        note: {
+          en: 'Discussing the recent findings of our project with the audience at Luxemburg.',
+          tr: 'Lüksemburg\'da dinleyicilerle projemizin son bulgularını tartışıyorum.',
         },
       },
     ],
