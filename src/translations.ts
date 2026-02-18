@@ -138,7 +138,7 @@ export const translations = {
     },
     apitherapy: {
       title: 'Apitherapy',
-      companyName: 'Ege Beekeeping',
+      companyName: 'BEEONIA',
       ourTeam: 'Our Team',
       vision: 'Our Vision',
       mission: 'Our Mission',
@@ -393,7 +393,7 @@ export const translations = {
     },
     apitherapy: {
       title: 'Arı Terapisi',
-      companyName: 'Ege Arıcılık',
+      companyName: 'BEEONIA',
       ourTeam: 'Ekibimiz',
       vision: 'Vizyonumuz',
       mission: 'Misyonumuz',
