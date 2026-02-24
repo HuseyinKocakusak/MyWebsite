@@ -108,9 +108,7 @@ export default function Science() {
               <h3 className="text-2xl font-bold text-white">{t.science.academia}</h3>
             </div>
             <div className="p-8">
-              <p className="text-slate-700 leading-relaxed text-lg">
-                {t.science.academiaText}
-              </p>
+              <p className="text-slate-700 leading-relaxed text-lg" dangerouslySetInnerHTML={{ __html: t.science.academiaText }} />
             </div>
           </div>
 
