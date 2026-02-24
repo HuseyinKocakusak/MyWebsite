@@ -26,7 +26,7 @@ export const translations = {
       allCategories: 'All',
       addedOn: 'Added on',
       readArticle: 'Read Article',
-      academiaText: "Microglia are the resident immune cells of the central nervous system, essential for maintaining neural homeostasis and coordinating inflammatory responses. Noncoding RNAs constitute a major regulatory layer in these processes, influencing gene expression and cellular behavior. Current research investigates how microglia modify the production and release of extracellular vesicles, which act as intercellular carriers delivering molecular signals to neurons, glia, and peripheral targets. Ongoing work aims to define how EVs shape neuronal integrity and broader brain health through these molecules, ultimately aiming to advance strategies for healthy aging and disease prevention.",
+      academiaText: "<b><i>Microglia</i></b> are the resident immune cells of the <b>central nervous system</b>, essential for maintaining <b>neural homeostasis</b> and coordinating <b>inflammatory responses</b>. <b><i>Noncoding RNAs</i></b> constitute a major regulatory layer in these processes, influencing <b>gene expression</b> and <b>cellular behavior</b>. Current research investigates how <i>microglia</i> modify the production and release of <b><i>extracellular vesicles</i></b>, which act as intercellular carriers delivering <b>molecular signals</b> to <i>neurons, glia, and peripheral targets</i>. Ongoing work aims to define how <b>EVs</b> shape <b>neuronal integrity</b> and broader <b>brain health</b> through these molecules, ultimately aiming to advance strategies for <b><i>healthy aging</i></b> and <b><i>disease prevention</i></b>.",
       literatureCategories: {
         ev: 'Extracellular Vesicles',
         apitherapy: 'Apitherapy',
@@ -212,7 +212,7 @@ export const translations = {
       photoCount: 'photos',
       noPhotosYet: 'Photos coming soon...',
       items: [
-        { title: 'Research Lab', description: 'Microbiology and cellular research environment' },
+        { title: 'Research Lab', description: 'Molecular Biology & Cellular Research' },
         {
           title: 'Athletic Training',
           description: 'Performance optimization and biomechanics',
@@ -281,7 +281,7 @@ export const translations = {
       allCategories: 'Tümü',
       addedOn: 'Eklenme tarihi',
       readArticle: 'Makaleyi Oku',
-      academiaText: "Mikroglia, sinir sisteminin yerleşik bağışıklık hücreleridir ve sinirsel homeostazın korunması ile inflamatuar yanıtların koordinasyonu için gereklidir. Kodlamayan RNA'lar bu süreçlerde önemli bir düzenleyici katman oluşturarak gen ifadesini ve hücresel davranışı etkiler. Güncel araştırmalar, mikroglianın nöronlara, glia hücrelerine ve periferik hedeflere moleküler sinyaller taşıyan hücrelerarası taşıyıcılar olarak görev yapan ekstraselüler veziküllerin üretimini ve salınımını nasıl değiştirdiğini incelemektedir. Devam eden çalışmalar, EV'lerin bu moleküller aracılığıyla nöronal bütünlüğü ve daha geniş beyin sağlığını nasıl şekillendirdiğini tanımlamayı ve nihayetinde sağlıklı yaşlanma ve hastalık önleme stratejilerini geliştirmeyi amaçlamaktadır.",
+      academiaText: "<b><i>Mikroglia</i></b>, sinir sisteminin yerleşik bağışıklık hücreleridir ve <b>sinirsel homeostazın</b> korunması ile <b>inflamatuar yanıtların</b> koordinasyonu için gereklidir. <b><i>Kodlamayan RNA'lar</i></b> bu süreçlerde önemli bir düzenleyici katman oluşturarak <b>gen ifadesini</b> ve <b>hücresel davranışı</b> etkiler. Güncel araştırmalar, <i>mikroglianın</i> nöronlara, glia hücrelerine ve periferik hedeflere <b>moleküler sinyaller</b> taşıyan hücrelerarası taşıyıcılar olarak görev yapan <b><i>ekstraselüler veziküllerin</i></b> üretimini ve salınımını nasıl değiştirdiğini incelemektedir. Devam eden çalışmalar, <b>EV'lerin</b> bu moleküller aracılığıyla <b>nöronal bütünlüğü</b> ve daha geniş <b>beyin sağlığını</b> nasıl şekillendirdiğini tanımlamayı ve nihayetinde <b><i>sağlıklı yaşlanma</i></b> ve <b><i>hastalık önleme</i></b> stratejilerini geliştirmeyi amaçlamaktadır.",
       literatureCategories: {
         ev: 'Ekstraselüler Veziküller',
         apitherapy: 'Arı Terapisi',
@@ -467,7 +467,7 @@ export const translations = {
       photoCount: 'fotoğraf',
       noPhotosYet: 'Fotoğraflar yakında...',
       items: [
-        { title: 'Araştırma Laboratuvarı', description: 'Mikrobiyoloji ve hücresel araştırma ortamı' },
+        { title: 'Araştırma Laboratuvarı', description: 'Moleküler Biyoloji & Hücresel Araştırma' },
         {
           title: 'Atletik Antrenman',
           description: 'Performans optimizasyonu ve biyomekanik',
