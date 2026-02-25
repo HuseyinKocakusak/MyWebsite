@@ -230,7 +230,34 @@ export const albums: Album[] = [
         slug: 'running',
         icon: '🏃',
         photos: [
-          // { src: '/images/gallery/athletic-training/running/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+          {
+            src: '/images/gallery/athletic-training/running/Maraton-Izmir-2024.jpeg',
+            note: {
+              en: 'Maraton İzmir 2024',
+              tr: 'Maraton İzmir 2024',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/running/Maraton-Izmir-2024-2.jpeg',
+            note: {
+              en: 'Maraton İzmir 2024',
+              tr: 'Maraton İzmir 2024',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/running/Maraton-Izmir-2024-3.jpeg',
+            note: {
+              en: 'Maraton İzmir 2024',
+              tr: 'Maraton İzmir 2024',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/running/20240421-MaratonIstanbul.jpeg',
+            note: {
+              en: 'Maraton İstanbul, April 21, 2024',
+              tr: 'Maraton İstanbul, 21 Nisan 2024',
+            },
+          },
         ],
       },
     ],
