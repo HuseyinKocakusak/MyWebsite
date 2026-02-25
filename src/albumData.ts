@@ -49,9 +49,27 @@ export const albums: Album[] = [
     slug: 'research-lab',
     icon: '🔬',
     photos: [
-      // Add your Research Lab photos here:
-      //
-      // { src: '/images/gallery/research-lab/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+      {
+        src: '/images/gallery/research-lab/2025newyear_genclab.jpeg',
+        note: {
+          en: 'New year event of 2025, December 23, 2024',
+          tr: '2025 Yeni Yıl Etkinliği, 23 Aralık 2024',
+        },
+      },
+      {
+        src: '/images/gallery/research-lab/20260123_genclab.jpeg',
+        note: {
+          en: 'Thesis Defense, January 23, 2026',
+          tr: 'Tez Savunması, 23 Ocak 2026',
+        },
+      },
+      {
+        src: '/images/gallery/research-lab/brain chopping.jpeg',
+        note: {
+          en: 'Chopping a mice brain as an intern, September 12, 2022',
+          tr: 'Stajyer olarak fare beyni kesimi, 12 Eylül 2022',
+        },
+      },
     ],
   },
 
