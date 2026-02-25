@@ -203,6 +203,20 @@ export const albums: Album[] = [
             },
           },
           {
+            src: '/images/gallery/athletic-training/mountaineering/20240405-team.jpeg',
+            note: {
+              en: 'Friends, April 05, 2025 - Su Uçuran Şelalesi',
+              tr: 'Arkadaşlar, 05 Nisan 2025 - Su Uçuran Şelalesi',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20240405.jpeg',
+            note: {
+              en: 'Waterfall, April 05, 2025 - Su Uçuran Şelalesi',
+              tr: 'Şelale, 05 Nisan 2025 - Su Uçuran Şelalesi',
+            },
+          },
+          {
             src: '/images/gallery/athletic-training/mountaineering/20240413-Ozdere.jpeg',
             note: {
               en: 'Night walk, April 13, 2025 - Ozdere, Izmir',
