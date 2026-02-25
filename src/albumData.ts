@@ -66,7 +66,13 @@ export const albums: Album[] = [
         slug: 'strength',
         icon: '💪',
         photos: [
-          // { src: '/images/gallery/athletic-training/strength/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+          {
+            src: '/images/gallery/athletic-training/strength/January 2025.jpeg',
+            note: {
+              en: 'January 23, 2025',
+              tr: '23 Ocak 2025',
+            },
+          },
         ],
       },
       // ── Stretching & Mobility ──
@@ -230,7 +236,34 @@ export const albums: Album[] = [
         slug: 'running',
         icon: '🏃',
         photos: [
-          // { src: '/images/gallery/athletic-training/running/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+          {
+            src: '/images/gallery/athletic-training/running/20240421-MaratonIstanbul.jpeg',
+            note: {
+              en: 'April 21, 2024 - Istanbul',
+              tr: '21 Nisan 2024 - İstanbul',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/running/Maraton-Izmir-2024.jpeg',
+            note: {
+              en: 'Ranking, May 07, 2023 - Izmir',
+              tr: 'Sıralama, 07 Mayıs 2023 - İzmir',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/running/Maraton-Izmir-2024-2.jpeg',
+            note: {
+              en: 'Medal, May 07, 2023 - Izmir',
+              tr: 'Madalya, 07 Mayıs 2023 - İzmir',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/running/Maraton-Izmir-2024-3.jpeg',
+            note: {
+              en: 'Mobility before running, May 07, 2023 - Izmir',
+              tr: 'Koşu öncesi hareketlilik, 07 Mayıs 2023 - İzmir',
+            },
+          },
         ],
       },
     ],
