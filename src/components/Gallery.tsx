@@ -25,7 +25,8 @@ export default function Gallery({ onOpenAlbum }: GalleryProps) {
           {t.gallery.items.map((item, index) => {
             const slug = albumSlugs[index];
             const album = albums[index];
-            const photoCount = album.photos.length;
+            const photoCount = album.photos.length +
+              (album.subAlbums?.reduce((sum, sub) => sum + sub.photos.length, 0) ?? 0);
 
             return (
               <button
