@@ -90,7 +90,139 @@ export const albums: Album[] = [
         slug: 'mountaineering',
         icon: '🏔️',
         photos: [
-          // { src: '/images/gallery/athletic-training/mountaineering/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20201104_123612.jpg',
+            note: {
+              en: 'Goats, November 04, 2020 - Çaldede Dağı',
+              tr: 'Keçiler, 04 Kasım 2020 - Çaldede Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20201104_133904.jpg',
+            note: {
+              en: 'Greetings from the air, November 04, 2020 - Çaldede Dağı',
+              tr: 'Havadan selamlar, 04 Kasım 2020 - Çaldede Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20201104_134607.jpg',
+            note: {
+              en: 'Scenery, November 04, 2020 - Çaldede Dağı',
+              tr: 'Manzara, 04 Kasım 2020 - Çaldede Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20201223_153110.jpg',
+            note: {
+              en: 'Reflection, December 23, 2020 - Yamanlar Dağı',
+              tr: 'Yansıma, 23 Aralık 2020 - Yamanlar Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20201223_153327.jpg',
+            note: {
+              en: 'Reflection & Hüseyin, December 23, 2020 - Yamanlar Dağı',
+              tr: 'Yansıma & Hüseyin, 23 Aralık 2020 - Yamanlar Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20210105_123011.jpg',
+            note: {
+              en: 'The Gulf of Izmir, January 05, 2021 - Çatalkaya, Balçova',
+              tr: 'İzmir Körfezi, 05 Ocak 2021 - Çatalkaya, Balçova',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20210105_165300.jpg',
+            note: {
+              en: 'Forest, January 05, 2021 - Çatalkaya, Balçova',
+              tr: 'Orman, 05 Ocak 2021 - Çatalkaya, Balçova',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20211003_124047.jpg',
+            note: {
+              en: 'The Gulf of Izmir, October 03, 2021 - Yamanlar Dağı',
+              tr: 'İzmir Körfezi, 03 Ekim 2021 - Yamanlar Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20211017_130406.jpg',
+            note: {
+              en: 'Mumkayası, October 17, 2021 - Ödemiş, Izmir',
+              tr: 'Mumkayası, 17 Ekim 2021 - Ödemiş, İzmir',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20220123_104912.jpg',
+            note: {
+              en: 'Zirve Dağcılık, January 23, 2022 - Bozdağ, Izmir',
+              tr: 'Zirve Dağcılık, 23 Ocak 2022 - Bozdağ, İzmir',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20220123_125559.jpg',
+            note: {
+              en: 'Snowwyyy, January 23, 2022 - Bozdağ, Izmir',
+              tr: 'Karrrr, 23 Ocak 2022 - Bozdağ, İzmir',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/image.png',
+            note: {
+              en: 'Strive, January 23, 2022 - Bozdağ, Izmir',
+              tr: 'Çabalamak, 23 Ocak 2022 - Bozdağ, İzmir',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/IMG-20231210-WA0012.jpg',
+            note: {
+              en: 'Starting point, December 10, 2023 - Nif Dağı',
+              tr: 'Başlangıç noktası, 10 Aralık 2023 - Nif Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/IMG-20240121-WA0011.jpg',
+            note: {
+              en: 'Thyme and rucking, January 21, 2024 - Yamanlar Dağı',
+              tr: 'Kekik ve çantayla yürüyüş, 21 Ocak 2024 - Yamanlar Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/IMG-20240128-WA0002.jpg',
+            note: {
+              en: 'Lake with my dad, January 28, 2024 - Yamanlar Dağı',
+              tr: 'Babamla göl başında, 28 Ocak 2024 - Yamanlar Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/IMG-20240218-WA0015.jpg',
+            note: {
+              en: 'Freezing water, February 18, 2024 - Spil Dağı',
+              tr: 'Dondurucu soğukta su, 18 Şubat 2024 - Spil Dağı',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20240405-team.jpeg',
+            note: {
+              en: 'Friends, April 05, 2025 - Su Uçuran Şelalesi',
+              tr: 'Arkadaşlar, 05 Nisan 2025 - Su Uçuran Şelalesi',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20240405.jpeg',
+            note: {
+              en: 'Waterfall, April 05, 2025 - Su Uçuran Şelalesi',
+              tr: 'Şelale, 05 Nisan 2025 - Su Uçuran Şelalesi',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/mountaineering/20240413-Ozdere.jpeg',
+            note: {
+              en: 'Night walk, April 13, 2025 - Ozdere, Izmir',
+              tr: 'Gece yürüyüşü, 13 Nisan 2025 - Özdere, İzmir',
+            },
+          },
         ],
       },
       // ── Running ──
