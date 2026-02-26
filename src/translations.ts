@@ -108,7 +108,7 @@ export const translations = {
           url: 'https://pubmed.ncbi.nlm.nih.gov/41679354/',
           dateAdded: '2026-02-17',
           summary: 'Research. Brain, Behavior & Immunity. Demonstrates that inflammatory dietary patterns mediate the link between early life stress and systemic inflammation in adolescents.',
-          categories: ['exposome'],
+          categories: ['exposome', 'nutrition'],
         },
         {
           title: 'Social Engagement and Epigenetic Age Acceleration in the Health and Retirement Study',
@@ -140,7 +140,7 @@ export const translations = {
           url: 'https://www.cell.com/cell-metabolism/fulltext/S1550-4131(25)00388-2',
           dateAdded: '2026-02-25',
           summary: 'Research (in vivo). Cell Metabolism. Demonstrates that paternal exercise reprograms sperm microRNAs, transmitting enhanced endurance capacity to offspring.',
-          categories: ['exercise', 'longevity'],
+          categories: ['exercise', 'longevity', 'tsrna'],
         },
         {
           title: 'Bioaccumulation of microplastics in decedent human brains',
@@ -379,7 +379,7 @@ export const translations = {
           url: 'https://pubmed.ncbi.nlm.nih.gov/41679354/',
           dateAdded: '2026-02-17',
           summary: 'Araştırma. Brain, Behavior & Immunity. İnflamatuvar beslenme düzeninin erken yaşam stresi ile adölesanlarda sistemik inflamasyon arasındaki ilişkiye aracılık ettiğini göstermektedir.',
-          categories: ['exposome'],
+          categories: ['exposome', 'nutrition'],
         },
         {
           title: 'Social Engagement and Epigenetic Age Acceleration in the Health and Retirement Study',
@@ -411,7 +411,7 @@ export const translations = {
           url: 'https://www.cell.com/cell-metabolism/fulltext/S1550-4131(25)00388-2',
           dateAdded: '2026-02-25',
           summary: 'Araştırma (in vivo). Cell Metabolism. Paternal egzersizin sperm mikroRNA\'larını yeniden programlayarak yavru nesillere artırılmış dayanıklılık kapasitesi aktardığını göstermektedir.',
-          categories: ['exercise', 'longevity'],
+          categories: ['exercise', 'longevity', 'tsrna'],
         },
         {
           title: 'Bioaccumulation of microplastics in decedent human brains',
