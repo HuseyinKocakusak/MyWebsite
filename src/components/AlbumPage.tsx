@@ -10,18 +10,12 @@ interface AlbumPageProps {
   onOpenSubAlbum?: (subSlug: string) => void;
 }
 
-const slugToIndex: Record<string, number> = {
-  'research-lab': 0,
-  'athletic-training': 1,
-  'apitherapy': 2,
-  'conferences': 3,
-};
-
 export default function AlbumPage({ albumSlug, subAlbumSlug, onBack, onOpenSubAlbum }: AlbumPageProps) {
   const { language } = useLanguage();
   const t = translations[language];
 
-  const albumIndex = slugToIndex[albumSlug] ?? 0;
+  const albumIndex = albums.findIndex(a => a.slug === albumSlug);
+  if (albumIndex === -1) return null;
   const album = albums[albumIndex];
   const galleryItem = t.gallery.items[albumIndex];
 

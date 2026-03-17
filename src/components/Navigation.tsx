@@ -16,7 +16,7 @@ export default function Navigation() {
 
   const navItems = [
     { key: 'science', label: t.nav.science },
-    { key: 'longevity', label: t.nav.longevity },
+    { key: 'longevity', label: t.nav.longevity, scrollTo: 'science' },
     { key: 'apitherapy', label: t.nav.apitherapy },
     { key: 'gallery', label: t.nav.gallery },
     { key: 'about', label: t.nav.about },
@@ -45,7 +45,7 @@ export default function Navigation() {
             {navItems.map((item) => (
               <button
                 key={item.key}
-                onClick={() => scrollToSection(item.key)}
+                onClick={() => scrollToSection(item.scrollTo ?? item.key)}
                 className="text-slate-700 hover:text-slate-900 hover:scale-110 transition-all font-medium"
               >
                 {item.label}
@@ -82,7 +82,7 @@ export default function Navigation() {
             {navItems.map((item) => (
               <button
                 key={item.key}
-                onClick={() => scrollToSection(item.key)}
+                onClick={() => scrollToSection(item.scrollTo ?? item.key)}
                 className="text-slate-700 hover:text-slate-900 hover:scale-110 transition-all font-medium text-left"
               >
                 {item.label}
