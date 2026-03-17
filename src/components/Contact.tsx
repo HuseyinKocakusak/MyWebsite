@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
+type FormStatus = 'idle' | 'sending' | 'success' | 'error';
+
 export default function Contact() {
   const { language } = useLanguage();
   const t = translations[language];
@@ -12,20 +14,30 @@ export default function Contact() {
     email: '',
     message: '',
   });
+  const [status, setStatus] = useState<FormStatus>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus('sending');
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Message from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    const mailtoLink = `mailto:huseyinkocakusak@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      // Replace REPLACE_WITH_YOUR_FORM_ID with your Formspree form ID.
+      // Get one for free at https://formspree.io
+      const response = await fetch('https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    // Open email client
-    window.location.href = mailtoLink;
-
-    // Clear form
-    setFormData({ name: '', email: '', message: '' });
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -122,11 +134,19 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:scale-105 font-medium shadow-lg shadow-slate-900/20 flex items-center justify-center gap-2"
+              disabled={status === 'sending'}
+              className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:scale-105 font-medium shadow-lg shadow-slate-900/20 flex items-center justify-center gap-2 disabled:opacity-60 disabled:hover:scale-100"
             >
-              <span>{t.contact.sendMessage}</span>
+              <span>{status === 'sending' ? 'Sending...' : t.contact.sendMessage}</span>
               <Send size={20} />
             </button>
+
+            {status === 'success' && (
+              <p className="text-green-700 text-center font-medium">Message sent successfully!</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-700 text-center font-medium">Failed to send message. Please try again.</p>
+            )}
           </form>
         </div>
 
