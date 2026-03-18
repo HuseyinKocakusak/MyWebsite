@@ -39,6 +39,14 @@ export const translations = {
       },
       literatureItems: [
         {
+          title: 'Microglia protein profiles in CSF across Alzheimer\'s disease clinical stages',
+          year: '2026',
+          url: 'https://www.nature.com/articles/s43587-026-01088-0',
+          dateAdded: '2026-03-18',
+          summary: 'Research. Analyzed CSF microglia-related proteins across Alzheimer\'s clinical stages (n=834), revealing innate immune processes in preclinical AD and adaptive immunity in dementia, with an 18-protein panel distinguishing early and late disease.',
+          categories: ['brain'],
+        },
+        {
           title: 'tRNA renovatio: Rebirth through fragmentation',
           year: '2023',
           url: 'https://www.cell.com/molecular-cell/fulltext/S1097-2765(23)00739-6',
@@ -365,6 +373,14 @@ export const translations = {
         nutrition: 'Beslenme',
       },
       literatureItems: [
+        {
+          title: 'Microglia protein profiles in CSF across Alzheimer\'s disease clinical stages',
+          year: '2026',
+          url: 'https://www.nature.com/articles/s43587-026-01088-0',
+          dateAdded: '2026-03-18',
+          summary: 'Araştırma. Alzheimer klinik evrelerinde BOS mikroglia ilişkili proteinleri analiz edilmiş (n=834), preklinik AD\'de doğal bağışıklık süreçleri ve demansta adaptif bağışıklık ortaya konmuş, erken ve geç hastalığı ayırt eden 18 proteinlik bir panel belirlenmiştir.',
+          categories: ['brain'],
+        },
         {
           title: 'tRNA renovatio: Rebirth through fragmentation',
           year: '2023',
