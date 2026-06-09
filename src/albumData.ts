@@ -292,9 +292,48 @@ export const albums: Album[] = [
     slug: 'apitherapy',
     icon: '🐝',
     photos: [
-      // Add your Apitherapy photos here:
-      //
-      // { src: '/images/gallery/apitherapy/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+      {
+        src: '/images/gallery/apitherapy/IMG_20260521_154702_cropped.jpg',
+        note: {
+          en: 'Apitherapy session, May 21, 2026 - Manisa Selendi',
+          tr: 'Apiterapi seansı, 21 Mayıs 2026 - Manisa Selendi',
+        },
+      },
+      {
+        src: '/images/gallery/apitherapy/IMG_20260521_153721.jpg',
+        note: {
+          en: 'Apitherapy session, May 21, 2026 - Manisa Selendi',
+          tr: 'Apiterapi seansı, 21 Mayıs 2026 - Manisa Selendi',
+        },
+      },
+      {
+        src: '/images/gallery/apitherapy/IMG_20260521_154015.jpg',
+        note: {
+          en: 'Apitherapy session, May 21, 2026 - Manisa Selendi',
+          tr: 'Apiterapi seansı, 21 Mayıs 2026 - Manisa Selendi',
+        },
+      },
+      {
+        src: '/images/gallery/apitherapy/20260521_152920.jpg',
+        note: {
+          en: 'Apitherapy session, May 21, 2026 - Manisa Selendi',
+          tr: 'Apiterapi seansı, 21 Mayıs 2026 - Manisa Selendi',
+        },
+      },
+      {
+        src: '/images/gallery/apitherapy/DSC02740.jpg',
+        note: {
+          en: 'Apitherapy session, June 1, 2026',
+          tr: 'Apiterapi seansı, 1 Haziran 2026',
+        },
+      },
+      {
+        src: '/images/gallery/apitherapy/DSC02743.jpg',
+        note: {
+          en: 'Apitherapy session, June 1, 2026',
+          tr: 'Apiterapi seansı, 1 Haziran 2026',
+        },
+      },
     ],
   },
 
