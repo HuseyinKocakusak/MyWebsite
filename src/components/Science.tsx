@@ -81,10 +81,11 @@ export default function Science() {
       icon: Users,
       content: [
         { title: '22nd Turkish Neuroscience Congress', year: '2024', location: 'Istanbul, Turkey', url: 'https://www.bad.org.tr/guncel-usk/' },
-        { title: '1st International Extracellular Vesicles Conference', year: '2024', location: 'Ankara, Turkey', type: 'Poster', url: 'https://meetinghand.com/e/1-extracellular-vesicles-conference/#welcome-3069' },
+        { title: '1st. Extracellular Vesicles Conference - 2024', year: '2024', location: 'Ankara, Turkey', type: 'Poster', url: 'https://meetinghand.com/e/1-extracellular-vesicles-conference/#welcome-3069' },
         { title: 'Exposome-TR Symposium', year: '2024', location: 'Izmir, Turkey', url: 'https://www.deu.edu.tr/etkinlik/exposome-tr-sempozyumu/' },
         { title: 'The 8th Venusberg Meeting on Neuroinflammation', year: '2025', location: 'Belval, Luxemburg', type: 'Poster', url: 'https://neuroinflammation.uni.lu/' },
         { title: '23rd Turkish Neuroscience Congress', year: '2025', location: 'Izmir, Turkey', type: 'Organization Team', url: 'https://usktubas.org/genel-bilgiler' },
+        { title: '2nd Extracellular Vesicles Conference (TURSEV-26)', year: '2026', location: 'Turkey', url: 'https://tursev.org/#page-title-6732' },
       ],
       type: 'conferences',
     },
