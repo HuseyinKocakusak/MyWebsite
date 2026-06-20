@@ -72,7 +72,7 @@ export default function Science() {
       icon: Award,
       content: [
         { title: 'KOCAKUSAK, H., KÖK, A. B., OZTURK, B., KARACICEK, B., GENC, S. (2025)', venue: 'Deciphering the Role of tRNA-Derived Fragments in Neurological and Psychiatric Disease Pathogenesis. Frontiers in Cellular Neuroscience', url: 'https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2025.1663788/full' },
-        { title: 'KOCAKUSAK, H. (2026)', venue: 'Profiling tRNA-derived fragments in LPS-induced microglia and their influence on immune response. Science Direct', url: 'https://www.sciencedirect.com/science/article/pii/S000689932600291X' },
+        { title: 'ARIOZ, B.I., BINOKAY, L., KOCAKUSAK, H., KARAKÜLAH, G., GENC, S. (2026)', venue: 'Profiling tRNA-derived fragments in LPS-induced microglia and their influence on immune response. Brain Research', url: 'https://www.sciencedirect.com/science/article/pii/S000689932600291X' },
       ],
       type: 'publications',
     },
