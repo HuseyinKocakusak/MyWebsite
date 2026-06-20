@@ -1,4 +1,4 @@
-import { BookOpen, CheckCircle, BarChart3 } from 'lucide-react';
+import { BookOpen, CheckCircle, BarChart3, Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
 
@@ -22,9 +22,17 @@ export default function About() {
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
               {t.about.paragraph2}
             </p>
-            <p className="text-lg text-slate-600 leading-relaxed">
+            <p className="text-lg text-slate-600 leading-relaxed mb-8">
               {t.about.paragraph3}
             </p>
+            <a
+              href="/cv/CV_HUSEYINKOCAKUSAK.pdf"
+              download
+              className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors font-medium"
+            >
+              <Download size={20} />
+              {t.about.downloadCV}
+            </a>
           </div>
 
           <div className="space-y-6">
