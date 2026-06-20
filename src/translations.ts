@@ -319,6 +319,8 @@ export const translations = {
       disciplinedDesc: 'Committed to consistent execution, rigorous methodology, and sustainable practices.',
       analytic: 'Analytic',
       analyticDesc: 'Using data-driven analysis and critical thinking to generate measurable, meaningful results.',
+      downloadCV: 'Download CV',
+      cvLabel: 'Curriculum Vitae',
     },
     contact: {
       title: 'Get In Touch',
@@ -654,6 +656,8 @@ export const translations = {
       disciplinedDesc: 'Tutarlı uygulama, titiz metodoloji ve sürdürülebilir pratiklere bağlılık.',
       analytic: 'Analitik',
       analyticDesc: 'Ölçülebilir ve anlamlı sonuçlar üretmek için veri odaklı analiz ve eleştirel düşünce kullanma.',
+      downloadCV: 'CV\'yi İndir',
+      cvLabel: 'Özgeçmiş',
     },
     contact: {
       title: 'İletişime Geçin',
