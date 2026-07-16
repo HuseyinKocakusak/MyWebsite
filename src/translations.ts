@@ -39,6 +39,14 @@ export const translations = {
       },
       literatureItems: [
         {
+          title: 'Induction of cortical on/off periods in awake mice fulfills sleep functions',
+          year: '2026',
+          url: 'https://www.nature.com/articles/s41593-026-02318-9',
+          dateAdded: '2026-07-15',
+          summary: 'Research. Demonstrates that artificially inducing cortical on/off periods in awake mice replicates the restorative functions of sleep, suggesting that these neural oscillations are sufficient to fulfill core sleep-dependent processes.',
+          categories: ['brain'],
+        },
+        {
           title: 'Microglia protein profiles in CSF across Alzheimer\'s disease clinical stages',
           year: '2026',
           url: 'https://www.nature.com/articles/s43587-026-01088-0',
@@ -399,6 +407,14 @@ export const translations = {
         nutrition: 'Beslenme',
       },
       literatureItems: [
+        {
+          title: 'Induction of cortical on/off periods in awake mice fulfills sleep functions',
+          year: '2026',
+          url: 'https://www.nature.com/articles/s41593-026-02318-9',
+          dateAdded: '2026-07-15',
+          summary: 'Araştırma. Uyanık farelerde kortikal açık/kapalı periyotların yapay olarak tetiklenmesinin uykunun işlevlerini yerine getirebildiğini göstermekte; bu nöral osilaasyonların temel uykuya bağlı süreçleri karşılamak için yeterli olduğuna işaret etmektedir.',
+          categories: ['brain'],
+        },
         {
           title: 'Microglia protein profiles in CSF across Alzheimer\'s disease clinical stages',
           year: '2026',
