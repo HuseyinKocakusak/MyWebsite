@@ -430,6 +430,13 @@ export const albums: Album[] = [
           tr: 'Lüksemburg\'da dinleyicilerle projemizin son bulgularını tartışıyorum.',
         },
       },
+      {
+        src: '/images/gallery/conferences/işvapur.jpg',
+        note: {
+          en: 'Celebrating Prof. Dr. Gökhan Hotamışlıgil\'s election to the U.S. National Academy of Sciences (NAS) aboard İş Vapuru, hosted by Enlila and Türkiye İş Bankası. A memorable gathering of scientists, entrepreneurs, and investors — July 24, 2026.',
+          tr: 'Prof. Dr. Gökhan Hotamışlıgil\'in ABD Ulusal Bilimler Akademisi\'ne (NAS) seçilmesini İş Vapuru\'nda kutladık. Enlila ve Türkiye İş Bankası\'nın ev sahipliğinde, Hakan Aran\'ın da katılımıyla gerçekleşen unutulmaz bir buluşma — 24 Temmuz 2026.',
+        },
+      },
     ],
   },
 ];
