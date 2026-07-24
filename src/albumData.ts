@@ -337,8 +337,8 @@ export const albums: Album[] = [
       {
         src: '/images/gallery/apitherapy/GOPR0661_cropped.JPG',
         note: {
-          en: 'With my bee friend at BEEONIA.',
-          tr: 'Arı dostumla BEEONIA\'dayız.',
+          en: 'With my bee friend at BEEONIA. | June 10, 2026',
+          tr: 'Arı dostumla BEEONIA\'dayız. | 10 Haziran 2026',
         },
       },
     ],
