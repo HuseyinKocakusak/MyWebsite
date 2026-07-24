@@ -365,6 +365,28 @@ export const albums: Album[] = [
     ],
   },
 
+  // ── Brazilian Jiu Jitsu ───────────────────────────────────────────────
+  {
+    slug: 'brazilian-jiu-jitsu',
+    icon: '🥋',
+    photos: [
+      {
+        src: '/images/gallery/brazilian-jiu-jitsu/BJJ_13Temmuz.JPG',
+        note: {
+          en: 'Ashina Clan, July 13, 2026',
+          tr: 'Ashina Clan, 13 Temmuz 2026',
+        },
+      },
+      {
+        src: '/images/gallery/brazilian-jiu-jitsu/Bjj_20Temmuz.JPG',
+        note: {
+          en: 'Ashina Clan, July 20, 2026',
+          tr: 'Ashina Clan, 20 Temmuz 2026',
+        },
+      },
+    ],
+  },
+
   // ── Conferences ───────────────────────────────────────────────────────
   {
     slug: 'conferences',
