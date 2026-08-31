@@ -276,7 +276,7 @@ export const translations = {
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13511335/#sec2-cells-15-01468',
           dateAdded: '2026-08-24',
           summary: 'Research (in vivo). Cells. Demonstrates that muscle-derived small extracellular vesicles regulate bone maintenance during hibernation through miRNA-mediated signaling, revealing a novel muscle-to-bone communication axis active under energy-restricted states.',
-          categories: ['ev', 'tsrna', 'exercise'],
+          categories: ['ev', 'tsrna'],
         },
         {
           title: 'miR-151a-5p in Neuron-Derived Extracellular Vesicles Mediates Antidepressant Response',
@@ -686,7 +686,7 @@ export const translations = {
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13511335/#sec2-cells-15-01468',
           dateAdded: '2026-08-24',
           summary: 'Araştırma (in vivo). Cells. Kas kaynaklı küçük ekstraselüler vesiküllerin, hibernasyon sırasında miRNA aracılı sinyalizasyon yoluyla kemik homeostazını düzenlediğini ortaya koymakta; enerji kısıtlı koşullarda aktif olan yeni bir kas-kemik iletişim ekseni tanımlamaktadır.',
-          categories: ['ev', 'tsrna', 'exercise'],
+          categories: ['ev', 'tsrna'],
         },
         {
           title: 'miR-151a-5p in Neuron-Derived Extracellular Vesicles Mediates Antidepressant Response',
