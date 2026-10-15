@@ -315,7 +315,7 @@ export const translations = {
           year: '2026',
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12894209/',
           dateAdded: '2026-09-27',
-          summary: 'Research (in vivo). Shows that miR-27b-3p-enriched extracellular vesicles from M2-polarized microglia reduce mitochondria-dependent endothelial apoptosis via the MKK4/JNK pathway after intracerebral hemorrhage, lowering brain edema and hematoma volume and limiting blood-brain barrier disruption.',
+          summary: 'Research (in vitro, in vivo). Molecular Neurobiology. EVs from IL-4-polarized M2 microglia reduced endothelial apoptosis, preserved tight junctions and attenuated blood-brain barrier disruption in in vitro and mouse intracerebral hemorrhage models, limiting brain edema and hematoma expansion and improving neurological deficits; the enriched miR-27b-3p targeted MKK4, reducing MKK4/JNK phosphorylation, cytochrome c release and Caspase-3.',
           categories: ['ev', 'brain', 'tsrna'],
         },
         {
@@ -339,7 +339,7 @@ export const translations = {
           year: '2026',
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12723720/',
           dateAdded: '2026-10-25',
-          summary: 'Research (in vivo). Aging Cell. In 5xFAD mice, four weeks of weekly retro-orbital injections of EVs from human neural stem cells or iPSC-derived microglia produced comparable cognitive improvements versus vehicle-treated Alzheimer\'s mice.',
+          summary: 'Research (in vivo). Aging Cell. In 3-month-old 5xFAD mice, four weekly intravenous injections of EVs from human neural stem cells or iPSC-derived microglia produced comparable cognitive improvements, reduced amyloid-beta plaques, astrogliosis and microglial activation, restored synaptophysin and PSD-95, and lowered neuroinflammatory gene signatures; the two EV types carried unique and shared miRNA signatures.',
           categories: ['ev', 'brain'],
         },
         {
@@ -387,7 +387,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.nature.com/articles/s41586-026-11142-x',
           dateAdded: '2026-10-11',
-          summary: 'Research (in vivo). Nature. Identifies Bacteroides uniformis, enriched in the gut microbiome of healthy individuals, and its odd-chain fatty acid pentadecanoic acid as reducing aortic plaque in ApoE-deficient mice on a high-fat diet; the molecule binds HMG-CoA reductase and lowers LDL cholesterol, acting on the same pathway as atorvastatin.',
+          summary: 'Research (in vivo, human data). Nature. Bacteroides uniformis, the most abundant health-associated species in gut metagenomes of 223 ASCVD patients vs 189 controls, alleviated atherosclerosis in Apoe-/- mice by upregulating hepatic LDL receptor; its odd-chain fatty acid pentadecanoic acid (C15:0) reduced plaque burden by about 50% and improved plasma lipids by directly inhibiting HMG-CoA reductase, and was markedly depleted in patients with dyslipidaemia.',
           categories: ['nutrition', 'longevity'],
         },
         {
@@ -403,7 +403,7 @@ export const translations = {
           year: '2026',
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13228447/',
           dateAdded: '2026-11-29',
-          summary: 'Research (human, in vivo, in vitro). bioRxiv preprint. Identifies stress-induced tRNA-derived fragments as the most dysregulated small RNA class in Alzheimer\'s brains, PS19 mice and human neuronal tauopathy models; 5′Glu-CTC and 5′Gly-GCC bind Tau and promote its phosphorylation, oligomerization and fibril formation, and inhibiting 5′Glu-CTC reduced Tau pathology.',
+          summary: 'Research (human, in vivo, in vitro). bioRxiv preprint (not peer-reviewed). Stress-induced tRNA-derived fragments are the most dysregulated small RNA class in Alzheimer\'s brains, PS19 tau mice and human neuronal tauopathy models; 5′GluCTC and 5′GlyGCC bind Tau directly and induce its phosphorylation, oligomerization and fibril formation, 5′GluCTC co-localizes with oligomeric Tau in PS19 brains and its inhibition mitigates Tau pathology, and these tRFs are secreted by neurons and taken up by recipient cells.',
           categories: ['tsrna', 'brain'],
         },
         {
@@ -411,7 +411,7 @@ export const translations = {
           year: '2024',
           url: 'https://linkinghub.elsevier.com/retrieve/pii/S0896627324004914',
           dateAdded: '2026-12-06',
-          summary: 'Research (in vitro, in vivo). Neuron. Shows that microglia form tunneling nanotubes with neurons to remove alpha-synuclein and tau aggregates and to transfer healthy mitochondria, reducing oxidative stress and restoring neuronal activity; this transfer is impaired in microglia carrying Lrrk2 G2019S or Trem2 T66M and R47H variants.',
+          summary: 'Research (in vitro, in vivo). Neuron. Microglia connect to alpha-synuclein- or tau-burdened neurons via tunneling nanotubes, take up these aggregates for clearance and donate healthy mitochondria, reducing oxidative stress, normalizing gene expression and rescuing neuronal activity; blocking microglial mitochondrial function with antimycin A abolished the protection, and aggregate transfer was impaired in microglia carrying Lrrk2 G2019S or Trem2 T66M and R47H variants.',
           categories: ['brain'],
         },
       ],
@@ -853,7 +853,7 @@ export const translations = {
           year: '2026',
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12894209/',
           dateAdded: '2026-09-27',
-          summary: 'Araştırma (in vivo). M2 polarize mikrogliadan elde edilen ve miR-27b-3p açısından zengin ekstraselüler veziküllerin intraserebral kanama sonrası MKK4/JNK yolağı üzerinden mitokondri bağımlı endotel apoptozunu azalttığını, beyin ödemini ve hematom hacmini düşürdüğünü ve kan-beyin bariyeri hasarını sınırladığını göstermektedir.',
+          summary: 'Araştırma (in vitro, in vivo). Molecular Neurobiology. IL-4 ile M2 fenotipine polarize edilen mikrogliadan elde edilen EV\'ler, in vitro ve fare intraserebral kanama modellerinde endotel apoptozunu azaltmış, sıkı bağlantıları korumuş ve kan-beyin bariyeri hasarını hafifletmiş; beyin ödemini ve hematom büyümesini sınırlayarak nörolojik defisitleri iyileştirmiştir; zenginleşen miR-27b-3p, MKK4\'ü hedefleyerek MKK4/JNK fosforilasyonunu, sitokrom c salınımını ve Kaspaz-3\'ü azaltmıştır.',
           categories: ['ev', 'brain', 'tsrna'],
         },
         {
@@ -877,7 +877,7 @@ export const translations = {
           year: '2026',
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12723720/',
           dateAdded: '2026-10-25',
-          summary: 'Araştırma (in vivo). Aging Cell. 5xFAD farelerinde, insan nöral kök hücrelerinden veya iPSC kaynaklı mikrogliadan elde edilen EV\'lerin dört hafta boyunca haftalık retro-orbital enjeksiyonu, taşıyıcı verilen Alzheimer farelerine kıyasla benzer bilişsel iyileşme sağlamıştır.',
+          summary: 'Araştırma (in vivo). Aging Cell. 3 aylık 5xFAD farelerinde, insan nöral kök hücrelerinden veya iPSC kaynaklı mikrogliadan elde edilen EV\'lerin dört haftalık intravenöz enjeksiyonu benzer bilişsel iyileşme sağlamış; amiloid-beta plaklarını, astrogliozu ve mikroglial aktivasyonu azaltmış, sinaptofizin ve PSD-95 düzeylerini geri kazandırmış ve nöroinflamatuvar gen imzalarını düşürmüştür; iki EV türü hem özgün hem ortak miRNA imzaları taşımaktadır.',
           categories: ['ev', 'brain'],
         },
         {
@@ -925,7 +925,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.nature.com/articles/s41586-026-11142-x',
           dateAdded: '2026-10-11',
-          summary: 'Araştırma (in vivo). Nature. Sağlıklı bireylerin bağırsak mikrobiyomunda zenginleşen Bacteroides uniformis\'i ve onun tek zincirli yağ asidi pentadekanoik asidi, yüksek yağlı diyetle beslenen ApoE eksik farelerde aort plağını azaltan faktör olarak tanımlamaktadır; molekül HMG-CoA redüktaza bağlanarak LDL kolesterolü düşürmekte ve atorvastatin ile aynı yolak üzerinden etki etmektedir.',
+          summary: 'Araştırma (in vivo, insan verisi). Nature. 223 ASKVH hastası ve 189 kontrolün bağırsak metagenomlarında sağlıkla en çok ilişkili tür olan Bacteroides uniformis, Apoe-/- farelerde hepatik LDL reseptörünü artırarak aterosklerozu hafifletmiştir; bu bakterinin tek zincirli yağ asidi pentadekanoik asit (C15:0), HMG-CoA redüktazı doğrudan inhibe ederek plak yükünü yaklaşık %50 azaltmış ve plazma lipidlerini iyileştirmiş, dislipidemi hastalarında ise belirgin şekilde düşük bulunmuştur.',
           categories: ['nutrition', 'longevity'],
         },
         {
@@ -941,7 +941,7 @@ export const translations = {
           year: '2026',
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13228447/',
           dateAdded: '2026-11-29',
-          summary: 'Araştırma (insan, in vivo, in vitro). bioRxiv ön baskı. Strese bağlı tRNA kaynaklı fragmanları Alzheimer beyinlerinde, PS19 farelerinde ve insan nöronal tauopati modellerinde en çok düzensizleşen küçük RNA sınıfı olarak tanımlamaktadır; 5′Glu-CTC ve 5′Gly-GCC Tau\'ya bağlanarak fosforilasyonunu, oligomerizasyonunu ve fibril oluşumunu artırmakta, 5′Glu-CTC\'nin inhibisyonu ise Tau patolojisini azaltmaktadır.',
+          summary: 'Araştırma (insan, in vivo, in vitro). bioRxiv ön baskı (hakem değerlendirmesinden geçmemiş). Strese bağlı tRNA kaynaklı fragmanlar Alzheimer beyinlerinde, PS19 tau farelerinde ve insan nöronal tauopati modellerinde en çok düzensizleşen küçük RNA sınıfıdır; 5′GluCTC ve 5′GlyGCC Tau\'ya doğrudan bağlanarak fosforilasyonunu, oligomerizasyonunu ve fibril oluşumunu tetiklemekte, 5′GluCTC PS19 beyinlerinde oligomerik Tau ile birlikte bulunmakta ve inhibisyonu Tau patolojisini azaltmaktadır; bu tRF\'ler nöronlardan salınıp alıcı hücrelerce alınmaktadır.',
           categories: ['tsrna', 'brain'],
         },
         {
@@ -949,7 +949,7 @@ export const translations = {
           year: '2024',
           url: 'https://linkinghub.elsevier.com/retrieve/pii/S0896627324004914',
           dateAdded: '2026-12-06',
-          summary: 'Araştırma (in vitro, in vivo). Neuron. Mikroglianın nöronlarla tünel nanotüpler oluşturarak alfa-sinüklein ve tau agregatlarını uzaklaştırdığını ve sağlıklı mitokondri aktardığını, böylece oksidatif stresi azaltıp nöronal aktiviteyi geri kazandırdığını göstermektedir; bu aktarım Lrrk2 G2019S veya Trem2 T66M ve R47H varyantları taşıyan mikrogliada bozulmaktadır.',
+          summary: 'Araştırma (in vitro, in vivo). Neuron. Mikroglia, alfa-sinüklein veya tau yüklü nöronlara tünel nanotüplerle bağlanarak bu agregatları temizlemek üzere alır ve sağlıklı mitokondri aktarır; böylece oksidatif stresi azaltır, gen ekspresyonunu normalleştirir ve nöronal aktiviteyi geri kazandırır; mikroglial mitokondri işlevinin antimisin A ile engellenmesi korumayı ortadan kaldırmış, Lrrk2 G2019S veya Trem2 T66M ve R47H varyantları taşıyan mikrogliada agregat aktarımı bozulmuştur.',
           categories: ['brain'],
         },
       ],
