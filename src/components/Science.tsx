@@ -34,11 +34,14 @@ export default function Science() {
   const categories = t.science.literatureCategories as Record<string, string>;
   const literatureItems = t.science.literatureItems as LiteratureItem[];
 
-  // Sort by dateAdded (newest first), then filter by category
-  const sortedItems = useMemo(() =>
-    [...literatureItems].sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()),
-    [literatureItems]
-  );
+  // Hide items scheduled for a future date, sort by dateAdded (newest first), then filter by category
+  const sortedItems = useMemo(() => {
+    const now = new Date();
+    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    return literatureItems
+      .filter((item) => item.dateAdded <= today)
+      .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
+  }, [literatureItems]);
 
   const filteredItems = activeCategory
     ? sortedItems.filter((item) => item.categories.includes(activeCategory))
