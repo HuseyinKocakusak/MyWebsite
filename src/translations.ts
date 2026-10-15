@@ -395,7 +395,7 @@ export const translations = {
           year: '2026',
           url: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202514852',
           dateAdded: '2026-11-22',
-          summary: 'Research (in vitro). Advanced Science. Shows that cytoplasmic NPM1 recognizes specific RNA motifs and forms phase-separated condensates with RNA through its intrinsically disordered region; these condensates recruit CD63-labeled multivesicular body membranes, mediating selective mRNA sorting into extracellular vesicles.',
+          summary: 'Research (in vitro, human samples). Advanced Science. Identifies Nucleophosmin 1 (NPM1) as a protein that sorts mRNAs into EVs: it binds specific RNA motifs, including within EGFR mRNA, and forms phase-separated RNA condensates that are packaged into late endosomes and multivesicular bodies and then loaded into EVs; serum EVs from non-small cell lung cancer patients showed elevated NPM1 protein and EGFR mRNA.',
           categories: ['ev'],
         },
         {
@@ -933,7 +933,7 @@ export const translations = {
           year: '2026',
           url: 'https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202514852',
           dateAdded: '2026-11-22',
-          summary: 'Araştırma (in vitro). Advanced Science. Sitoplazmik NPM1\'in belirli RNA motiflerini tanıdığını ve içsel olarak düzensiz bölgesi aracılığıyla RNA ile faz ayrımına uğramış kondensatlar oluşturduğunu göstermektedir; bu kondensatlar CD63 işaretli multiveziküler cisim zarlarını toplayarak mRNA\'ların ekstraselüler veziküllere seçici olarak yüklenmesine aracılık etmektedir.',
+          summary: 'Araştırma (in vitro, insan örnekleri). Advanced Science. Nükleofosmin 1\'i (NPM1) mRNA\'ları EV\'lere yönlendiren bir protein olarak tanımlamaktadır: NPM1, EGFR mRNA\'sındakiler dahil belirli RNA motiflerine bağlanarak faz ayrımına uğramış RNA kondensatları oluşturmakta; bu kondensatlar geç endozomlara ve multiveziküler cisimlere paketlenip EV\'lere yüklenmektedir; küçük hücreli dışı akciğer kanseri hastalarının serum EV\'lerinde NPM1 proteini ve EGFR mRNA\'sı yüksek bulunmuştur.',
           categories: ['ev'],
         },
         {
