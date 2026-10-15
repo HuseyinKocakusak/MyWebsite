@@ -299,7 +299,7 @@ export const translations = {
           year: '2025',
           url: 'https://www.nature.com/articles/s41556-025-01682-1',
           dateAdded: '2026-09-13',
-          summary: 'Research (in vitro). Nature Cell Biology. Using metabolic labeling with an azide-modified sugar analog, shows that glycosylated RNAs (glycoRNAs) are absent from the plasma membrane and nucleus but concentrated in membrane-associated cytoplasmic compartments and inside exosomes.',
+          summary: 'Research (in vitro). Nature Cell Biology. Metabolic labeling with an Ac4GalNAz probe reveals small, non-coding, glyco-modified RNAs (glycoRNAs) that are RNase-resistant and carried mainly as intraluminal exosome cargo, distinct from cell-surface glycoRNAs; exosomal glycoRNAs transfer to naive cells, and blocking glycan transfer to proteins reduces their sorting into exosomes.',
           categories: ['ev', 'tsrna'],
         },
         {
@@ -331,7 +331,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.mdpi.com/1422-0067/27/11/4661',
           dateAdded: '2026-10-25',
-          summary: 'Review. International Journal of Molecular Sciences. Reviews the bioactive components of bee venom (melittin, apamin, adolapin, phospholipase A2), their anti-inflammatory, antioxidant, antimicrobial, analgesic and immunomodulatory properties, and their studied therapeutic potential in cancer, diabetes and neurodegenerative disorders, including clinical trials.',
+          summary: 'Review. International Journal of Molecular Sciences. Reviews experimental and clinical evidence on bee venom and its main components (melittin, apamin, adolapin, phospholipase A2) in diabetes, cancer and neurodegenerative disorders such as Parkinson\'s and Alzheimer\'s disease, covering effects on oxidative stress, inflammation, apoptosis and immune pathways; notes that allergic reactions, systemic toxicity and anaphylaxis limit clinical use and that well-designed clinical trials are still needed.',
           categories: ['apitherapy'],
         },
         {
@@ -355,7 +355,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.nature.com/articles/s41467-026-71141-4',
           dateAdded: '2026-11-15',
-          summary: 'Research (human). Nature Communications. In 533 participants from four long-term dietary trials (DIRECT, CASCADE, CENTRAL, DIRECT-PLUS) followed for up to 16 years with repeated MRI, sustained visceral fat loss was associated with slower brain atrophy, particularly in the hippocampus, and better cognitive performance, independent of weight loss.',
+          summary: 'Research (human, RCT follow-up). Nature Communications. In 533 adults (mean age 61.4, 86% men) from four lifestyle RCTs (DIRECT, CASCADE, CENTRAL, DIRECT-PLUS) assessed by MRI and MoCA 5-16 years after the interventions, lower long-term visceral fat exposure was associated with higher cognitive scores, higher brain volumes independent of weight loss, and slower brain atrophy; subcutaneous fat showed no such pattern, and improved glycemic control was the main related factor.',
           categories: ['nutrition', 'brain', 'longevity'],
         },
         {
@@ -363,7 +363,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.nature.com/articles/s41419-026-09264-1',
           dateAdded: '2026-10-11',
-          summary: 'Research (in vitro). Cell Death & Disease. Reports that the tRNA-derived fragment 5′tRF-GluCTC is released from human iPSC-derived neurons in an activity-dependent manner and modulates neuronal molecular networks.',
+          summary: 'Research (in vitro). Cell Death & Disease. In human iPSC-derived cortical neurons, glutamate/picrotoxin-induced hyperexcitability raised intracellular and extracellular 5′tRF GluCTC, whose production depended on DICER and Angiogenin; a 5′tRF GluCTC mimic downregulated proteins of RNA-protein complexes, translation and neuronal signaling (including the epilepsy-associated TUBB2B, EEF1A1/2 and EIF4A2) and increased spike and burst frequency at 24 h.',
           categories: ['tsrna', 'brain'],
         },
         {
@@ -379,7 +379,7 @@ export const translations = {
           year: '2026',
           url: 'https://link.springer.com/article/10.1186/s40035-026-00587-9',
           dateAdded: '2026-11-22',
-          summary: 'Translational Neurodegeneration. Addresses the cargo of microglia-derived extracellular vesicles as a candidate biomarker source for the early detection of Alzheimer\'s disease.',
+          summary: 'Review. Translational Neurodegeneration. Evaluates whether the protein, nucleic acid and lipid cargo of EVs released by disease-associated microglia, detectable in CSF and blood, meets the criteria of an early Alzheimer\'s biomarker (detectability, sensitivity, specificity, longitudinal monitoring), discusses isolation and marker-standardization challenges, and proposes a roadmap toward microglia-specific EV signatures.',
           categories: ['ev', 'brain'],
         },
         {
@@ -837,7 +837,7 @@ export const translations = {
           year: '2025',
           url: 'https://www.nature.com/articles/s41556-025-01682-1',
           dateAdded: '2026-09-13',
-          summary: 'Araştırma (in vitro). Nature Cell Biology. Azid modifiyeli şeker analoğu ile metabolik işaretleme kullanarak, glikozillenmiş RNA\'ların (glikoRNA) plazma zarında ve çekirdekte bulunmadığını, zarla ilişkili sitoplazmik kompartmanlarda ve eksozomların içinde yoğunlaştığını göstermektedir.',
+          summary: 'Araştırma (in vitro). Nature Cell Biology. Ac4GalNAz probu ile metabolik işaretleme, RNaz\'a dirençli ve büyük ölçüde eksozomların lümen içi yükü olarak taşınan, hücre yüzeyindeki glikoRNA\'lardan farklı küçük, kodlamayan, glikozillenmiş RNA\'ları (glikoRNA) ortaya koymaktadır; eksozomal glikoRNA\'lar naif hücrelere aktarılabilmekte, proteinlere glikan aktarımının engellenmesi ise bunların eksozomlara yüklenmesini azaltmaktadır.',
           categories: ['ev', 'tsrna'],
         },
         {
@@ -869,7 +869,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.mdpi.com/1422-0067/27/11/4661',
           dateAdded: '2026-10-25',
-          summary: 'Derleme. International Journal of Molecular Sciences. Arı zehrinin biyoaktif bileşenlerini (melittin, apamin, adolapin, fosfolipaz A2), bunların antiinflamatuvar, antioksidan, antimikrobiyal, analjezik ve immünomodülatör özelliklerini ve klinik çalışmalar dahil olmak üzere kanser, diyabet ve nörodejeneratif hastalıklardaki incelenen terapötik potansiyelini derlemektedir.',
+          summary: 'Derleme. International Journal of Molecular Sciences. Arı zehri ve başlıca bileşenlerinin (melittin, apamin, adolapin, fosfolipaz A2) diyabet, kanser ve Parkinson ile Alzheimer gibi nörodejeneratif hastalıklardaki etkilerine dair deneysel ve klinik kanıtları; oksidatif stres, inflamasyon, apoptoz ve immün yolaklar üzerinden derlemektedir; alerjik reaksiyon, sistemik toksisite ve anafilaksi riskinin klinik kullanımı sınırladığını ve iyi tasarlanmış klinik çalışmalara hâlâ ihtiyaç olduğunu vurgulamaktadır.',
           categories: ['apitherapy'],
         },
         {
@@ -893,7 +893,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.nature.com/articles/s41467-026-71141-4',
           dateAdded: '2026-11-15',
-          summary: 'Araştırma (insan). Nature Communications. Dört uzun süreli diyet çalışmasından (DIRECT, CASCADE, CENTRAL, DIRECT-PLUS) 533 katılımcının tekrarlı MR ile 16 yıla kadar izlendiği çalışmada, kalıcı viseral yağ kaybı kilo kaybından bağımsız olarak özellikle hipokampusta daha yavaş beyin atrofisi ve daha iyi bilişsel performansla ilişkili bulunmuştur.',
+          summary: 'Araştırma (insan, RKÇ takibi). Nature Communications. Dört yaşam tarzı RKÇ\'sinden (DIRECT, CASCADE, CENTRAL, DIRECT-PLUS) müdahalelerden 5-16 yıl sonra MR ve MoCA ile değerlendirilen 533 yetişkinde (ort. yaş 61,4; %86 erkek), uzun süreli düşük viseral yağ maruziyeti daha yüksek bilişsel skorlar, kilo kaybından bağımsız olarak daha yüksek beyin hacimleri ve daha yavaş beyin atrofisi ile ilişkili bulunmuştur; deri altı yağda bu örüntü görülmemiş, ilişkili ana faktör glisemik kontroldeki iyileşme olmuştur.',
           categories: ['nutrition', 'brain', 'longevity'],
         },
         {
@@ -901,7 +901,7 @@ export const translations = {
           year: '2026',
           url: 'https://www.nature.com/articles/s41419-026-09264-1',
           dateAdded: '2026-10-11',
-          summary: 'Araştırma (in vitro). Cell Death & Disease. tRNA kaynaklı fragman 5′tRF-GluCTC\'nin insan iPSC kaynaklı nöronlardan aktiviteye bağlı olarak salındığını ve nöronal moleküler ağları düzenlediğini bildirmektedir.',
+          summary: 'Araştırma (in vitro). Cell Death & Disease. İnsan iPSC kaynaklı kortikal nöronlarda glutamat/pikrotoksin ile oluşturulan hipereksitabilite, üretimi DICER ve Anjiyogenin\'e bağlı olan 5′tRF GluCTC\'nin hücre içi ve hücre dışı düzeylerini artırmıştır; 5′tRF GluCTC mimiği RNA-protein kompleksleri, translasyon ve nöronal sinyalizasyon proteinlerini (epilepsiyle ilişkili TUBB2B, EEF1A1/2 ve EIF4A2 dahil) azaltmış ve 24. saatte spike ve burst frekansını artırmıştır.',
           categories: ['tsrna', 'brain'],
         },
         {
@@ -917,7 +917,7 @@ export const translations = {
           year: '2026',
           url: 'https://link.springer.com/article/10.1186/s40035-026-00587-9',
           dateAdded: '2026-11-22',
-          summary: 'Translational Neurodegeneration. Mikroglia kaynaklı ekstraselüler veziküllerin içeriğini Alzheimer hastalığının erken tespiti için aday bir biyobelirteç kaynağı olarak ele almaktadır.',
+          summary: 'Derleme. Translational Neurodegeneration. Hastalıkla ilişkili mikroglianın salgıladığı ve BOS ile kanda saptanabilen EV\'lerin protein, nükleik asit ve lipid içeriğinin erken Alzheimer biyobelirteci kriterlerini (saptanabilirlik, duyarlılık, özgüllük, uzunlamasına izlem) karşılayıp karşılamadığını değerlendirmekte; izolasyon ve belirteç standardizasyonu sorunlarını tartışmakta ve mikrogliaya özgü EV imzalarına yönelik bir yol haritası önermektedir.',
           categories: ['ev', 'brain'],
         },
         {
