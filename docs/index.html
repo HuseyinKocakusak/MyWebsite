@@ -2,22 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hüseyin KOCAKUŞAK</title>
+    <title>Hüseyin Kocakuşak | Molecular Biology, Athletic Performance, Scientific Advisor</title>
     <meta name="description" content="Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies." />
-    <meta name="author" content="Hüseyin Kocakuşak" />
-    <meta property="og:title" content="Hüseyin KOCAKUŞAK" />
-    <meta property="og:description" content="Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies." />
-    <meta property="og:url" content="https://huseyinkocakusak.com" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hüseyin KOCAKUŞAK" />
-    <meta name="twitter:description" content="Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies." />
-    <script type="module" crossorigin src="/assets/index-BUMzfcWJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CEyDENpe.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" hreflang="en" href="https://huseyinkocakusak.com/en/" />
+    <link rel="alternate" hreflang="tr" href="https://huseyinkocakusak.com/tr/" />
+    <link rel="alternate" hreflang="x-default" href="https://huseyinkocakusak.com/" />
+    <script>
+      (function () {
+        var lang;
+        try { lang = localStorage.getItem('lang'); } catch (e) {}
+        if (lang !== 'en' && lang !== 'tr') {
+          var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+          lang = /^tr\b/i.test(prefs[0]) ? 'tr' : 'en';
+        }
+        location.replace('/' + lang + '/' + location.hash);
+      })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=/en/" /></noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <p><a href="/en/">English</a> · <a href="/tr/">Türkçe</a></p>
   </body>
 </html>
