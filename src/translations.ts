@@ -27,7 +27,7 @@ export const translations = {
       allCategories: 'All',
       addedOn: 'Added on',
       readArticle: 'Read Article',
-      academiaText: "<b><i>Microglia</i></b> are the resident immune cells of the <b>central nervous system</b>, essential for maintaining <b>neural homeostasis</b> and coordinating <b>inflammatory responses</b>. <b><i>Noncoding RNAs</i></b> constitute a major regulatory layer in these processes, influencing <b>gene expression</b> and <b>cellular behavior</b>. Current research investigates how <i>microglia</i> modify the production and release of <b><i>extracellular vesicles</i></b>, which act as intercellular carriers delivering <b>molecular signals</b> to <i>neurons, glia, and peripheral targets</i>. Ongoing work aims to define how <b>EVs</b> shape <b>neuronal integrity</b> and broader <b>brain health</b> through these molecules, ultimately aiming to advance strategies for <b><i>healthy aging</i></b> and <b><i>disease prevention</i></b>.",
+      academiaText: "I am a PhD student at the <b>University of Vienna</b>, in the <b>Vienna Doctoral School of Pharmaceutical, Nutritional and Sport Sciences (PhaNuSpo)</b>. I investigate the roles of <b><i>extracellular vesicles</i></b>, and the <b>proteins</b> and <b><i>sncRNAs</i></b> they carry, in <b>communication between neurons</b>. In my work, I use <i>human iPSC-derived neurons</i> and <i>mouse primary cortical neurons</i>.",
       literatureCategories: {
         ev: 'Extracellular Vesicles',
         apitherapy: 'Apitherapy',
@@ -520,7 +520,7 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      paragraph1: 'I am a PhD student at the University of Vienna, in the Vienna Doctoral School of Pharmaceutical, Nutritional and Sport Sciences (PhaNuSpo). I investigate the roles of extracellular vesicles, and the proteins and sncRNAs they carry, in communication between neurons. In my work, I use human iPSC-derived neurons and mouse primary cortical neurons.',
+      paragraph1: 'I am a science-driven molecular biologist who focuses on understanding how cells communicate through extracellular vesicles and small noncoding RNAs. I approach complex biological questions with analytical precision, aiming to generate clear, reproducible, and meaningful results.',
       paragraph2: 'Outside the lab, I apply the same discipline to training, combining strength work, endurance running, and evidence-based nutrition to continuously improve physical performance. I also practice beekeeping with a scientific mindset, emphasizing natural production, sustainability, and traceable quality.',
       paragraph3: 'I value rigorous thinking, consistent work, and projects that create measurable impact in research, sport, and the products I develop.',
       scienceBased: 'Science Based',
@@ -574,7 +574,7 @@ export const translations = {
       allCategories: 'Tümü',
       addedOn: 'Eklenme tarihi',
       readArticle: 'Makaleyi Oku',
-      academiaText: "<b><i>Mikroglia</i></b>, sinir sisteminin yerleşik bağışıklık hücreleridir ve <b>sinirsel homeostazın</b> korunması ile <b>inflamatuar yanıtların</b> koordinasyonu için gereklidir. <b><i>Kodlamayan RNA'lar</i></b> bu süreçlerde önemli bir düzenleyici katman oluşturarak <b>gen ifadesini</b> ve <b>hücresel davranışı</b> etkiler. Güncel araştırmalar, <i>mikroglianın</i> nöronlara, glia hücrelerine ve periferik hedeflere <b>moleküler sinyaller</b> taşıyan hücrelerarası taşıyıcılar olarak görev yapan <b><i>ekstraselüler veziküllerin</i></b> üretimini ve salınımını nasıl değiştirdiğini incelemektedir. Devam eden çalışmalar, <b>EV'lerin</b> bu moleküller aracılığıyla <b>nöronal bütünlüğü</b> ve daha geniş <b>beyin sağlığını</b> nasıl şekillendirdiğini tanımlamayı ve nihayetinde <b><i>sağlıklı yaşlanma</i></b> ve <b><i>hastalık önleme</i></b> stratejilerini geliştirmeyi amaçlamaktadır.",
+      academiaText: "<b>Viyana Üniversitesi</b>'nde, <b>Vienna Doctoral School of Pharmaceutical, Nutritional and Sport Sciences (PhaNuSpo)</b> bünyesinde doktora öğrencisiyim. <b>Nöronların birbirleriyle iletişiminde</b> <b><i>ekstraselüler veziküller</i></b> ve bu veziküller aracılığıyla taşınan <b>protein</b> ve <b><i>sncRNA</i></b>'ların rollerini araştırıyorum. Çalışmalarımda <i>insan iPSC kaynaklı nöronlar</i> ve <i>fare primer kortikal nöronları</i> kullanıyorum.",
       literatureCategories: {
         ev: 'Ekstraselüler Veziküller',
         apitherapy: 'Arı Terapisi',
@@ -1067,7 +1067,7 @@ export const translations = {
     },
     about: {
       title: 'Hakkımda',
-      paragraph1: 'Viyana Üniversitesi\'nde, Vienna Doctoral School of Pharmaceutical, Nutritional and Sport Sciences (PhaNuSpo) bünyesinde doktora öğrencisiyim. Nöronların birbirleriyle iletişiminde ekstraselüler veziküller ve bu veziküller aracılığıyla taşınan protein ve sncRNA\'ların rollerini araştırıyorum. Çalışmalarımda insan iPSC kaynaklı nöronlar ve fare primer kortikal nöronları kullanıyorum.',
+      paragraph1: 'Hücrelerin ekstraselüler veziküller ve küçük kodlamayan RNA\'lar aracılığıyla nasıl iletişim kurduğunu anlamaya odaklanan, bilim odaklı bir moleküler biyologum. Karmaşık biyolojik sorulara analitik hassasiyetle yaklaşıyor, net, tekrarlanabilir ve anlamlı sonuçlar üretmeyi hedefliyorum.',
       paragraph2: 'Laboratuvar dışında, aynı disiplini antrenmanlara uyguluyorum; güç çalışmaları, dayanıklılık koşusu ve kanıta dayalı beslenmeyi birleştirerek fiziksel performansı sürekli geliştiriyorum. Ayrıca bilimsel bir bakış açısıyla arıcılık yapıyor, doğal üretim, sürdürülebilirlik ve izlenebilir kaliteyi ön plana çıkarıyorum.',
       paragraph3: 'Titiz düşünceye, tutarlı çalışmaya ve araştırma, spor ve geliştirdiğim ürünlerde ölçülebilir etki yaratan projelere değer veriyorum.',
       scienceBased: 'Bilim Temelli',
