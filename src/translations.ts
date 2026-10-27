@@ -11,7 +11,7 @@ export const translations = {
     hero: {
       title1: 'Molecular Biology',
       title2: 'Athletic Performance',
-      title3: 'Scientific Advisor',
+      title3: 'Body Composition',
       subtitle: 'Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies.',
       getInTouch: 'Get In Touch',
     },
@@ -557,7 +557,7 @@ export const translations = {
     hero: {
       title1: 'Moleküler Biyoloji',
       title2: 'Atletik Performans',
-      title3: 'Bilimsel Danışman',
+      title3: 'Vücut Kompozisyonu',
       subtitle: 'Sinirbilim, hücresel metabolizma, egzersiz fizyolojisi ve beslenme stratejilerini entegre ediyorum.',
       getInTouch: 'İletişime Geç',
     },

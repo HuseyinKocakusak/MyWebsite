@@ -91,6 +91,13 @@ export const albums: Album[] = [
               tr: '23 Ocak 2025',
             },
           },
+          {
+            src: '/images/gallery/athletic-training/strength/IMG_2430.jpg',
+            note: {
+              en: 'October 2026',
+              tr: 'Ekim 2026',
+            },
+          },
         ],
       },
       // ── Stretching & Mobility ──
@@ -106,7 +113,13 @@ export const albums: Album[] = [
         slug: 'diet',
         icon: '🥗',
         photos: [
-          // { src: '/images/gallery/athletic-training/diet/FILENAME.jpg', note: { en: 'English note', tr: 'Türkçe not' } },
+          {
+            src: '/images/gallery/athletic-training/diet/IMG_2439.JPG',
+            note: {
+              en: 'Reward meal',
+              tr: 'Ödül maması',
+            },
+          },
         ],
       },
       // ── Mountaineering ──
@@ -266,6 +279,20 @@ export const albums: Album[] = [
             note: {
               en: 'Ashina Clan, July 20, 2026',
               tr: 'Ashina Clan, 20 Temmuz 2026',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/brazilian-jiu-jitsu/IMG_3622.JPG',
+            note: {
+              en: 'AUSTRIA AJP NATIONAL 2026, 77KG',
+              tr: 'AUSTRIA AJP NATIONAL 2026, 77KG',
+            },
+          },
+          {
+            src: '/images/gallery/athletic-training/brazilian-jiu-jitsu/IMG_2415.PNG',
+            note: {
+              en: 'AUSTRIA AJP NATIONAL 2026, 77KG',
+              tr: 'AUSTRIA AJP NATIONAL 2026, 77KG',
             },
           },
         ],
