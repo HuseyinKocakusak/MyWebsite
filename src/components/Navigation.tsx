@@ -9,14 +9,22 @@ export default function Navigation() {
   const t = translations[language];
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
     setIsOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    // An album page is open and the sections are not rendered: leave the
+    // album first, then scroll once the home page is back.
+    window.location.hash = id;
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
   };
 
   const navItems = [
     { key: 'science', label: t.nav.science },
-    { key: 'longevity', label: t.nav.longevity, scrollTo: 'science' },
     { key: 'apitherapy', label: t.nav.apitherapy },
     { key: 'gallery', label: t.nav.gallery },
     { key: 'about', label: t.nav.about },
@@ -45,7 +53,7 @@ export default function Navigation() {
             {navItems.map((item) => (
               <button
                 key={item.key}
-                onClick={() => scrollToSection(item.scrollTo ?? item.key)}
+                onClick={() => scrollToSection(item.key)}
                 className="text-slate-700 hover:text-slate-900 hover:scale-110 transition-all font-medium"
               >
                 {item.label}
@@ -82,7 +90,7 @@ export default function Navigation() {
             {navItems.map((item) => (
               <button
                 key={item.key}
-                onClick={() => scrollToSection(item.scrollTo ?? item.key)}
+                onClick={() => scrollToSection(item.key)}
                 className="text-slate-700 hover:text-slate-900 hover:scale-110 transition-all font-medium text-left"
               >
                 {item.label}

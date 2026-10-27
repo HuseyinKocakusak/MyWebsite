@@ -8,8 +8,9 @@ import Contact from './components/Contact';
 import Navigation from './components/Navigation';
 import AlbumPage from './components/AlbumPage';
 import { LanguageProvider } from './contexts/LanguageContext';
+import type { Language } from './seo';
 
-function App() {
+function App({ language }: { language: Language }) {
   const [albumSlug, setAlbumSlug] = useState<string | null>(null);
   const [subAlbumSlug, setSubAlbumSlug] = useState<string | null>(null);
 
@@ -58,7 +59,7 @@ function App() {
   };
 
   return (
-    <LanguageProvider>
+    <LanguageProvider language={language}>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
         <Navigation />
         {albumSlug ? (

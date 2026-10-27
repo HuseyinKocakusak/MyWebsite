@@ -1,6 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
-
-type Language = 'en' | 'tr';
+import { createContext, useContext, ReactNode } from 'react';
+import type { Language } from '../seo';
 
 interface LanguageContextType {
   language: Language;
@@ -9,14 +8,16 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(
-    () => (localStorage.getItem('lang') === 'tr' ? 'tr' : 'en')
-  );
-
+export function LanguageProvider({ language, children }: { language: Language; children: ReactNode }) {
+  // Each language has its own URL (/en/, /tr/), so switching loads that page.
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    localStorage.setItem('lang', lang);
+    if (lang === language) return;
+    try {
+      localStorage.setItem('lang', lang);
+    } catch {
+      // Storage can be unavailable (private mode); the URL still carries the language.
+    }
+    window.location.assign(`/${lang}/${window.location.hash}`);
   };
 
   return (

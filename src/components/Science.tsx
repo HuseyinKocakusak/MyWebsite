@@ -1,7 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { BookOpen, FileText, Award, Users, Tag, ExternalLink, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
+import { initialRenderDate, todayString } from '../renderDate';
 
 const ITEMS_PER_PAGE = 10;
 
@@ -30,18 +31,21 @@ export default function Science() {
   const t = translations[language];
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [today, setToday] = useState(initialRenderDate);
+
+  useEffect(() => {
+    setToday(todayString());
+  }, []);
 
   const categories = t.science.literatureCategories as Record<string, string>;
   const literatureItems = t.science.literatureItems as LiteratureItem[];
 
   // Hide items scheduled for a future date, sort by dateAdded (newest first), then filter by category
   const sortedItems = useMemo(() => {
-    const now = new Date();
-    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
     return literatureItems
       .filter((item) => item.dateAdded <= today)
       .sort((a, b) => new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime());
-  }, [literatureItems]);
+  }, [literatureItems, today]);
 
   const filteredItems = activeCategory
     ? sortedItems.filter((item) => item.categories.includes(activeCategory))
