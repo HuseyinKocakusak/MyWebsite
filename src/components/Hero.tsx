@@ -1,6 +1,7 @@
 import { ArrowDown, Instagram, Linkedin, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
+import HeroPeeks from './HeroPeeks';
 
 export default function Hero() {
   const { language } = useLanguage();
@@ -12,8 +13,9 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="hero" className="relative overflow-hidden min-h-screen flex items-center justify-center px-6 pt-20">
+      <HeroPeeks />
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <div className="mb-8 animate-fade-in">
           <div className="inline-block p-6 mb-6">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent leading-tight">

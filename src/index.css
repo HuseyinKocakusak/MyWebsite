@@ -20,3 +20,32 @@ html {
 .animate-fade-in {
   animation: fade-in 1s ease-out;
 }
+
+/* Hero peeking photos */
+@keyframes hero-peek-rise {
+  from { translate: 0 170%; opacity: 0; }
+  to { translate: 0 0; opacity: 1; }
+}
+@keyframes hero-peek-drift {
+  from { translate: 0 0; }
+  to { translate: 0 -8px; }
+}
+.hero-peek { animation: hero-peek-rise 1s cubic-bezier(.2,.8,.2,1) both; }
+.hero-peek-tilt { animation: hero-peek-drift 4.5s ease-in-out infinite alternate; }
+.hero-peek-card {
+  box-shadow: 0 14px 34px rgba(15,23,42,0.20);
+  transition: translate .3s cubic-bezier(.2,.8,.2,1), scale .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease;
+}
+.hero-peek:hover .hero-peek-card,
+.hero-peek:focus-visible .hero-peek-card {
+  translate: 0 -30px;
+  scale: 1.06;
+  box-shadow: 0 28px 54px rgba(15,23,42,0.28);
+}
+.hero-peek-tag { opacity: 0; translate: 0 6px; transition: opacity .25s ease, translate .25s ease; }
+.hero-peek:hover .hero-peek-tag,
+.hero-peek:focus-visible .hero-peek-tag { opacity: 1; translate: 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-peek, .hero-peek-tilt { animation: none; }
+  .hero-peek-card { transition: none; }
+}
