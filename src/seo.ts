@@ -8,14 +8,12 @@ export const LANGUAGES: Language[] = ['en', 'tr'];
 export const seo: Record<Language, { title: string; description: string; ogLocale: string }> = {
   en: {
     title: 'Hüseyin Kocakuşak | Molecular Biology, Athletic Performance, Scientific Advisor',
-    description:
-      'Molecular biologist studying extracellular vesicles and small noncoding RNAs in microglia. Science-based training, nutrition and apitherapy.',
+    description: 'Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies.',
     ogLocale: 'en_US',
   },
   tr: {
     title: 'Hüseyin Kocakuşak | Moleküler Biyoloji, Atletik Performans, Bilimsel Danışman',
-    description:
-      'Mikroglialarda ekstraselüler veziküller ve küçük kodlamayan RNA\'lar üzerine çalışan moleküler biyolog. Bilime dayalı antrenman, beslenme ve apiterapi.',
+    description: 'Sinirbilim, hücresel metabolizma, egzersiz fizyolojisi ve beslenme stratejilerini entegre ediyorum.',
     ogLocale: 'tr_TR',
   },
 };
