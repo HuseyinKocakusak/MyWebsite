@@ -520,7 +520,7 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      paragraph1: 'I am a science-driven molecular biologist who focuses on understanding how cells communicate through extracellular vesicles and small noncoding RNAs. I approach complex biological questions with analytical precision, aiming to generate clear, reproducible, and meaningful results.',
+      paragraph1: 'I am a PhD student at the University of Vienna, in the Vienna Doctoral School of Pharmaceutical, Nutritional and Sport Sciences (PhaNuSpo). I investigate the roles of extracellular vesicles, and the proteins and sncRNAs they carry, in communication between neurons. In my work, I use human iPSC-derived neurons and mouse primary cortical neurons.',
       paragraph2: 'Outside the lab, I apply the same discipline to training, combining strength work, endurance running, and evidence-based nutrition to continuously improve physical performance. I also practice beekeeping with a scientific mindset, emphasizing natural production, sustainability, and traceable quality.',
       paragraph3: 'I value rigorous thinking, consistent work, and projects that create measurable impact in research, sport, and the products I develop.',
       scienceBased: 'Science Based',
@@ -1067,7 +1067,7 @@ export const translations = {
     },
     about: {
       title: 'Hakkımda',
-      paragraph1: 'Hücrelerin ekstraselüler veziküller ve küçük kodlamayan RNA\'lar aracılığıyla nasıl iletişim kurduğunu anlamaya odaklanan, bilim odaklı bir moleküler biyologum. Karmaşık biyolojik sorulara analitik hassasiyetle yaklaşıyor, net, tekrarlanabilir ve anlamlı sonuçlar üretmeyi hedefliyorum.',
+      paragraph1: 'Viyana Üniversitesi\'nde, Vienna Doctoral School of Pharmaceutical, Nutritional and Sport Sciences (PhaNuSpo) bünyesinde doktora öğrencisiyim. Nöronların birbirleriyle iletişiminde ekstraselüler veziküller ve bu veziküller aracılığıyla taşınan protein ve sncRNA\'ların rollerini araştırıyorum. Çalışmalarımda insan iPSC kaynaklı nöronlar ve fare primer kortikal nöronları kullanıyorum.',
       paragraph2: 'Laboratuvar dışında, aynı disiplini antrenmanlara uyguluyorum; güç çalışmaları, dayanıklılık koşusu ve kanıta dayalı beslenmeyi birleştirerek fiziksel performansı sürekli geliştiriyorum. Ayrıca bilimsel bir bakış açısıyla arıcılık yapıyor, doğal üretim, sürdürülebilirlik ve izlenebilir kaliteyi ön plana çıkarıyorum.',
       paragraph3: 'Titiz düşünceye, tutarlı çalışmaya ve araştırma, spor ve geliştirdiğim ürünlerde ölçülebilir etki yaratan projelere değer veriyorum.',
       scienceBased: 'Bilim Temelli',
