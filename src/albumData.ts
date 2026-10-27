@@ -91,8 +91,13 @@ export const albums: Album[] = [
               tr: '23 Ocak 2025',
             },
           },
-          // IMG_2430.jpg is empty (0 bytes) in the repo. Re-upload it, then remove the // below.
-          // { src: '/images/gallery/athletic-training/strength/IMG_2430.jpg', note: { en: 'October 2026', tr: 'Ekim 2026' } },
+          {
+            src: '/images/gallery/athletic-training/strength/IMG_2430.jpg',
+            note: {
+              en: 'October 2026',
+              tr: 'Ekim 2026',
+            },
+          },
         ],
       },
       // ── Stretching & Mobility ──
