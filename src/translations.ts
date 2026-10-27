@@ -2,7 +2,6 @@ export const translations = {
   en: {
     nav: {
       science: 'Science',
-      longevity: 'Longevity',
       apitherapy: 'Apitherapy',
       gallery: 'Gallery',
       about: 'About',
@@ -14,6 +13,8 @@ export const translations = {
       title3: 'Scientific Advisor',
       subtitle: 'Integrating neuroscience, cellular metabolism, exercise physiology, and nutritional strategies.',
       getInTouch: 'Get In Touch',
+      albums: 'Albums',
+      openGallery: 'Open the gallery',
     },
     science: {
       title: 'Science',
@@ -537,7 +538,7 @@ export const translations = {
       contactInfo: 'Contact Information',
       email: 'Email',
       location: 'Location',
-      locationValue: '🇹🇷 Izmir, Türkiye',
+      locationValue: '🇦🇹 Vienna, Austria',
       yourName: 'Your Name',
       yourEmail: 'Your Email',
       yourMessage: 'Your Message',
@@ -548,7 +549,6 @@ export const translations = {
   tr: {
     nav: {
       science: 'Bilim',
-      longevity: 'Longevity',
       apitherapy: 'Arı Terapisi',
       gallery: 'Galeri',
       about: 'Hakkımda',
@@ -560,6 +560,8 @@ export const translations = {
       title3: 'Bilimsel Danışman',
       subtitle: 'Sinirbilim, hücresel metabolizma, egzersiz fizyolojisi ve beslenme stratejilerini entegre ediyorum.',
       getInTouch: 'İletişime Geç',
+      albums: 'Albüm',
+      openGallery: 'Galeriyi aç',
     },
     science: {
       title: 'Bilim',
@@ -1083,7 +1085,7 @@ export const translations = {
       contactInfo: 'İletişim Bilgileri',
       email: 'E-posta',
       location: 'Konum',
-      locationValue: '🇹🇷 İzmir, Türkiye',
+      locationValue: '🇦🇹 Viyana, Avusturya & 🇹🇷 İzmir, Türkiye',
       yourName: 'Adınız',
       yourEmail: 'E-posta Adresiniz',
       yourMessage: 'Mesajınız',
