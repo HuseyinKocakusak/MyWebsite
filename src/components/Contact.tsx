@@ -5,6 +5,8 @@ import { translations } from '../translations';
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
+const CONTACT_EMAIL = 'huseyinkocakusak@gmail.com';
+
 export default function Contact() {
   const { language } = useLanguage();
   const t = translations[language];
@@ -21,15 +23,21 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      // Replace REPLACE_WITH_YOUR_FORM_ID with your Formspree form ID.
-      // Get one for free at https://formspree.io
-      const response = await fetch('https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID', {
+      // FormSubmit forwards the message to this inbox without an account.
+      // The very first submission sends an activation email to the inbox;
+      // messages are delivered once the "Activate Form" link in it is clicked.
+      const response = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `Website message from ${formData.name}`,
+          _template: 'table',
+        }),
       });
+      const result = await response.json().catch(() => null);
 
-      if (response.ok) {
+      if (response.ok && String(result?.success) === 'true') {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       } else {
@@ -63,10 +71,10 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-1">{t.contact.email}</h4>
                   <a
-                    href="mailto:huseyinkocakusak@gmail.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="text-slate-600 hover:text-slate-900 transition-colors"
                   >
-                    huseyinkocakusak@gmail.com
+                    {CONTACT_EMAIL}
                   </a>
                 </div>
               </div>
@@ -137,21 +145,22 @@ export default function Contact() {
               disabled={status === 'sending'}
               className="w-full px-8 py-4 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:scale-105 font-medium shadow-lg shadow-slate-900/20 flex items-center justify-center gap-2 disabled:opacity-60 disabled:hover:scale-100"
             >
-              <span>{status === 'sending' ? 'Sending...' : t.contact.sendMessage}</span>
+              <span>{status === 'sending' ? t.contact.sending : t.contact.sendMessage}</span>
               <Send size={20} />
             </button>
 
             {status === 'success' && (
-              <p className="text-green-700 text-center font-medium">Message sent successfully!</p>
+              <p className="text-green-700 text-center font-medium">{t.contact.success}</p>
             )}
             {status === 'error' && (
-              <p className="text-red-700 text-center font-medium">Failed to send message. Please try again.</p>
+              <p className="text-red-700 text-center font-medium">
+                {t.contact.error}{' '}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="underline">
+                  {CONTACT_EMAIL}
+                </a>
+              </p>
             )}
           </form>
-        </div>
-
-        <div className="mt-16 pt-8 border-t border-slate-200 text-center text-slate-600">
-          <p>&copy; 2026 HÜSEYİN KOCAKUŞAK</p>
         </div>
       </div>
     </section>
