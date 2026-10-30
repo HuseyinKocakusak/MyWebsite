@@ -5,6 +5,7 @@ import Apitherapy from './components/Apitherapy';
 import Gallery from './components/Gallery';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import AlbumPage from './components/AlbumPage';
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -79,6 +80,7 @@ function App({ language }: { language: Language }) {
             <Contact />
           </>
         )}
+        <Footer onOpenAlbum={openAlbum} />
       </div>
     </LanguageProvider>
   );

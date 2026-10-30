@@ -2,6 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations';
+import { scrollToSection as scrollTo } from '../scrollToSection';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,17 +11,7 @@ export default function Navigation() {
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      return;
-    }
-    // An album page is open and the sections are not rendered: leave the
-    // album first, then scroll once the home page is back.
-    window.location.hash = id;
-    setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    }, 50);
+    scrollTo(id);
   };
 
   const navItems = [
