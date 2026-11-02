@@ -7,6 +7,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
+import CookieBanner from './components/CookieBanner';
 import AlbumPage from './components/AlbumPage';
 import { LanguageProvider } from './contexts/LanguageContext';
 import type { Language } from './seo';
@@ -81,6 +82,7 @@ function App({ language }: { language: Language }) {
           </>
         )}
         <Footer onOpenAlbum={openAlbum} />
+        <CookieBanner />
       </div>
     </LanguageProvider>
   );

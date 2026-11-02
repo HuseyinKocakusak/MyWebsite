@@ -4,6 +4,7 @@ import { translations } from '../translations';
 import { albums } from '../albumData';
 import { initialRenderDate } from '../renderDate';
 import { scrollToSection } from '../scrollToSection';
+import { analyticsEnabled, reopenConsentBanner } from '../analytics';
 
 const CONTACT_EMAIL = 'huseyinkocakusak@gmail.com';
 
@@ -144,6 +145,14 @@ export default function Footer({ onOpenAlbum }: FooterProps) {
         <div className="mt-14 pt-8 border-t border-slate-800 flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between text-sm">
           <p className="text-slate-400">
             &copy; {year} Hüseyin Kocakuşak. {t.footer.rights}
+            {analyticsEnabled() && (
+              <>
+                {' · '}
+                <button onClick={reopenConsentBanner} className="underline hover:text-white transition-colors">
+                  {t.cookies.settings}
+                </button>
+              </>
+            )}
           </p>
 
           <div className="flex items-center gap-6">

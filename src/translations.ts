@@ -431,6 +431,14 @@ export const translations = {
           summary: 'Review. NeuroMolecular Medicine. Assesses candidate markers for enriching EVs derived from neurons, astrocytes, microglia and oligodendrocytes, noting that selective enrichment and reliable assignment of cellular origin limit their use as biomarkers; identifies ATP1A3, AMPA receptor subunits, GLAST and AQP4 as more biologically grounded markers, and calls for brain-restricted marker discovery, multiplexed and orthogonal enrichment, single-vesicle validation and benchmarking against neural reference datasets.',
           categories: ['ev', 'brain'],
         },
+        {
+          title: 'Analysis of 515 human proteomes defines plasma extracellular vesicle core composition, corona and coisolated networks',
+          year: '2026',
+          url: 'https://www.nature.com/articles/s42003-026-11038-6',
+          dateAdded: '2026-11-03',
+          summary: 'Research (meta-analysis, human data). Communications Biology. A meta-analysis of 515 public plasma EV proteomes from 20 studies shows that the plasma EV core is shaped mainly by a surface-charge-driven protein corona and by physically co-isolated material, organized into 8 functional modules; of 344 core proteins, only 39 could not be attributed to a synthetic nanoparticle corona or to platelet-derived EVs.',
+          categories: ['ev'],
+        },
       ],
     },
     apitherapy: {
@@ -566,6 +574,12 @@ export const translations = {
       rights: 'All rights reserved.',
       backToTop: 'Back to top',
       language: 'Language',
+    },
+    cookies: {
+      message: 'This site uses Google Analytics cookies to count visits and see which pages are read. Analytics runs only if you accept.',
+      accept: 'Accept',
+      decline: 'Decline',
+      settings: 'Cookie settings',
     },
   },
   tr: {
@@ -1000,6 +1014,14 @@ export const translations = {
           summary: 'Derleme. NeuroMolecular Medicine. Nöron, astrosit, mikroglia ve oligodendrosit kaynaklı EV\'leri zenginleştirmek için önerilen belirteçleri değerlendirmekte; seçici zenginleştirme ve hücresel kökenin güvenilir biçimde belirlenmesindeki güçlüklerin biyobelirteç olarak kullanımı sınırladığını vurgulamaktadır; ATP1A3, AMPA reseptör alt birimleri, GLAST ve AQP4\'ü biyolojik olarak daha sağlam belirteçler olarak öne çıkarmakta ve beyne özgü belirteç keşfi, çoklu ve ortogonal zenginleştirme, tek vezikül düzeyinde doğrulama ve nöral referans veri setleriyle karşılaştırma önermektedir.',
           categories: ['ev', 'brain'],
         },
+        {
+          title: 'Analysis of 515 human proteomes defines plasma extracellular vesicle core composition, corona and coisolated networks',
+          year: '2026',
+          url: 'https://www.nature.com/articles/s42003-026-11038-6',
+          dateAdded: '2026-11-03',
+          summary: 'Araştırma (meta-analiz, insan verisi). Communications Biology. 20 çalışmadan derlenen 515 açık plazma EV proteomunun meta-analizi, plazma EV çekirdeğinin büyük ölçüde yüzey yüküne bağlı bir protein koronası ve fiziksel olarak birlikte izole edilen materyal tarafından şekillendiğini ve 8 işlevsel modülde toplandığını göstermektedir; 344 çekirdek proteinden yalnızca 39\'u sentetik nanopartikül koronasına veya trombosit kaynaklı EV\'lere atfedilememiştir.',
+          categories: ['ev'],
+        },
       ],
     },
     apitherapy: {
@@ -1135,6 +1157,12 @@ export const translations = {
       rights: 'Tüm hakları saklıdır.',
       backToTop: 'Başa dön',
       language: 'Dil',
+    },
+    cookies: {
+      message: 'Bu site, ziyaretleri saymak ve hangi sayfaların okunduğunu görmek için Google Analytics çerezleri kullanır. Analitik yalnızca kabul ederseniz çalışır.',
+      accept: 'Kabul et',
+      decline: 'Reddet',
+      settings: 'Çerez ayarları',
     },
   },
 };
