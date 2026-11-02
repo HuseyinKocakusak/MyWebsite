@@ -575,6 +575,12 @@ export const translations = {
       backToTop: 'Back to top',
       language: 'Language',
     },
+    cookies: {
+      message: 'This site uses Google Analytics cookies to count visits and see which pages are read. Analytics runs only if you accept.',
+      accept: 'Accept',
+      decline: 'Decline',
+      settings: 'Cookie settings',
+    },
   },
   tr: {
     nav: {
@@ -1151,6 +1157,12 @@ export const translations = {
       rights: 'Tüm hakları saklıdır.',
       backToTop: 'Başa dön',
       language: 'Dil',
+    },
+    cookies: {
+      message: 'Bu site, ziyaretleri saymak ve hangi sayfaların okunduğunu görmek için Google Analytics çerezleri kullanır. Analitik yalnızca kabul ederseniz çalışır.',
+      accept: 'Kabul et',
+      decline: 'Reddet',
+      settings: 'Çerez ayarları',
     },
   },
 };
