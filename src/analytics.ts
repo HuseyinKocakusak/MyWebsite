@@ -1,7 +1,7 @@
 // Google Analytics 4, loaded only after the visitor accepts cookies.
 // Set the Measurement ID (G-XXXXXXXXXX) from Google Analytics: Admin > Data streams.
 // While it is empty, neither the consent banner nor Google Analytics is shown.
-export const GA_MEASUREMENT_ID = '';
+export const GA_MEASUREMENT_ID: string = 'G-EPX5R1Y44E';
 
 export type Consent = 'granted' | 'denied';
 
