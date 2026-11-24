@@ -400,6 +400,14 @@ export const translations = {
           categories: ['ev'],
         },
         {
+          title: 'Regular exercise augments gut-brain communication and visceral feedback control of appetite',
+          year: '2026',
+          url: 'https://www.sciencedirect.com/science/article/pii/S221287782600147X',
+          dateAdded: '2026-11-24',
+          summary: 'Research (in vivo, human samples, GWAS). Molecular Metabolism. In mice given voluntary wheel running, intragastric delivery of a liquid diet (Ensure, 0.5 kcal) suppressed subsequent feeding more strongly than in sedentary controls, and 18FDG-PET showed enhanced brain-wide responses to the infusion; single-nucleus RNA sequencing of the dorsal brainstem identified nutrient-responsive neuron populations, including a previously unrecognized one marked by FIBCD1, whose nutrient-evoked activation (Fos) in the NTS was selectively increased by exercise. FIBCD1 neurons were also found in the human NTS and area postrema, and GWAS data suggest a possible link of this population to BMI.',
+          categories: ['exercise', 'brain', 'nutrition'],
+        },
+        {
           title: 'tRNA-derived fragments elevated in Alzheimer\'s disease promote Tau aggregation',
           year: '2026',
           url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13228447/',
@@ -981,6 +989,14 @@ export const translations = {
           dateAdded: '2026-11-22',
           summary: 'Araştırma (in vitro, insan örnekleri). Advanced Science. Nükleofosmin 1\'i (NPM1) mRNA\'ları EV\'lere yönlendiren bir protein olarak tanımlamaktadır: NPM1, EGFR mRNA\'sındakiler dahil belirli RNA motiflerine bağlanarak faz ayrımına uğramış RNA kondensatları oluşturmakta; bu kondensatlar geç endozomlara ve multiveziküler cisimlere paketlenip EV\'lere yüklenmektedir; küçük hücreli dışı akciğer kanseri hastalarının serum EV\'lerinde NPM1 proteini ve EGFR mRNA\'sı yüksek bulunmuştur.',
           categories: ['ev'],
+        },
+        {
+          title: 'Regular exercise augments gut-brain communication and visceral feedback control of appetite',
+          year: '2026',
+          url: 'https://www.sciencedirect.com/science/article/pii/S221287782600147X',
+          dateAdded: '2026-11-24',
+          summary: 'Araştırma (in vivo, insan örnekleri, GWAS). Molecular Metabolism. Gönüllü çark koşusu yapan farelerde mideye doğrudan verilen sıvı besin (Ensure, 0,5 kcal) sonraki besin alımını hareketsiz kontrollere göre daha güçlü baskılamış, 18FDG-PET ise infüzyona beyin genelinde daha güçlü yanıtlar göstermiştir; dorsal beyin sapının tek çekirdek RNA dizilemesi, besine yanıt veren nöron popülasyonlarını ve bunların arasında daha önce tanımlanmamış, FIBCD1 ile işaretli bir popülasyonu belirlemiş; egzersiz, bu nöronların NTS\'deki besinle uyarılan aktivasyonunu (Fos) seçici olarak artırmıştır. FIBCD1 nöronları insan NTS ve area postremasında da saptanmış, GWAS verileri bu popülasyonun BMI ile olası bir ilişkisine işaret etmektedir.',
+          categories: ['exercise', 'brain', 'nutrition'],
         },
         {
           title: 'tRNA-derived fragments elevated in Alzheimer\'s disease promote Tau aggregation',
